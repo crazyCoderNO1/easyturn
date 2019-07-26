@@ -104,6 +104,7 @@ static NSInteger  kPhoneTextFieldTag = 5678;
     [_btnSecurityCode setTitle:@"获取验证码" forState:UIControlStateNormal];
     [_btnSecurityCode setTitleColor:kACColorRGB(20, 138, 236) forState:UIControlStateNormal];
     _btnSecurityCode.titleLabel.font = kFontSize(12);
+    [_btnSecurityCode addTarget:self action:@selector(sendcode) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_btnSecurityCode];
     [_btnSecurityCode mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.tfUserName);
@@ -339,9 +340,32 @@ static NSInteger  kPhoneTextFieldTag = 5678;
     
 }
 
-
+-(void)sendcode
+{
+    NSDictionary *params = @{
+                             @"mobile" : @"15821414708",
+                             @"type": @1
+                             };
+    [HttpTool get:[NSString stringWithFormat:@"user/sendCode"] params:params success:^(id responseObj) {
+        NSLog(@"");
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+    
+}
 #pragma mark - 注册
 - (void)onRegister {
-    
+    NSMutableDictionary* dic=[NSMutableDictionary new];
+        NSDictionary *params = @{
+                                 @"mobile" : @"15821414708",
+                                 @"password": @"118268"
+                                 };
+    [HttpTool get:[NSString stringWithFormat:@"user/register"] params:params success:^(id responseObj) {
+        NSLog(@"");
+
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 @end

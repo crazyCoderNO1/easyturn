@@ -37,4 +37,5 @@
 #import "UserInfoModel.h"
 #import "SSCacheManager.h"
 #import "SSUserLoginModel.h"
+#import "HttpTool.h"
 #endif /* EasyTurn_PrefixHeader_pch */
