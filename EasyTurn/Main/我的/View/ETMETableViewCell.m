@@ -49,10 +49,6 @@
             make.right.mas_equalTo(-193);
             make.size.mas_equalTo(CGSizeMake(7 ,9 ));
         }];
-        
-        [_addressLab ];
-        
-        
     }
     return self;
 }
