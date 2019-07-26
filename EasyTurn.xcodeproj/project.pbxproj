@@ -16,33 +16,33 @@
 		0046A96E22EAAB720038CA11 /* ETMETableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A96122EAAB720038CA11 /* ETMETableViewCell.m */; };
 		0046A96F22EAAB720038CA11 /* WrongSpeakBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A96422EAAB720038CA11 /* WrongSpeakBtn.m */; };
 		0046A97022EAAB720038CA11 /* MEVIPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A96522EAAB720038CA11 /* MEVIPTableViewCell.m */; };
-		0046A9AC22EAADE50038CA11 /* ETPassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A97322EAADE50038CA11 /* ETPassWordViewController.m */; };
-		0046A9AD22EAADE50038CA11 /* ETCashOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A97422EAADE50038CA11 /* ETCashOutViewController.m */; };
-		0046A9AE22EAADE50038CA11 /* ETAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A97522EAADE50038CA11 /* ETAccountViewController.m */; };
-		0046A9AF22EAADE50038CA11 /* ETPusCashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A97822EAADE50038CA11 /* ETPusCashViewController.m */; };
-		0046A9B022EAADE50038CA11 /* ETMeinCollectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A97922EAADE50038CA11 /* ETMeinCollectTableViewCell.m */; };
-		0046A9B122EAADE50038CA11 /* ETBuyNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A97A22EAADE50038CA11 /* ETBuyNumberViewController.m */; };
-		0046A9B222EAADE50038CA11 /* ETUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A97C22EAADE50038CA11 /* ETUserViewController.m */; };
-		0046A9B322EAADE50038CA11 /* ETAuthenticateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A97E22EAADE50038CA11 /* ETAuthenticateViewController.m */; };
-		0046A9B422EAADE50038CA11 /* ETSetUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A97F22EAADE50038CA11 /* ETSetUserViewController.m */; };
-		0046A9B522EAADE50038CA11 /* LegalPersonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A98422EAADE50038CA11 /* LegalPersonVC.m */; };
-		0046A9B622EAADE50038CA11 /* PersonalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A98522EAADE50038CA11 /* PersonalVC.m */; };
-		0046A9B722EAADE50038CA11 /* StaffVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A98622EAADE50038CA11 /* StaffVC.m */; };
-		0046A9B822EAADE50038CA11 /* ETMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A98922EAADE50038CA11 /* ETMineViewController.m */; };
-		0046A9B922EAADE50038CA11 /* UserMegViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A98C22EAADE50038CA11 /* UserMegViewController.m */; };
-		0046A9BA22EAADE50038CA11 /* SaleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A99022EAADE50038CA11 /* SaleModel.m */; };
-		0046A9BB22EAADE50038CA11 /* UserServeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A99222EAADE50038CA11 /* UserServeView.m */; };
-		0046A9BC22EAADE50038CA11 /* UserSaleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A99322EAADE50038CA11 /* UserSaleViewCell.m */; };
-		0046A9BD22EAADE50038CA11 /* UserSaleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A99422EAADE50038CA11 /* UserSaleView.m */; };
-		0046A9BE22EAADE50038CA11 /* UserSaleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0046A99822EAADE50038CA11 /* UserSaleViewCell.xib */; };
-		0046A9BF22EAADE50038CA11 /* ETTouchMeinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A99A22EAADE50038CA11 /* ETTouchMeinViewController.m */; };
-		0046A9C022EAADE50038CA11 /* ETStoreUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A99B22EAADE50038CA11 /* ETStoreUpViewController.m */; };
-		0046A9C122EAADE50038CA11 /* identityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A99F22EAADE50038CA11 /* identityViewController.m */; };
-		0046A9C222EAADE50038CA11 /* ETPutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A9A322EAADE50038CA11 /* ETPutViewController.m */; };
-		0046A9C322EAADE50038CA11 /* ETUnsubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A9A622EAADE50038CA11 /* ETUnsubViewController.m */; };
-		0046A9C422EAADE50038CA11 /* ETPhoneNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A9A822EAADE50038CA11 /* ETPhoneNumberViewController.m */; };
-		0046A9C522EAADE50038CA11 /* ETVIPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A9A922EAADE50038CA11 /* ETVIPViewController.m */; };
-		0046A9C622EAADE50038CA11 /* ETAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046A9AB22EAADE50038CA11 /* ETAboutViewController.m */; };
+		0046AA5822EACDE30038CA11 /* ETPassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA1F22EACDE20038CA11 /* ETPassWordViewController.m */; };
+		0046AA5922EACDE30038CA11 /* ETCashOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA2022EACDE20038CA11 /* ETCashOutViewController.m */; };
+		0046AA5A22EACDE30038CA11 /* ETAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA2122EACDE20038CA11 /* ETAccountViewController.m */; };
+		0046AA5B22EACDE30038CA11 /* ETPusCashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA2422EACDE20038CA11 /* ETPusCashViewController.m */; };
+		0046AA5C22EACDE30038CA11 /* ETMeinCollectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA2522EACDE20038CA11 /* ETMeinCollectTableViewCell.m */; };
+		0046AA5D22EACDE30038CA11 /* ETBuyNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA2622EACDE20038CA11 /* ETBuyNumberViewController.m */; };
+		0046AA5E22EACDE30038CA11 /* ETUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA2822EACDE20038CA11 /* ETUserViewController.m */; };
+		0046AA5F22EACDE30038CA11 /* ETAuthenticateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA2A22EACDE20038CA11 /* ETAuthenticateViewController.m */; };
+		0046AA6022EACDE30038CA11 /* ETSetUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA2B22EACDE20038CA11 /* ETSetUserViewController.m */; };
+		0046AA6122EACDE30038CA11 /* LegalPersonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA3022EACDE20038CA11 /* LegalPersonVC.m */; };
+		0046AA6222EACDE30038CA11 /* PersonalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA3122EACDE20038CA11 /* PersonalVC.m */; };
+		0046AA6322EACDE30038CA11 /* StaffVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA3222EACDE20038CA11 /* StaffVC.m */; };
+		0046AA6422EACDE30038CA11 /* ETMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA3522EACDE20038CA11 /* ETMineViewController.m */; };
+		0046AA6522EACDE30038CA11 /* UserMegViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA3822EACDE20038CA11 /* UserMegViewController.m */; };
+		0046AA6622EACDE30038CA11 /* SaleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA3C22EACDE20038CA11 /* SaleModel.m */; };
+		0046AA6722EACDE30038CA11 /* UserServeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA3E22EACDE20038CA11 /* UserServeView.m */; };
+		0046AA6822EACDE30038CA11 /* UserSaleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA3F22EACDE20038CA11 /* UserSaleViewCell.m */; };
+		0046AA6922EACDE30038CA11 /* UserSaleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA4022EACDE20038CA11 /* UserSaleView.m */; };
+		0046AA6A22EACDE30038CA11 /* UserSaleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0046AA4422EACDE20038CA11 /* UserSaleViewCell.xib */; };
+		0046AA6B22EACDE30038CA11 /* ETTouchMeinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA4622EACDE20038CA11 /* ETTouchMeinViewController.m */; };
+		0046AA6C22EACDE30038CA11 /* ETStoreUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA4722EACDE20038CA11 /* ETStoreUpViewController.m */; };
+		0046AA6D22EACDE30038CA11 /* identityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA4B22EACDE20038CA11 /* identityViewController.m */; };
+		0046AA6E22EACDE30038CA11 /* ETPutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA4F22EACDE20038CA11 /* ETPutViewController.m */; };
+		0046AA6F22EACDE30038CA11 /* ETUnsubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA5222EACDE20038CA11 /* ETUnsubViewController.m */; };
+		0046AA7022EACDE30038CA11 /* ETPhoneNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA5422EACDE20038CA11 /* ETPhoneNumberViewController.m */; };
+		0046AA7122EACDE30038CA11 /* ETVIPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA5522EACDE20038CA11 /* ETVIPViewController.m */; };
+		0046AA7222EACDE30038CA11 /* ETAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA5722EACDE20038CA11 /* ETAboutViewController.m */; };
 		004AB53A22E175510056B8F5 /* ETHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 004AB53922E175510056B8F5 /* ETHomeViewController.m */; };
 		004AB53D22E19A3D0056B8F5 /* ETHomeTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 004AB53C22E19A3D0056B8F5 /* ETHomeTopView.m */; };
 		004AB54022E19D040056B8F5 /* ETHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 004AB53F22E19D040056B8F5 /* ETHomeHeaderView.m */; };
@@ -201,59 +201,59 @@
 		0046A96322EAAB720038CA11 /* ETMineVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETMineVIew.h; sourceTree = "<group>"; };
 		0046A96422EAAB720038CA11 /* WrongSpeakBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WrongSpeakBtn.m; sourceTree = "<group>"; };
 		0046A96522EAAB720038CA11 /* MEVIPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEVIPTableViewCell.m; sourceTree = "<group>"; };
-		0046A97222EAADE50038CA11 /* identityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = identityViewController.h; sourceTree = "<group>"; };
-		0046A97322EAADE50038CA11 /* ETPassWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPassWordViewController.m; sourceTree = "<group>"; };
-		0046A97422EAADE50038CA11 /* ETCashOutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETCashOutViewController.m; sourceTree = "<group>"; };
-		0046A97522EAADE50038CA11 /* ETAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETAccountViewController.m; sourceTree = "<group>"; };
-		0046A97622EAADE50038CA11 /* ETTouchMeinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETTouchMeinViewController.h; sourceTree = "<group>"; };
-		0046A97722EAADE50038CA11 /* ETStoreUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETStoreUpViewController.h; sourceTree = "<group>"; };
-		0046A97822EAADE50038CA11 /* ETPusCashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPusCashViewController.m; sourceTree = "<group>"; };
-		0046A97922EAADE50038CA11 /* ETMeinCollectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETMeinCollectTableViewCell.m; sourceTree = "<group>"; };
-		0046A97A22EAADE50038CA11 /* ETBuyNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETBuyNumberViewController.m; sourceTree = "<group>"; };
-		0046A97B22EAADE50038CA11 /* ETPhoneNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPhoneNumberViewController.h; sourceTree = "<group>"; };
-		0046A97C22EAADE50038CA11 /* ETUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETUserViewController.m; sourceTree = "<group>"; };
-		0046A97D22EAADE50038CA11 /* ETUnsubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETUnsubViewController.h; sourceTree = "<group>"; };
-		0046A97E22EAADE50038CA11 /* ETAuthenticateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETAuthenticateViewController.m; sourceTree = "<group>"; };
-		0046A97F22EAADE50038CA11 /* ETSetUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETSetUserViewController.m; sourceTree = "<group>"; };
-		0046A98122EAADE50038CA11 /* StaffVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaffVC.h; sourceTree = "<group>"; };
-		0046A98222EAADE50038CA11 /* PersonalVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalVC.h; sourceTree = "<group>"; };
-		0046A98322EAADE50038CA11 /* LegalPersonVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LegalPersonVC.h; sourceTree = "<group>"; };
-		0046A98422EAADE50038CA11 /* LegalPersonVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LegalPersonVC.m; sourceTree = "<group>"; };
-		0046A98522EAADE50038CA11 /* PersonalVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalVC.m; sourceTree = "<group>"; };
-		0046A98622EAADE50038CA11 /* StaffVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaffVC.m; sourceTree = "<group>"; };
-		0046A98722EAADE50038CA11 /* ETPutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPutViewController.h; sourceTree = "<group>"; };
-		0046A98822EAADE50038CA11 /* ETAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETAboutViewController.h; sourceTree = "<group>"; };
-		0046A98922EAADE50038CA11 /* ETMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETMineViewController.m; sourceTree = "<group>"; };
-		0046A98C22EAADE50038CA11 /* UserMegViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserMegViewController.m; sourceTree = "<group>"; };
-		0046A98D22EAADE50038CA11 /* UserMegViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMegViewController.h; sourceTree = "<group>"; };
-		0046A98F22EAADE50038CA11 /* SaleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaleModel.h; sourceTree = "<group>"; };
-		0046A99022EAADE50038CA11 /* SaleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaleModel.m; sourceTree = "<group>"; };
-		0046A99222EAADE50038CA11 /* UserServeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserServeView.m; sourceTree = "<group>"; };
-		0046A99322EAADE50038CA11 /* UserSaleViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSaleViewCell.m; sourceTree = "<group>"; };
-		0046A99422EAADE50038CA11 /* UserSaleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSaleView.m; sourceTree = "<group>"; };
-		0046A99522EAADE50038CA11 /* UserServeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserServeView.h; sourceTree = "<group>"; };
-		0046A99622EAADE50038CA11 /* UserSaleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSaleView.h; sourceTree = "<group>"; };
-		0046A99722EAADE50038CA11 /* UserSaleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSaleViewCell.h; sourceTree = "<group>"; };
-		0046A99822EAADE50038CA11 /* UserSaleViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserSaleViewCell.xib; sourceTree = "<group>"; };
-		0046A99922EAADE50038CA11 /* ETVIPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETVIPViewController.h; sourceTree = "<group>"; };
-		0046A99A22EAADE50038CA11 /* ETTouchMeinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETTouchMeinViewController.m; sourceTree = "<group>"; };
-		0046A99B22EAADE50038CA11 /* ETStoreUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETStoreUpViewController.m; sourceTree = "<group>"; };
-		0046A99C22EAADE50038CA11 /* ETAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETAccountViewController.h; sourceTree = "<group>"; };
-		0046A99D22EAADE50038CA11 /* ETPassWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPassWordViewController.h; sourceTree = "<group>"; };
-		0046A99E22EAADE50038CA11 /* ETCashOutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETCashOutViewController.h; sourceTree = "<group>"; };
-		0046A99F22EAADE50038CA11 /* identityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = identityViewController.m; sourceTree = "<group>"; };
-		0046A9A022EAADE50038CA11 /* ETBuyNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETBuyNumberViewController.h; sourceTree = "<group>"; };
-		0046A9A122EAADE50038CA11 /* ETMeinCollectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETMeinCollectTableViewCell.h; sourceTree = "<group>"; };
-		0046A9A222EAADE50038CA11 /* ETPusCashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPusCashViewController.h; sourceTree = "<group>"; };
-		0046A9A322EAADE50038CA11 /* ETPutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPutViewController.m; sourceTree = "<group>"; };
-		0046A9A422EAADE50038CA11 /* ETSetUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETSetUserViewController.h; sourceTree = "<group>"; };
-		0046A9A522EAADE50038CA11 /* ETAuthenticateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETAuthenticateViewController.h; sourceTree = "<group>"; };
-		0046A9A622EAADE50038CA11 /* ETUnsubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETUnsubViewController.m; sourceTree = "<group>"; };
-		0046A9A722EAADE50038CA11 /* ETUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETUserViewController.h; sourceTree = "<group>"; };
-		0046A9A822EAADE50038CA11 /* ETPhoneNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPhoneNumberViewController.m; sourceTree = "<group>"; };
-		0046A9A922EAADE50038CA11 /* ETVIPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETVIPViewController.m; sourceTree = "<group>"; };
-		0046A9AA22EAADE50038CA11 /* ETMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETMineViewController.h; sourceTree = "<group>"; };
-		0046A9AB22EAADE50038CA11 /* ETAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETAboutViewController.m; sourceTree = "<group>"; };
+		0046AA1E22EACDE20038CA11 /* identityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = identityViewController.h; sourceTree = "<group>"; };
+		0046AA1F22EACDE20038CA11 /* ETPassWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPassWordViewController.m; sourceTree = "<group>"; };
+		0046AA2022EACDE20038CA11 /* ETCashOutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETCashOutViewController.m; sourceTree = "<group>"; };
+		0046AA2122EACDE20038CA11 /* ETAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETAccountViewController.m; sourceTree = "<group>"; };
+		0046AA2222EACDE20038CA11 /* ETTouchMeinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETTouchMeinViewController.h; sourceTree = "<group>"; };
+		0046AA2322EACDE20038CA11 /* ETStoreUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETStoreUpViewController.h; sourceTree = "<group>"; };
+		0046AA2422EACDE20038CA11 /* ETPusCashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPusCashViewController.m; sourceTree = "<group>"; };
+		0046AA2522EACDE20038CA11 /* ETMeinCollectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETMeinCollectTableViewCell.m; sourceTree = "<group>"; };
+		0046AA2622EACDE20038CA11 /* ETBuyNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETBuyNumberViewController.m; sourceTree = "<group>"; };
+		0046AA2722EACDE20038CA11 /* ETPhoneNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPhoneNumberViewController.h; sourceTree = "<group>"; };
+		0046AA2822EACDE20038CA11 /* ETUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETUserViewController.m; sourceTree = "<group>"; };
+		0046AA2922EACDE20038CA11 /* ETUnsubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETUnsubViewController.h; sourceTree = "<group>"; };
+		0046AA2A22EACDE20038CA11 /* ETAuthenticateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETAuthenticateViewController.m; sourceTree = "<group>"; };
+		0046AA2B22EACDE20038CA11 /* ETSetUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETSetUserViewController.m; sourceTree = "<group>"; };
+		0046AA2D22EACDE20038CA11 /* StaffVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaffVC.h; sourceTree = "<group>"; };
+		0046AA2E22EACDE20038CA11 /* PersonalVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalVC.h; sourceTree = "<group>"; };
+		0046AA2F22EACDE20038CA11 /* LegalPersonVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LegalPersonVC.h; sourceTree = "<group>"; };
+		0046AA3022EACDE20038CA11 /* LegalPersonVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LegalPersonVC.m; sourceTree = "<group>"; };
+		0046AA3122EACDE20038CA11 /* PersonalVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalVC.m; sourceTree = "<group>"; };
+		0046AA3222EACDE20038CA11 /* StaffVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaffVC.m; sourceTree = "<group>"; };
+		0046AA3322EACDE20038CA11 /* ETPutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPutViewController.h; sourceTree = "<group>"; };
+		0046AA3422EACDE20038CA11 /* ETAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETAboutViewController.h; sourceTree = "<group>"; };
+		0046AA3522EACDE20038CA11 /* ETMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETMineViewController.m; sourceTree = "<group>"; };
+		0046AA3822EACDE20038CA11 /* UserMegViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserMegViewController.m; sourceTree = "<group>"; };
+		0046AA3922EACDE20038CA11 /* UserMegViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMegViewController.h; sourceTree = "<group>"; };
+		0046AA3B22EACDE20038CA11 /* SaleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaleModel.h; sourceTree = "<group>"; };
+		0046AA3C22EACDE20038CA11 /* SaleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaleModel.m; sourceTree = "<group>"; };
+		0046AA3E22EACDE20038CA11 /* UserServeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserServeView.m; sourceTree = "<group>"; };
+		0046AA3F22EACDE20038CA11 /* UserSaleViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSaleViewCell.m; sourceTree = "<group>"; };
+		0046AA4022EACDE20038CA11 /* UserSaleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSaleView.m; sourceTree = "<group>"; };
+		0046AA4122EACDE20038CA11 /* UserServeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserServeView.h; sourceTree = "<group>"; };
+		0046AA4222EACDE20038CA11 /* UserSaleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSaleView.h; sourceTree = "<group>"; };
+		0046AA4322EACDE20038CA11 /* UserSaleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSaleViewCell.h; sourceTree = "<group>"; };
+		0046AA4422EACDE20038CA11 /* UserSaleViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserSaleViewCell.xib; sourceTree = "<group>"; };
+		0046AA4522EACDE20038CA11 /* ETVIPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETVIPViewController.h; sourceTree = "<group>"; };
+		0046AA4622EACDE20038CA11 /* ETTouchMeinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETTouchMeinViewController.m; sourceTree = "<group>"; };
+		0046AA4722EACDE20038CA11 /* ETStoreUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETStoreUpViewController.m; sourceTree = "<group>"; };
+		0046AA4822EACDE20038CA11 /* ETAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETAccountViewController.h; sourceTree = "<group>"; };
+		0046AA4922EACDE20038CA11 /* ETPassWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPassWordViewController.h; sourceTree = "<group>"; };
+		0046AA4A22EACDE20038CA11 /* ETCashOutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETCashOutViewController.h; sourceTree = "<group>"; };
+		0046AA4B22EACDE20038CA11 /* identityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = identityViewController.m; sourceTree = "<group>"; };
+		0046AA4C22EACDE20038CA11 /* ETBuyNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETBuyNumberViewController.h; sourceTree = "<group>"; };
+		0046AA4D22EACDE20038CA11 /* ETMeinCollectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETMeinCollectTableViewCell.h; sourceTree = "<group>"; };
+		0046AA4E22EACDE20038CA11 /* ETPusCashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPusCashViewController.h; sourceTree = "<group>"; };
+		0046AA4F22EACDE20038CA11 /* ETPutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPutViewController.m; sourceTree = "<group>"; };
+		0046AA5022EACDE20038CA11 /* ETSetUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETSetUserViewController.h; sourceTree = "<group>"; };
+		0046AA5122EACDE20038CA11 /* ETAuthenticateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETAuthenticateViewController.h; sourceTree = "<group>"; };
+		0046AA5222EACDE20038CA11 /* ETUnsubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETUnsubViewController.m; sourceTree = "<group>"; };
+		0046AA5322EACDE20038CA11 /* ETUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETUserViewController.h; sourceTree = "<group>"; };
+		0046AA5422EACDE20038CA11 /* ETPhoneNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPhoneNumberViewController.m; sourceTree = "<group>"; };
+		0046AA5522EACDE20038CA11 /* ETVIPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETVIPViewController.m; sourceTree = "<group>"; };
+		0046AA5622EACDE20038CA11 /* ETMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETMineViewController.h; sourceTree = "<group>"; };
+		0046AA5722EACDE20038CA11 /* ETAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETAboutViewController.m; sourceTree = "<group>"; };
 		004AB53822E175510056B8F5 /* ETHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETHomeViewController.h; sourceTree = "<group>"; };
 		004AB53922E175510056B8F5 /* ETHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETHomeViewController.m; sourceTree = "<group>"; };
 		004AB53B22E19A3D0056B8F5 /* ETHomeTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETHomeTopView.h; sourceTree = "<group>"; };
@@ -555,7 +555,6 @@
 		0046A95522EAAB720038CA11 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0046A97122EAADE50038CA11 /* 11 */,
 			);
 			name = Controller;
 			path = "../../../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/3e04c201e0825c87fb2ae95c38e182ba/Message/MessageTemp/08b911174bebbb4c7e2e3af7d44737f8/File/我的/Controller";
@@ -580,102 +579,102 @@
 			path = "../../../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/3e04c201e0825c87fb2ae95c38e182ba/Message/MessageTemp/08b911174bebbb4c7e2e3af7d44737f8/File/我的/View";
 			sourceTree = "<group>";
 		};
-		0046A97122EAADE50038CA11 /* 11 */ = {
+		0046AA1D22EACDE20038CA11 /* 11 */ = {
 			isa = PBXGroup;
 			children = (
-				0046A97222EAADE50038CA11 /* identityViewController.h */,
-				0046A97322EAADE50038CA11 /* ETPassWordViewController.m */,
-				0046A97422EAADE50038CA11 /* ETCashOutViewController.m */,
-				0046A97522EAADE50038CA11 /* ETAccountViewController.m */,
-				0046A97622EAADE50038CA11 /* ETTouchMeinViewController.h */,
-				0046A97722EAADE50038CA11 /* ETStoreUpViewController.h */,
-				0046A97822EAADE50038CA11 /* ETPusCashViewController.m */,
-				0046A97922EAADE50038CA11 /* ETMeinCollectTableViewCell.m */,
-				0046A97A22EAADE50038CA11 /* ETBuyNumberViewController.m */,
-				0046A97B22EAADE50038CA11 /* ETPhoneNumberViewController.h */,
-				0046A97C22EAADE50038CA11 /* ETUserViewController.m */,
-				0046A97D22EAADE50038CA11 /* ETUnsubViewController.h */,
-				0046A97E22EAADE50038CA11 /* ETAuthenticateViewController.m */,
-				0046A97F22EAADE50038CA11 /* ETSetUserViewController.m */,
-				0046A98022EAADE50038CA11 /* 认证 */,
-				0046A98722EAADE50038CA11 /* ETPutViewController.h */,
-				0046A98822EAADE50038CA11 /* ETAboutViewController.h */,
-				0046A98922EAADE50038CA11 /* ETMineViewController.m */,
-				0046A98A22EAADE50038CA11 /* 用户信息页 */,
-				0046A99922EAADE50038CA11 /* ETVIPViewController.h */,
-				0046A99A22EAADE50038CA11 /* ETTouchMeinViewController.m */,
-				0046A99B22EAADE50038CA11 /* ETStoreUpViewController.m */,
-				0046A99C22EAADE50038CA11 /* ETAccountViewController.h */,
-				0046A99D22EAADE50038CA11 /* ETPassWordViewController.h */,
-				0046A99E22EAADE50038CA11 /* ETCashOutViewController.h */,
-				0046A99F22EAADE50038CA11 /* identityViewController.m */,
-				0046A9A022EAADE50038CA11 /* ETBuyNumberViewController.h */,
-				0046A9A122EAADE50038CA11 /* ETMeinCollectTableViewCell.h */,
-				0046A9A222EAADE50038CA11 /* ETPusCashViewController.h */,
-				0046A9A322EAADE50038CA11 /* ETPutViewController.m */,
-				0046A9A422EAADE50038CA11 /* ETSetUserViewController.h */,
-				0046A9A522EAADE50038CA11 /* ETAuthenticateViewController.h */,
-				0046A9A622EAADE50038CA11 /* ETUnsubViewController.m */,
-				0046A9A722EAADE50038CA11 /* ETUserViewController.h */,
-				0046A9A822EAADE50038CA11 /* ETPhoneNumberViewController.m */,
-				0046A9A922EAADE50038CA11 /* ETVIPViewController.m */,
-				0046A9AA22EAADE50038CA11 /* ETMineViewController.h */,
-				0046A9AB22EAADE50038CA11 /* ETAboutViewController.m */,
+				0046AA1E22EACDE20038CA11 /* identityViewController.h */,
+				0046AA1F22EACDE20038CA11 /* ETPassWordViewController.m */,
+				0046AA2022EACDE20038CA11 /* ETCashOutViewController.m */,
+				0046AA2122EACDE20038CA11 /* ETAccountViewController.m */,
+				0046AA2222EACDE20038CA11 /* ETTouchMeinViewController.h */,
+				0046AA2322EACDE20038CA11 /* ETStoreUpViewController.h */,
+				0046AA2422EACDE20038CA11 /* ETPusCashViewController.m */,
+				0046AA2522EACDE20038CA11 /* ETMeinCollectTableViewCell.m */,
+				0046AA2622EACDE20038CA11 /* ETBuyNumberViewController.m */,
+				0046AA2722EACDE20038CA11 /* ETPhoneNumberViewController.h */,
+				0046AA2822EACDE20038CA11 /* ETUserViewController.m */,
+				0046AA2922EACDE20038CA11 /* ETUnsubViewController.h */,
+				0046AA2A22EACDE20038CA11 /* ETAuthenticateViewController.m */,
+				0046AA2B22EACDE20038CA11 /* ETSetUserViewController.m */,
+				0046AA2C22EACDE20038CA11 /* 认证 */,
+				0046AA3322EACDE20038CA11 /* ETPutViewController.h */,
+				0046AA3422EACDE20038CA11 /* ETAboutViewController.h */,
+				0046AA3522EACDE20038CA11 /* ETMineViewController.m */,
+				0046AA3622EACDE20038CA11 /* 用户信息页 */,
+				0046AA4522EACDE20038CA11 /* ETVIPViewController.h */,
+				0046AA4622EACDE20038CA11 /* ETTouchMeinViewController.m */,
+				0046AA4722EACDE20038CA11 /* ETStoreUpViewController.m */,
+				0046AA4822EACDE20038CA11 /* ETAccountViewController.h */,
+				0046AA4922EACDE20038CA11 /* ETPassWordViewController.h */,
+				0046AA4A22EACDE20038CA11 /* ETCashOutViewController.h */,
+				0046AA4B22EACDE20038CA11 /* identityViewController.m */,
+				0046AA4C22EACDE20038CA11 /* ETBuyNumberViewController.h */,
+				0046AA4D22EACDE20038CA11 /* ETMeinCollectTableViewCell.h */,
+				0046AA4E22EACDE20038CA11 /* ETPusCashViewController.h */,
+				0046AA4F22EACDE20038CA11 /* ETPutViewController.m */,
+				0046AA5022EACDE20038CA11 /* ETSetUserViewController.h */,
+				0046AA5122EACDE20038CA11 /* ETAuthenticateViewController.h */,
+				0046AA5222EACDE20038CA11 /* ETUnsubViewController.m */,
+				0046AA5322EACDE20038CA11 /* ETUserViewController.h */,
+				0046AA5422EACDE20038CA11 /* ETPhoneNumberViewController.m */,
+				0046AA5522EACDE20038CA11 /* ETVIPViewController.m */,
+				0046AA5622EACDE20038CA11 /* ETMineViewController.h */,
+				0046AA5722EACDE20038CA11 /* ETAboutViewController.m */,
 			);
 			path = 11;
 			sourceTree = "<group>";
 		};
-		0046A98022EAADE50038CA11 /* 认证 */ = {
+		0046AA2C22EACDE20038CA11 /* 认证 */ = {
 			isa = PBXGroup;
 			children = (
-				0046A98122EAADE50038CA11 /* StaffVC.h */,
-				0046A98222EAADE50038CA11 /* PersonalVC.h */,
-				0046A98322EAADE50038CA11 /* LegalPersonVC.h */,
-				0046A98422EAADE50038CA11 /* LegalPersonVC.m */,
-				0046A98522EAADE50038CA11 /* PersonalVC.m */,
-				0046A98622EAADE50038CA11 /* StaffVC.m */,
+				0046AA2D22EACDE20038CA11 /* StaffVC.h */,
+				0046AA2E22EACDE20038CA11 /* PersonalVC.h */,
+				0046AA2F22EACDE20038CA11 /* LegalPersonVC.h */,
+				0046AA3022EACDE20038CA11 /* LegalPersonVC.m */,
+				0046AA3122EACDE20038CA11 /* PersonalVC.m */,
+				0046AA3222EACDE20038CA11 /* StaffVC.m */,
 			);
 			path = "认证";
 			sourceTree = "<group>";
 		};
-		0046A98A22EAADE50038CA11 /* 用户信息页 */ = {
+		0046AA3622EACDE20038CA11 /* 用户信息页 */ = {
 			isa = PBXGroup;
 			children = (
-				0046A98B22EAADE50038CA11 /* Controller */,
-				0046A98E22EAADE50038CA11 /* Model */,
-				0046A99122EAADE50038CA11 /* View */,
+				0046AA3722EACDE20038CA11 /* Controller */,
+				0046AA3A22EACDE20038CA11 /* Model */,
+				0046AA3D22EACDE20038CA11 /* View */,
 			);
 			path = "用户信息页";
 			sourceTree = "<group>";
 		};
-		0046A98B22EAADE50038CA11 /* Controller */ = {
+		0046AA3722EACDE20038CA11 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0046A98C22EAADE50038CA11 /* UserMegViewController.m */,
-				0046A98D22EAADE50038CA11 /* UserMegViewController.h */,
+				0046AA3822EACDE20038CA11 /* UserMegViewController.m */,
+				0046AA3922EACDE20038CA11 /* UserMegViewController.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		0046A98E22EAADE50038CA11 /* Model */ = {
+		0046AA3A22EACDE20038CA11 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0046A98F22EAADE50038CA11 /* SaleModel.h */,
-				0046A99022EAADE50038CA11 /* SaleModel.m */,
+				0046AA3B22EACDE20038CA11 /* SaleModel.h */,
+				0046AA3C22EACDE20038CA11 /* SaleModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		0046A99122EAADE50038CA11 /* View */ = {
+		0046AA3D22EACDE20038CA11 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0046A99222EAADE50038CA11 /* UserServeView.m */,
-				0046A99322EAADE50038CA11 /* UserSaleViewCell.m */,
-				0046A99422EAADE50038CA11 /* UserSaleView.m */,
-				0046A99522EAADE50038CA11 /* UserServeView.h */,
-				0046A99622EAADE50038CA11 /* UserSaleView.h */,
-				0046A99722EAADE50038CA11 /* UserSaleViewCell.h */,
-				0046A99822EAADE50038CA11 /* UserSaleViewCell.xib */,
+				0046AA3E22EACDE20038CA11 /* UserServeView.m */,
+				0046AA3F22EACDE20038CA11 /* UserSaleViewCell.m */,
+				0046AA4022EACDE20038CA11 /* UserSaleView.m */,
+				0046AA4122EACDE20038CA11 /* UserServeView.h */,
+				0046AA4222EACDE20038CA11 /* UserSaleView.h */,
+				0046AA4322EACDE20038CA11 /* UserSaleViewCell.h */,
+				0046AA4422EACDE20038CA11 /* UserSaleViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -849,6 +848,7 @@
 		007FAD5022E044A4001EC5F2 /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
+				0046AA1D22EACDE20038CA11 /* 11 */,
 				0046A95522EAAB720038CA11 /* Controller */,
 				0046A94D22EAAB720038CA11 /* MCPageView */,
 				0046A95222EAAB720038CA11 /* Model */,
@@ -1437,7 +1437,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0046A9BE22EAADE50038CA11 /* UserSaleViewCell.xib in Resources */,
+				0046AA6A22EACDE30038CA11 /* UserSaleViewCell.xib in Resources */,
 				007FAE8222E06EE8001EC5F2 /* AlipaySDK.bundle in Resources */,
 				007FADF422E052C3001EC5F2 /* SVProgressHUD.bundle in Resources */,
 				007FAD0C22E0236F001EC5F2 /* Assets.xcassets in Resources */,
@@ -1509,83 +1509,83 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0046AA6222EACDE30038CA11 /* PersonalVC.m in Sources */,
 				007FAE2522E052FD001EC5F2 /* UIButton+AHKit.m in Sources */,
 				007FADA222E05228001EC5F2 /* LGAlertViewWindow.m in Sources */,
 				004AB54922E1C5BF0056B8F5 /* ETHomeViewListCell.m in Sources */,
 				007FADA622E05228001EC5F2 /* LGAlertViewWindowsObserver.m in Sources */,
 				0046A96722EAAB720038CA11 /* UIView+QQFrame.m in Sources */,
+				0046AA5B22EACDE30038CA11 /* ETPusCashViewController.m in Sources */,
 				007FADEB22E052C3001EC5F2 /* WRCustomNavigationBar.m in Sources */,
 				007FADEC22E052C3001EC5F2 /* ACMyBenchToolCollectionViewCell.m in Sources */,
+				0046AA6522EACDE30038CA11 /* UserMegViewController.m in Sources */,
+				0046AA5A22EACDE30038CA11 /* ETAccountViewController.m in Sources */,
 				007FAD9822E05228001EC5F2 /* ACToastView.m in Sources */,
+				0046AA6822EACDE30038CA11 /* UserSaleViewCell.m in Sources */,
 				0046A96622EAAB720038CA11 /* MCPageView.m in Sources */,
-				0046A9C222EAADE50038CA11 /* ETPutViewController.m in Sources */,
-				0046A9BB22EAADE50038CA11 /* UserServeView.m in Sources */,
+				0046AA6B22EACDE30038CA11 /* ETTouchMeinViewController.m in Sources */,
 				007FAD9A22E05228001EC5F2 /* ACLoadingAlert.m in Sources */,
-				0046A9BA22EAADE50038CA11 /* SaleModel.m in Sources */,
 				007FAE3C22E0539F001EC5F2 /* SSCacheManager.m in Sources */,
 				0046A96F22EAAB720038CA11 /* WrongSpeakBtn.m in Sources */,
 				007FAD6422E05142001EC5F2 /* SSNotificationCenterName.m in Sources */,
 				0046A97022EAAB720038CA11 /* MEVIPTableViewCell.m in Sources */,
-				0046A9BF22EAADE50038CA11 /* ETTouchMeinViewController.m in Sources */,
+				0046AA6E22EACDE30038CA11 /* ETPutViewController.m in Sources */,
 				007FADFF22E052C3001EC5F2 /* OTAutoScrollView.m in Sources */,
 				007FAD4222E03E66001EC5F2 /* ACViewController.m in Sources */,
+				0046AA6C22EACDE30038CA11 /* ETStoreUpViewController.m in Sources */,
+				0046AA5822EACDE30038CA11 /* ETPassWordViewController.m in Sources */,
 				007FAD9922E05228001EC5F2 /* AHKToastView.m in Sources */,
 				007FADA822E05228001EC5F2 /* LGAlertViewController.m in Sources */,
+				0046AA7222EACDE30038CA11 /* ETAboutViewController.m in Sources */,
+				0046AA6F22EACDE30038CA11 /* ETUnsubViewController.m in Sources */,
 				007FADF622E052C3001EC5F2 /* OTSyncContainerView.m in Sources */,
-				0046A9C422EAADE50038CA11 /* ETPhoneNumberViewController.m in Sources */,
+				0046AA6722EACDE30038CA11 /* UserServeView.m in Sources */,
 				2E0CDF1822E83C8800783952 /* ETIntelligenceViewController.m in Sources */,
 				007FAE4022E0539F001EC5F2 /* DCObjManager.m in Sources */,
 				007FADF822E052C3001EC5F2 /* OTSyncView.m in Sources */,
 				007FADFB22E052C3001EC5F2 /* ApiXml.mm in Sources */,
-				0046A9B122EAADE50038CA11 /* ETBuyNumberViewController.m in Sources */,
 				007FAE2722E052FD001EC5F2 /* UIBarButtonItem+Extension.m in Sources */,
 				007FADEE22E052C3001EC5F2 /* OTDynamicGridModel.m in Sources */,
+				0046AA6122EACDE30038CA11 /* LegalPersonVC.m in Sources */,
 				007FAE3F22E0539F001EC5F2 /* DCCheckRegular.m in Sources */,
 				007FADF022E052C3001EC5F2 /* SVRadialGradientLayer.m in Sources */,
 				007FAE5022E05640001EC5F2 /* SSPayUtils.m in Sources */,
 				007FAE2122E052FD001EC5F2 /* UILabel+ChangeLineSpaceAndWordSpace.m in Sources */,
 				0046A96822EAAB720038CA11 /* ETMineModel.m in Sources */,
+				0046AA5F22EACDE30038CA11 /* ETAuthenticateViewController.m in Sources */,
 				007FAD4522E03E66001EC5F2 /* STApiHelper.m in Sources */,
-				0046A9BC22EAADE50038CA11 /* UserSaleViewCell.m in Sources */,
+				0046AA5C22EACDE30038CA11 /* ETMeinCollectTableViewCell.m in Sources */,
 				007FADAD22E05228001EC5F2 /* ACAlertView.m in Sources */,
 				007FAD9E22E05228001EC5F2 /* APAuthInfo.m in Sources */,
 				007FAE8922E0A082001EC5F2 /* ETRegisterViewController.m in Sources */,
 				007FAE2C22E052FD001EC5F2 /* UIView+Extension.m in Sources */,
-				0046A9B022EAADE50038CA11 /* ETMeinCollectTableViewCell.m in Sources */,
-				0046A9AE22EAADE50038CA11 /* ETAccountViewController.m in Sources */,
 				007FAE2222E052FD001EC5F2 /* UIBarButtonItem+DCBarButtonItem.m in Sources */,
 				007FADA922E05228001EC5F2 /* LGAlertViewButton.m in Sources */,
-				0046A9B722EAADE50038CA11 /* StaffVC.m in Sources */,
 				0046A96D22EAAB720038CA11 /* ETMTableViewCell.m in Sources */,
 				007FAE2B22E052FD001EC5F2 /* NSString+AHKit.m in Sources */,
-				0046A9AC22EAADE50038CA11 /* ETPassWordViewController.m in Sources */,
 				007FAE2822E052FD001EC5F2 /* SQPrintJsonLog.m in Sources */,
 				007FAE4922E05492001EC5F2 /* UserInfoModel.m in Sources */,
 				007FADFE22E052C3001EC5F2 /* WTPayManager.m in Sources */,
 				007FAE0022E052C3001EC5F2 /* SMPageControl.m in Sources */,
-				0046A9B622EAADE50038CA11 /* PersonalVC.m in Sources */,
 				007FAE8622E075CF001EC5F2 /* ETLoginViewController.m in Sources */,
+				0046AA7022EACDE30038CA11 /* ETPhoneNumberViewController.m in Sources */,
 				007FADA322E05228001EC5F2 /* LGAlertViewWindowContainer.m in Sources */,
+				0046AA6922EACDE30038CA11 /* UserSaleView.m in Sources */,
 				007FAE5622E05DDB001EC5F2 /* ETEnterpriseServiceController.m in Sources */,
 				2E0CDF1B22E83CA200783952 /* ETPuzzleViewController.m in Sources */,
-				0046A9B322EAADE50038CA11 /* ETAuthenticateViewController.m in Sources */,
 				2E0CDF1E22E83DC900783952 /* ETEnterpriseServiceTableViewCell.m in Sources */,
-				0046A9AF22EAADE50038CA11 /* ETPusCashViewController.m in Sources */,
-				0046A9C622EAADE50038CA11 /* ETAboutViewController.m in Sources */,
 				007FADF222E052C3001EC5F2 /* SVProgressHUD.m in Sources */,
+				0046AA6322EACDE30038CA11 /* StaffVC.m in Sources */,
 				004AB54022E19D040056B8F5 /* ETHomeHeaderView.m in Sources */,
 				007FAE2022E052FD001EC5F2 /* UIView+Frame.m in Sources */,
-				0046A9B222EAADE50038CA11 /* ETUserViewController.m in Sources */,
 				007FAE3D22E0539F001EC5F2 /* DCSpeedy.m in Sources */,
 				007FAE4D22E05540001EC5F2 /* SSUserLoginModel.m in Sources */,
 				2E7161B022E98800008B72CF /* ETRKongViewController.m in Sources */,
 				007FAD4422E03E66001EC5F2 /* SSNavigationController.m in Sources */,
-				0046A9B822EAADE50038CA11 /* ETMineViewController.m in Sources */,
 				007FADF722E052C3001EC5F2 /* OTSyncViewStyleConfig.m in Sources */,
-				0046A9B922EAADE50038CA11 /* UserMegViewController.m in Sources */,
-				0046A9C122EAADE50038CA11 /* identityViewController.m in Sources */,
 				007FADAC22E05228001EC5F2 /* LGAlertView+AHKAlertView.m in Sources */,
 				007FAE0122E052C3001EC5F2 /* OTAutoScrollViewStyleConfig.m in Sources */,
+				0046AA6422EACDE30038CA11 /* ETMineViewController.m in Sources */,
 				007FAE3E22E0539F001EC5F2 /* SSAppVersionTool.m in Sources */,
 				0046A96B22EAAB720038CA11 /* ETMineVIew.m in Sources */,
 				2E7161AA22E97AED008B72CF /* MarqueeView.m in Sources */,
@@ -1602,45 +1602,45 @@
 				007FADF922E052C3001EC5F2 /* OTTextView.m in Sources */,
 				007FADFC22E052C3001EC5F2 /* payRequsestHandler.mm in Sources */,
 				2E0CDF0C22E83C1F00783952 /* ETBusinessViewController.m in Sources */,
+				0046AA6622EACDE30038CA11 /* SaleModel.m in Sources */,
 				007FAD4322E03E66001EC5F2 /* MainViewController.m in Sources */,
-				0046A9B422EAADE50038CA11 /* ETSetUserViewController.m in Sources */,
 				007FADAB22E05228001EC5F2 /* UIWindow+LGAlertView.m in Sources */,
+				0046AA6D22EACDE30038CA11 /* identityViewController.m in Sources */,
 				007FAD6322E05142001EC5F2 /* SSJewelryCore.m in Sources */,
-				0046A9C022EAADE50038CA11 /* ETStoreUpViewController.m in Sources */,
 				007FAD9B22E05228001EC5F2 /* ACLoadingHUD.m in Sources */,
 				007FADED22E052C3001EC5F2 /* OTDynamicGridViewStyleConfig.m in Sources */,
 				007FADA122E05228001EC5F2 /* LGAlertViewTextField.m in Sources */,
 				007FADEA22E052C3001EC5F2 /* WRNavigationBar.m in Sources */,
 				007FADF122E052C3001EC5F2 /* SVProgressAnimatedView.m in Sources */,
-				0046A9B522EAADE50038CA11 /* LegalPersonVC.m in Sources */,
 				004AB54622E1BB130056B8F5 /* ETHomeHeaderAutoScrollCell.m in Sources */,
 				007FADFA22E052C3001EC5F2 /* WXUtil.mm in Sources */,
 				007FADE922E052C3001EC5F2 /* OTButton.m in Sources */,
 				007FAE6222E05F1B001EC5F2 /* ETReleaseViewController.m in Sources */,
 				004AB53D22E19A3D0056B8F5 /* ETHomeTopView.m in Sources */,
-				0046A9C322EAADE50038CA11 /* ETUnsubViewController.m in Sources */,
-				0046A9BD22EAADE50038CA11 /* UserSaleView.m in Sources */,
 				007FAE2922E052FD001EC5F2 /* UIImage+AHKit.m in Sources */,
 				0046A96E22EAAB720038CA11 /* ETMETableViewCell.m in Sources */,
 				007FADFD22E052C3001EC5F2 /* WXApiManager.m in Sources */,
+				0046AA6022EACDE30038CA11 /* ETSetUserViewController.m in Sources */,
 				007FADF322E052C3001EC5F2 /* SVIndefiniteAnimatedView.m in Sources */,
 				007FAE4222E0539F001EC5F2 /* AHKeychain.m in Sources */,
 				007FAD0422E0236F001EC5F2 /* AppDelegate.m in Sources */,
-				0046A9C522EAADE50038CA11 /* ETVIPViewController.m in Sources */,
 				007FAD9D22E05228001EC5F2 /* APOrderInfo.m in Sources */,
 				007FAE1F22E052FD001EC5F2 /* NSNumber+AHKit.m in Sources */,
 				004AB54322E1A6B60056B8F5 /* ETHomeModel.m in Sources */,
 				007FAE2322E052FD001EC5F2 /* UIImage+GradientColor.m in Sources */,
 				007FADA522E05228001EC5F2 /* LGAlertViewCell.m in Sources */,
+				0046AA7122EACDE30038CA11 /* ETVIPViewController.m in Sources */,
 				2E30B4C622E59D940079F1CE /* ETMessageTableView.m in Sources */,
 				007FADEF22E052C3001EC5F2 /* OTDynamicGridView.m in Sources */,
 				007FAE4122E0539F001EC5F2 /* DCPlaceholderTextView.m in Sources */,
 				007FAE5C22E05E2D001EC5F2 /* ETMessageCenterController.m in Sources */,
 				007FAE2422E052FD001EC5F2 /* UIView+AHkit.m in Sources */,
+				0046AA5922EACDE30038CA11 /* ETCashOutViewController.m in Sources */,
 				2E0CDF1522E83C7000783952 /* ETFinancialViewController.m in Sources */,
 				007FADA022E05228001EC5F2 /* AHKAlertView.m in Sources */,
-				0046A9AD22EAADE50038CA11 /* ETCashOutViewController.m in Sources */,
 				007FAE2622E052FD001EC5F2 /* UIView+AZGradient.m in Sources */,
+				0046AA5D22EACDE30038CA11 /* ETBuyNumberViewController.m in Sources */,
+				0046AA5E22EACDE30038CA11 /* ETUserViewController.m in Sources */,
 				2E0CDF1222E83C5500783952 /* ETAdministrationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
