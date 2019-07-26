@@ -10,6 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol AccountBindingDelegate <NSObject>
+- (void)imgjumpWeb:(UIImageView*)sender;
+
 - (void)jumpWebVC:(UIButton*)sender;
 - (void)jumpWebVC1:(UIButton*)sender;
 - (void)jumpWebVC2:(UIButton*)sender;

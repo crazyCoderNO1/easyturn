@@ -90,7 +90,9 @@ static NSString *const cellIdentifier =@"cellIdentifier";
 //    [_tableView deselectRowAtIndexPath:indexPath animated:YES];
 //}
 
--(void)photoWebVC:(UIImageView *)sender
+
+
+-(void)imgjumpWeb:(UIImageView *)sender
 {
     UserMegViewController*user=[[UserMegViewController alloc]init];
     UIBarButtonItem *backItem = [UIBarButtonItem new];

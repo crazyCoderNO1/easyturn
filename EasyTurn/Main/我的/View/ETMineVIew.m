@@ -10,6 +10,7 @@
 #import "Masonry.h"
 #import "WrongSpeakBtn.h"
 #import "ETPutViewController.h"
+#import "UserMegViewController.h"
 @implementation ETMineVIew
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -246,6 +247,7 @@
     if (!_img) {
         _img=[[UIImageView alloc]init];
         _img.image=[UIImage imageNamed:@"我的_背景"];
+        _img.userInteractionEnabled=YES;
         
     }
     return _img;
@@ -255,8 +257,18 @@
     if (!_photoImg) {
         _photoImg=[[UIImageView alloc]init];
         _photoImg.image=[UIImage imageNamed:@"我的_Bitmap"];
+        _photoImg.userInteractionEnabled=YES;
+        UITapGestureRecognizer *singleTap =[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(onClickImage:)];
+        [_photoImg addGestureRecognizer:singleTap];
     }
     return _photoImg;
+}
+
+- (void)onClickImage:(UIImageView*)sender
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(imgjumpWeb:)]) {
+        [self.delegate imgjumpWeb:sender];
+    }
 }
 
 - (UILabel *)nameLab {
@@ -302,8 +314,17 @@
         _signBtn.titleLabel.font=[UIFont systemFontOfSize:13];
         [_signBtn setTitle:@"签到" forState:UIControlStateNormal];
         [_signBtn setTitle:@"已签到" forState:UIControlStateSelected];
+        [_signBtn addTarget:self action:@selector(aaa) forControlEvents:UIControlEventTouchUpInside];
     }
     return _signBtn;
+}
+
+- (void)aaa {
+    if (_signBtn.selected==YES) {
+        _signBtn.selected=NO;
+    }else {
+        _signBtn.selected=YES;
+    }
 }
 
 - (UIButton *)putBtn {
