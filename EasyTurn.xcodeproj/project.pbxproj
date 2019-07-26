@@ -225,7 +225,6 @@
 		0046AA4822EACDE20038CA11 /* ETAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETAccountViewController.h; sourceTree = "<group>"; };
 		0046AA4922EACDE20038CA11 /* ETPassWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPassWordViewController.h; sourceTree = "<group>"; };
 		0046AA4A22EACDE20038CA11 /* ETCashOutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETCashOutViewController.h; sourceTree = "<group>"; };
-		0046AA4B22EACDE20038CA11 /* identityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = identityViewController.m; sourceTree = "<group>"; };
 		0046AA4C22EACDE20038CA11 /* ETBuyNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETBuyNumberViewController.h; sourceTree = "<group>"; };
 		0046AA4D22EACDE20038CA11 /* ETMeinCollectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETMeinCollectTableViewCell.h; sourceTree = "<group>"; };
 		0046AA4E22EACDE20038CA11 /* ETPusCashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPusCashViewController.h; sourceTree = "<group>"; };
@@ -533,59 +532,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0046AA1D22EACDE20038CA11 /* 11 */ = {
+		0046AA1D22EACDE20038CA11 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0046AA1E22EACDE20038CA11 /* identityViewController.h */,
-				0046AA1F22EACDE20038CA11 /* ETPassWordViewController.m */,
-				0046AA2022EACDE20038CA11 /* ETCashOutViewController.m */,
-				0046AA2122EACDE20038CA11 /* ETAccountViewController.m */,
-				0046AA2222EACDE20038CA11 /* ETTouchMeinViewController.h */,
-				0046AA2322EACDE20038CA11 /* ETStoreUpViewController.h */,
-				0046AA2422EACDE20038CA11 /* ETPusCashViewController.m */,
-				0046AA2522EACDE20038CA11 /* ETMeinCollectTableViewCell.m */,
-				0046AA2622EACDE20038CA11 /* ETBuyNumberViewController.m */,
-				0046AA2722EACDE20038CA11 /* ETPhoneNumberViewController.h */,
-				0046AA2822EACDE20038CA11 /* ETUserViewController.m */,
-				0046AA2922EACDE20038CA11 /* ETUnsubViewController.h */,
-				0046AA2A22EACDE20038CA11 /* ETAuthenticateViewController.m */,
-				0046AA2B22EACDE20038CA11 /* ETSetUserViewController.m */,
 				0046AA2C22EACDE20038CA11 /* 认证 */,
-				0046AA3322EACDE20038CA11 /* ETPutViewController.h */,
-				0046AA3422EACDE20038CA11 /* ETAboutViewController.h */,
-				0046AA3522EACDE20038CA11 /* ETMineViewController.m */,
 				0046AA3622EACDE20038CA11 /* 用户信息页 */,
-				0046AA4522EACDE20038CA11 /* ETVIPViewController.h */,
-				0046AA4622EACDE20038CA11 /* ETTouchMeinViewController.m */,
-				0046AA4722EACDE20038CA11 /* ETStoreUpViewController.m */,
+				0046AA3422EACDE20038CA11 /* ETAboutViewController.h */,
+				0046AA5722EACDE20038CA11 /* ETAboutViewController.m */,
 				0046AA4822EACDE20038CA11 /* ETAccountViewController.h */,
-				0046AA4922EACDE20038CA11 /* ETPassWordViewController.h */,
-				0046AA4A22EACDE20038CA11 /* ETCashOutViewController.h */,
-				0046AA4B22EACDE20038CA11 /* identityViewController.m */,
+				0046AA2122EACDE20038CA11 /* ETAccountViewController.m */,
+				0046AA5122EACDE20038CA11 /* ETAuthenticateViewController.h */,
+				0046AA2A22EACDE20038CA11 /* ETAuthenticateViewController.m */,
 				0046AA4C22EACDE20038CA11 /* ETBuyNumberViewController.h */,
+				0046AA2622EACDE20038CA11 /* ETBuyNumberViewController.m */,
+				0046AA4A22EACDE20038CA11 /* ETCashOutViewController.h */,
+				0046AA2022EACDE20038CA11 /* ETCashOutViewController.m */,
 				0046AA4D22EACDE20038CA11 /* ETMeinCollectTableViewCell.h */,
+				0046AA2522EACDE20038CA11 /* ETMeinCollectTableViewCell.m */,
+				0046AA5622EACDE20038CA11 /* ETMineViewController.h */,
+				0046AA3522EACDE20038CA11 /* ETMineViewController.m */,
+				0046AA4922EACDE20038CA11 /* ETPassWordViewController.h */,
+				0046AA1F22EACDE20038CA11 /* ETPassWordViewController.m */,
+				0046AA2722EACDE20038CA11 /* ETPhoneNumberViewController.h */,
+				0046AA5422EACDE20038CA11 /* ETPhoneNumberViewController.m */,
 				0046AA4E22EACDE20038CA11 /* ETPusCashViewController.h */,
+				0046AA2422EACDE20038CA11 /* ETPusCashViewController.m */,
+				0046AA3322EACDE20038CA11 /* ETPutViewController.h */,
 				0046AA4F22EACDE20038CA11 /* ETPutViewController.m */,
 				0046AA5022EACDE20038CA11 /* ETSetUserViewController.h */,
-				0046AA5122EACDE20038CA11 /* ETAuthenticateViewController.h */,
+				0046AA2B22EACDE20038CA11 /* ETSetUserViewController.m */,
+				0046AA2322EACDE20038CA11 /* ETStoreUpViewController.h */,
+				0046AA4722EACDE20038CA11 /* ETStoreUpViewController.m */,
+				0046AA2222EACDE20038CA11 /* ETTouchMeinViewController.h */,
+				0046AA4622EACDE20038CA11 /* ETTouchMeinViewController.m */,
+				0046AA2922EACDE20038CA11 /* ETUnsubViewController.h */,
 				0046AA5222EACDE20038CA11 /* ETUnsubViewController.m */,
 				0046AA5322EACDE20038CA11 /* ETUserViewController.h */,
-				0046AA5422EACDE20038CA11 /* ETPhoneNumberViewController.m */,
+				0046AA2822EACDE20038CA11 /* ETUserViewController.m */,
+				0046AA4522EACDE20038CA11 /* ETVIPViewController.h */,
 				0046AA5522EACDE20038CA11 /* ETVIPViewController.m */,
-				0046AA5622EACDE20038CA11 /* ETMineViewController.h */,
-				0046AA5722EACDE20038CA11 /* ETAboutViewController.m */,
 			);
-			path = 11;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		0046AA2C22EACDE20038CA11 /* 认证 */ = {
 			isa = PBXGroup;
 			children = (
-				0046AA2D22EACDE20038CA11 /* StaffVC.h */,
-				0046AA2E22EACDE20038CA11 /* PersonalVC.h */,
 				0046AA2F22EACDE20038CA11 /* LegalPersonVC.h */,
 				0046AA3022EACDE20038CA11 /* LegalPersonVC.m */,
+				0046AA2E22EACDE20038CA11 /* PersonalVC.h */,
 				0046AA3122EACDE20038CA11 /* PersonalVC.m */,
+				0046AA2D22EACDE20038CA11 /* StaffVC.h */,
 				0046AA3222EACDE20038CA11 /* StaffVC.m */,
 			);
 			path = "认证";
@@ -805,8 +802,7 @@
 				2E1CDA8F22EAD09600174F08 /* MCPageView */,
 				2E1CDA8C22EAD09600174F08 /* Model */,
 				2E1CDA7E22EAD09600174F08 /* View */,
-				2E1CDA7A22EAD07F00174F08 /* Controller */,
-				0046AA1D22EACDE20038CA11 /* 11 */,
+				0046AA1D22EACDE20038CA11 /* Controller */,
 			);
 			path = "我的";
 			sourceTree = "<group>";
@@ -1242,27 +1238,20 @@
 			path = NetWorking;
 			sourceTree = "<group>";
 		};
-		2E1CDA7A22EAD07F00174F08 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		2E1CDA7E22EAD09600174F08 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				2E1CDA8022EAD09600174F08 /* ETMETableViewCell.h */,
-				2E1CDA8122EAD09600174F08 /* ETMTableViewCell.h */,
-				2E1CDA8222EAD09600174F08 /* WrongSpeakBtn.h */,
-				2E1CDA8322EAD09600174F08 /* ETMineVIew.m */,
-				2E1CDA8422EAD09600174F08 /* ETMTableViewCell.xib */,
-				2E1CDA8522EAD09600174F08 /* MEVIPTableViewCell.h */,
-				2E1CDA8622EAD09600174F08 /* ETMTableViewCell.m */,
 				2E1CDA8722EAD09600174F08 /* ETMETableViewCell.m */,
 				2E1CDA8922EAD09600174F08 /* ETMineVIew.h */,
-				2E1CDA8A22EAD09600174F08 /* WrongSpeakBtn.m */,
+				2E1CDA8322EAD09600174F08 /* ETMineVIew.m */,
+				2E1CDA8122EAD09600174F08 /* ETMTableViewCell.h */,
+				2E1CDA8622EAD09600174F08 /* ETMTableViewCell.m */,
+				2E1CDA8422EAD09600174F08 /* ETMTableViewCell.xib */,
+				2E1CDA8522EAD09600174F08 /* MEVIPTableViewCell.h */,
 				2E1CDA8B22EAD09600174F08 /* MEVIPTableViewCell.m */,
+				2E1CDA8222EAD09600174F08 /* WrongSpeakBtn.h */,
+				2E1CDA8A22EAD09600174F08 /* WrongSpeakBtn.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1616,7 +1605,6 @@
 				0046AA6622EACDE30038CA11 /* SaleModel.m in Sources */,
 				007FAD4322E03E66001EC5F2 /* MainViewController.m in Sources */,
 				007FADAB22E05228001EC5F2 /* UIWindow+LGAlertView.m in Sources */,
-				0046AA6D22EACDE30038CA11 /* identityViewController.m in Sources */,
 				007FAD6322E05142001EC5F2 /* SSJewelryCore.m in Sources */,
 				007FAD9B22E05228001EC5F2 /* ACLoadingHUD.m in Sources */,
 				007FADED22E052C3001EC5F2 /* OTDynamicGridViewStyleConfig.m in Sources */,
@@ -1808,7 +1796,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6467D2S34F;
+				DEVELOPMENT_TEAM = P79622B5H8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EasyTurn/Vendors(第三方)/aliPayTools",
@@ -1842,7 +1830,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6467D2S34F;
+				DEVELOPMENT_TEAM = P79622B5H8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EasyTurn/Vendors(第三方)/aliPayTools",

@@ -242,7 +242,14 @@ typedef NS_ENUM(NSUInteger, ETLoginViewControllerType) {
     }else{
         NSLog(@"未安装微信");
     }
-
+    [self.window.rootViewController removeFromParentViewController];
+    MainViewController * mainvc = [[MainViewController alloc]init];
+    SSNavigationController * naviRoot = [[SSNavigationController alloc] initWithRootViewController:mainvc];
+    naviRoot.navigationBarHidden = NO;
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen]bounds]];
+    [self.window setRootViewController:naviRoot];
+    [self.window setBackgroundColor:kACColorWhite];
+    [self.window makeKeyAndVisible];
     
 }
 
