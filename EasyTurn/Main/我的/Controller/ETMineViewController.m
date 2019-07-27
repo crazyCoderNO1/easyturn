@@ -76,8 +76,7 @@ static NSString *const cellIdentifier =@"cellIdentifier";
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ETMETableViewCell*cell=[tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    
-    
+
     return cell;
     
 //    ETMETableViewCell*cell=[tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
@@ -91,6 +90,14 @@ static NSString *const cellIdentifier =@"cellIdentifier";
 //}
 
 
+- (void)putjumpWeb:(UIButton *)sender {
+    ETPutViewController*putVC=[ETPutViewController new];
+    UIBarButtonItem *backItem = [UIBarButtonItem new];
+    backItem.title = @"返回";
+    self.navigationItem.backBarButtonItem = backItem;
+    [self.navigationController pushViewController:putVC animated:YES];
+}
+
 
 -(void)imgjumpWeb:(UIImageView *)sender
 {
@@ -99,15 +106,6 @@ static NSString *const cellIdentifier =@"cellIdentifier";
     backItem.title = @"返回";
     self.navigationItem.backBarButtonItem = backItem;
     [self.navigationController pushViewController:user animated:YES];
-}
-
--(void)putWebVC:(UIButton *)sender
-{
-    ETPutViewController*putVC=[ETPutViewController new];
-    UIBarButtonItem *backItem = [UIBarButtonItem new];
-    backItem.title = @"返回";
-    self.navigationItem.backBarButtonItem = backItem;
-    [self.navigationController pushViewController:putVC animated:YES];
 }
 
 - (void)jumpWebVC:(UIButton*)sender

@@ -331,9 +331,18 @@
     if (!_putBtn) {
         _putBtn=[[UIButton alloc]init];
         [_putBtn setImage:[UIImage imageNamed:@"我的_设置"] forState:UIControlStateNormal];
+        [_putBtn addTarget:self action:@selector(putAgreementBtnC:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _putBtn;
 }
+
+- (void)putAgreementBtnC:(UIButton*)sender
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(putjumpWeb:)]) {
+        [self.delegate putjumpWeb:sender];
+    }
+}
+
 
 - (UIButton *)memberv {
     if (!_memberv) {
@@ -592,6 +601,7 @@
     [btn setQJselected:NO];
     [btn layoutSubviews];
 }
+
 - (void)agreementBtnClick:(UIButton*)sender
 {
     if (self.delegate && [self.delegate respondsToSelector:@selector(jumpWebVC:)]) {
