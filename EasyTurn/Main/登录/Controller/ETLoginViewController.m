@@ -160,10 +160,10 @@ typedef NS_ENUM(NSUInteger, ETLoginViewControllerType) {
     [_btnSecurityCode setTitleColor:kACColorRGB(20, 138, 236) forState:UIControlStateNormal];
     _btnSecurityCode.titleLabel.font = kFontSize(12);
     [self.view addSubview:_btnSecurityCode];
-    [_btnSecurityCode mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.tfUserName);
-        make.right.mas_equalTo(-30);
-    }];
+//    [_btnSecurityCode mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerY.equalTo(self.tfUserName);
+//        make.right.mas_equalTo(-30);
+//    }];
     
 
     _btnLogin = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -327,25 +327,37 @@ typedef NS_ENUM(NSUInteger, ETLoginViewControllerType) {
 #pragma mark - 请求网络登录
 - (void)requestLoginDataWithPhoneNum:(NSString *)phoneNum WithSecurityCode:(NSString *)code WithType:(NSInteger )type {
     [[ACToastView toastView]showLoadingCircleViewWithStatus:@"正在加载中"];
-    [UserInfoModel requestLoginDataWithPhoneNum:phoneNum
-                               WithSecurityCode:code
-                                       WithType:type
-                                        success:^(id request, STResponseModel *response, id resultObject) {
-                                            if (response.code == 0) {
-                                                [[ACToastView toastView]hide];
-                                                UserInfoModel *model = response.data;
-                                                [UserInfoModel saveUserInfoModel:model];
-                                                [[NSNotificationCenter defaultCenter]postNotificationName:LOGINSELECTCENTERINDEX object:nil];
-                                            }else{
-                                                if (response.msg.length > 0) {
-                                                    [[ACToastView toastView] showErrorWithStatus:response.msg];
-                                                } else {
-                                                    [[ACToastView toastView] showErrorWithStatus:kToastErrorServerNoErrorMessage];
-                                                }
-                                            }
-                                        } failure:^(id request, NSError *error) {
-                                            
-                                        }];
+//    [UserInfoModel requestLoginDataWithPhoneNum:phoneNum
+//                               WithSecurityCode:code
+//                                       WithType:type
+//                                        success:^(id request, STResponseModel *response, id resultObject) {
+//                                            if (response.code == 0) {
+//                                                [[ACToastView toastView]hide];
+//                                                UserInfoModel *model = response.data;
+//                                                [UserInfoModel saveUserInfoModel:model];
+//                                                [[NSNotificationCenter defaultCenter]postNotificationName:LOGINSELECTCENTERINDEX object:nil];
+//                                            }else{
+//                                                if (response.msg.length > 0) {
+//                                                    [[ACToastView toastView] showErrorWithStatus:response.msg];
+//                                                } else {
+//                                                    [[ACToastView toastView] showErrorWithStatus:kToastErrorServerNoErrorMessage];
+//                                                }
+//                                            }
+//                                        } failure:^(id request, NSError *error) {
+//
+//                                        }];
+    
+    NSDictionary *params = @{
+                             @"mobile" : @"15821414708",
+                             @"code": @"123456",
+                             @"type": @(1)
+                             };
+    [HttpTool get:[NSString stringWithFormat:@"user/login"] params:params success:^(id responseObj) {
+        NSLog(@"");
+        [[ACToastView toastView]hide];
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 
