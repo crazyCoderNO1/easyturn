@@ -359,7 +359,8 @@ static NSInteger  kPhoneTextFieldTag = 5678;
     NSMutableDictionary* dic=[NSMutableDictionary new];
         NSDictionary *params = @{
                                  @"mobile" : @"15821414708",
-                                 @"password": @"118268"
+                                 @"password": @"123456",
+                                 @"code": @"155228"
                                  };
     [HttpTool get:[NSString stringWithFormat:@"user/register"] params:params success:^(id responseObj) {
         NSLog(@"");
