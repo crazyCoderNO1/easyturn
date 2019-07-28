@@ -16,11 +16,14 @@
 
 + (void)get:(NSString *)url params:(NSDictionary *)params success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
+    NSUserDefaults* user=[NSUserDefaults standardUserDefaults];
+    NSString* token=[user objectForKey:@"token"];
     // 1.获得请求管理者
     static AFHTTPSessionManager *mgr = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         mgr = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@""]];
+        [mgr.requestSerializer setValue:token forHTTPHeaderField:@"token"];
     });
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;

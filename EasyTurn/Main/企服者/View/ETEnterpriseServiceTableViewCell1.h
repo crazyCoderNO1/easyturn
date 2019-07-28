@@ -1,22 +1,22 @@
 //
-//  ETEnterpriseServiceTableViewCell.h
+//  ETEnterpriseServiceTableViewCell1.h
 //  EasyTurn
 //
-//  Created by 王翔 on 2019/7/24.
-//  Copyright © 2019年 EasyTurn. All rights reserved.
+//  Created by 程立 on 2019/7/28.
+//  Copyright © 2019 EasyTurn. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
-@interface ETEnterpriseServiceTableViewCell : UITableViewCell
+//首页的
+@interface ETEnterpriseServiceTableViewCell1 : UITableViewCell
 @property(nonatomic,strong)UIImageView *comImg;
 @property(nonatomic,strong)UILabel *giveserviceLab;
 @property(nonatomic,strong)UILabel *serviceLab;
 @property(nonatomic,strong)UILabel *moneyLab;
 @property(nonatomic,strong)UILabel *addressLab;
 @property(nonatomic,strong)UILabel *detailsLab;
-@end
 
+@end
 NS_ASSUME_NONNULL_END

@@ -355,6 +355,10 @@ typedef NS_ENUM(NSUInteger, ETLoginViewControllerType) {
     [HttpTool get:[NSString stringWithFormat:@"user/login"] params:params success:^(id responseObj) {
         NSLog(@"");
         [[ACToastView toastView]hide];
+        NSUserDefaults* user=[NSUserDefaults standardUserDefaults];
+        NSDictionary* a=responseObj[@"data"];
+        [user setObject:[a objectForKey:@"token"] forKey:@"token"];
+        [user synchronize];
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
     }];

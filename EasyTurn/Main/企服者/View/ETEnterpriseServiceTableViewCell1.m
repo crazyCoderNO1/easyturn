@@ -1,19 +1,18 @@
 //
-//  ETEnterpriseServiceTableViewCell.m
+//  ETEnterpriseServiceTableViewCell1.m
 //  EasyTurn
 //
-//  Created by 王翔 on 2019/7/24.
-//  Copyright © 2019年 EasyTurn. All rights reserved.
+//  Created by 程立 on 2019/7/28.
+//  Copyright © 2019 EasyTurn. All rights reserved.
 //
 
-#import "ETEnterpriseServiceTableViewCell.h"
+#import "ETEnterpriseServiceTableViewCell1.h"
 
-
-@interface ETEnterpriseServiceTableViewCell ()
+@interface ETEnterpriseServiceTableViewCell1 ()
 
 @end
 
-@implementation ETEnterpriseServiceTableViewCell
+@implementation ETEnterpriseServiceTableViewCell1
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self=[super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -74,7 +73,7 @@
 - (UILabel *)giveserviceLab {
     if (!_giveserviceLab) {
         _giveserviceLab=[[UILabel alloc]init];
-        _giveserviceLab.backgroundColor=[UIColor blackColor];
+        //        _giveserviceLab.backgroundColor=[UIColor blackColor];
     }
     return _giveserviceLab;
 }
@@ -82,7 +81,7 @@
 - (UILabel *)serviceLab {
     if (!_serviceLab) {
         _serviceLab=[[UILabel alloc]init];
-        _serviceLab.backgroundColor=[UIColor blueColor];
+        //        _serviceLab.backgroundColor=[UIColor blueColor];
     }
     return _serviceLab;
 }
@@ -90,7 +89,7 @@
 - (UILabel *)moneyLab {
     if (!_moneyLab) {
         _moneyLab=[[UILabel alloc]init];
-        _moneyLab.backgroundColor=[UIColor blueColor];
+        //        _moneyLab.backgroundColor=[UIColor blueColor];
     }
     return _moneyLab;
 }
@@ -98,7 +97,7 @@
 - (UILabel *)addressLab {
     if (!_addressLab) {
         _addressLab=[[UILabel alloc]init];
-        _addressLab.backgroundColor=[UIColor blueColor];
+        //        _addressLab.backgroundColor=[UIColor blueColor];
     }
     return _addressLab;
 }
@@ -106,7 +105,7 @@
 - (UILabel *)detailsLab {
     if (!_detailsLab) {
         _detailsLab=[[UILabel alloc]init];
-         _detailsLab.backgroundColor=[UIColor blueColor];
+        //         _detailsLab.backgroundColor=[UIColor blueColor];
     }
     return _detailsLab;
 }
@@ -117,7 +116,7 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 
