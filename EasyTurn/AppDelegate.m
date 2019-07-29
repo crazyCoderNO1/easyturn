@@ -18,6 +18,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleLightContent]; 
     [WXApi registerApp:@"wx6aa68fa297ad59ee"];
     //设置根控制器
     [self appConfigProvider];

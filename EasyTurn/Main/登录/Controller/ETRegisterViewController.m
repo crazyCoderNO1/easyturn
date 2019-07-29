@@ -343,7 +343,7 @@ static NSInteger  kPhoneTextFieldTag = 5678;
 -(void)sendcode
 {
     NSDictionary *params = @{
-                             @"mobile" : @"15821414708",
+                             @"mobile" : _tfUserName.text,
                              @"type": @1
                              };
     [HttpTool get:[NSString stringWithFormat:@"user/sendCode"] params:params success:^(id responseObj) {
@@ -356,11 +356,11 @@ static NSInteger  kPhoneTextFieldTag = 5678;
 }
 #pragma mark - 注册
 - (void)onRegister {
-    NSMutableDictionary* dic=[NSMutableDictionary new];
+//    NSMutableDictionary* dic=[NSMutableDictionary new];
         NSDictionary *params = @{
-                                 @"mobile" : @"15821414708",
-                                 @"password": @"123456",
-                                 @"code": @"155228"
+                                 @"mobile" : _tfUserName.text,
+                                 @"password": _tfPassWord.text,
+                                 @"code": _tfSecurityCode.text
                                  };
     [HttpTool get:[NSString stringWithFormat:@"user/register"] params:params success:^(id responseObj) {
         NSLog(@"");

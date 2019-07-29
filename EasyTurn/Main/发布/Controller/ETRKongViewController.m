@@ -7,7 +7,8 @@
 //
 
 #import "ETRKongViewController.h"
-
+#import "ETIssueViewController.h"
+#import "ETPurchaseViewController.h"
 @interface ETRKongViewController ()
 @property (nonatomic,strong) UIImageView *publishImg;
 @property (nonatomic,strong) UILabel *publishLab;
@@ -123,8 +124,13 @@
 - (UIButton *)publishBtn {
     if (!_publishBtn) {
         _publishBtn= [[UIButton alloc]init];
+        [_publishBtn addTarget:self action:@selector(aaaaa) forControlEvents:UIControlEventTouchUpInside];
     }
     return _publishBtn;
+}
+- (void)aaaaa {
+    ETIssueViewController *is=[[ETIssueViewController alloc]init];
+    [self.navigationController pushViewController:is animated:YES];
 }
 
 - (UIImageView *)purchaseImg {
@@ -148,6 +154,7 @@
 - (UIButton *)purchaseBtn {
     if (!_purchaseBtn) {
         _purchaseBtn=[[UIButton alloc]init];
+        [_purchaseBtn addTarget:self action:@selector(aaaaa) forControlEvents:UIControlEventTouchUpInside];
     }
     return _purchaseBtn;
 }
@@ -173,6 +180,7 @@
 - (UIButton *)businessBtn {
     if (!_businessBtn) {
         _businessBtn=[[UIButton alloc]init];
+         [_businessBtn addTarget:self action:@selector(aaaaa) forControlEvents:UIControlEventTouchUpInside];
     }
     return _businessBtn;
 }
