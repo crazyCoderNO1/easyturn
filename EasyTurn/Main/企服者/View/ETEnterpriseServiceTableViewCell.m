@@ -10,12 +10,7 @@
 
 
 @interface ETEnterpriseServiceTableViewCell ()
-@property(nonatomic,strong)UIImageView *comImg;
-@property(nonatomic,strong)UILabel *giveserviceLab;
-@property(nonatomic,strong)UILabel *serviceLab;
-@property(nonatomic,strong)UILabel *moneyLab;
-@property(nonatomic,strong)UILabel *addressLab;
-@property(nonatomic,strong)UILabel *detailsLab;
+
 @end
 
 @implementation ETEnterpriseServiceTableViewCell
@@ -50,7 +45,7 @@
         [self.moneyLab mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(42);
             make.right.mas_equalTo(-15);
-            make.size.mas_equalTo(CGSizeMake(34, 17));
+            make.size.mas_equalTo(CGSizeMake(84, 17));
         }];
         
         [self.addressLab mas_makeConstraints:^(MASConstraintMaker *make) {

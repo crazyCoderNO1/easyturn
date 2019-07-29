@@ -54,6 +54,7 @@
     [_btnLocationDown setTitleColor:kACColorWhite forState:UIControlStateNormal];
     [_btnLocationDown setImage:[UIImage imageNamed:@"首页_下拉"] forState:UIControlStateNormal];
     _btnLocationDown.titleLabel.font = kFontSize(13);
+    [_btnLocationDown addTarget:self action:@selector(locationController) forControlEvents:UIControlEventTouchUpInside];
     [vBackground addSubview:_btnLocationDown];
     [_btnLocationDown mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.btnLocation);
@@ -79,5 +80,10 @@
         make.height.mas_equalTo(15);
     }];
 }
-
+-(void)locationController
+{
+    if (self.block) {
+        self.block();
+    }
+}
 @end

@@ -11,7 +11,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ETEnterpriseServiceTableViewCell : UITableViewCell
-
+@property(nonatomic,strong)UIImageView *comImg;
+@property(nonatomic,strong)UILabel *giveserviceLab;
+@property(nonatomic,strong)UILabel *serviceLab;
+@property(nonatomic,strong)UILabel *moneyLab;
+@property(nonatomic,strong)UILabel *addressLab;
+@property(nonatomic,strong)UILabel *detailsLab;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -11,11 +11,18 @@
 #import "ETHomeHeaderView.h"
 #import "ETHomeModel.h"
 #import "MarqueeView.h"
+#import "ETHomeLocationController.h"
+#import "JMColumnMenu.h"
+#import "AticleMenu.h"
+#import "ETEnterpriseServiceTableViewCell1.h"
+#import "ETProductModel.h"
 @interface ETHomeViewController ()<UITableViewDelegate, UITableViewDataSource, ETHomeHeaderViewDelegate>
 @property (nonatomic, strong) ETHomeTopView *vHomeTop;
 @property (nonatomic, strong) ETHomeHeaderView *vHomeHeader;
 @property (nonatomic, strong) UITableView *tbHome;
 @property (nonatomic, strong) MarqueeView *marqueeView;
+@property (nonatomic, strong) NSMutableArray *products;
+
 @end
 
 @implementation ETHomeViewController
@@ -69,6 +76,53 @@
     [self createSubViewsAndConstraints];
     [self requestDate];
     [self.vHomeHeader addSubview:self.marqueeView];
+    [self PostUI];
+}
+
+#pragma mark - 动态列表
+- (void)PostUI {
+    NSMutableDictionary* dic=[NSMutableDictionary new];
+    NSDictionary *params = @{
+                             @"page" : @"1",
+                             @"pageSize": @"10",
+                             @"cityId": @(2)
+                             };
+    [HttpTool get:[NSString stringWithFormat:@"product/dynamic"] params:params success:^(id responseObj) {
+        _products=[NSMutableArray new];
+        NSDictionary* a=responseObj[@"data"][@"productList"];
+        for (NSDictionary* prod in responseObj[@"data"][@"productList"]) {
+            ETProductModel* p=[ETProductModel mj_objectWithKeyValues:prod];
+            [_products addObject:p];
+        }
+//        NSLog(@"");
+        [_tbHome reloadData];
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+}
+
+#pragma mark - 产品搜索
+- (void)PostSearchUI {
+    NSMutableDictionary* dic=[NSMutableDictionary new];
+    NSDictionary *params = @{
+                             @"page" : @"1",
+                             @"pageSize": @"10",
+                             @"cityId": @(2),
+                             @"keyword" : @"营业",
+                             @"priceOrder" : @(2)
+                             };
+    [HttpTool get:[NSString stringWithFormat:@"search/product"] params:params success:^(id responseObj) {
+        _products=[NSMutableArray new];
+        NSDictionary* a=responseObj[@"data"][@"productList"];
+        for (NSDictionary* prod in responseObj[@"data"][@"productList"]) {
+            ETProductModel* p=[ETProductModel mj_objectWithKeyValues:prod];
+            [_products addObject:p];
+        }
+        //        NSLog(@"");
+        [_tbHome reloadData];
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 #pragma mark - createSubViewsAndConstraints
@@ -76,6 +130,22 @@
     
     _vHomeTop = [[ETHomeTopView alloc]init];
     [self.view addSubview:_vHomeTop];
+    _vHomeTop.block = ^{
+        ETHomeLocationController* loc=[ETHomeLocationController new];
+        
+        AticleMenu* memu=[AticleMenu new];
+        memu.Text=@"交易";
+        NSMutableArray *arr1 = [NSMutableArray new];
+        NSMutableArray *arr2 = [NSMutableArray new];
+        [arr1 addObject:memu];
+        [arr2 addObject:memu];
+        JMColumnMenu *menuVC = [JMColumnMenu columnMenuWithTagsArrM:arr1 OtherArrM:arr2 Type:JMColumnMenuTypeTouTiao Delegate:self];
+//        [self presentViewController:menuVC animated:YES completion:nil];
+//        [loc.view addSubview:menuVC.view];
+        [self.navigationController pushViewController:loc animated:YES];
+        
+
+    };
     [_vHomeTop mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(0);
         make.left.right.mas_equalTo(0);
@@ -112,21 +182,28 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return _products.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyIdentifier"];
+    ETEnterpriseServiceTableViewCell1 *cell = [tableView dequeueReusableCellWithIdentifier:@"MyIdentifier"];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"MyIdentifier"];
+        cell = [[ETEnterpriseServiceTableViewCell1 alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"MyIdentifier"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    if (_products.count>0) {
+        ETProductModel* p=[_products objectAtIndex:indexPath.row];
+                           cell.serviceLab.text=p.desc;
+        cell.moneyLab.text=p.price;
+        cell.detailsLab.text=p.desc;
+                           [cell.comImg sd_setImageWithURL:[NSURL URLWithString:p.image]];
     }
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 98;
+    return 128;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

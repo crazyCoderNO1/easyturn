@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ETHomeTopView : UIView
+@property (nonatomic, strong) void (^block)(void);
 
 @end
 

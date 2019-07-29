@@ -36,7 +36,7 @@
             
         }else{
             //跳转登录页面
-            [self loginViewController];
+            [self mainViewController];
 
         }
     }

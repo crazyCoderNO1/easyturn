@@ -355,6 +355,7 @@ typedef NS_ENUM(NSUInteger, ETLoginViewControllerType) {
     [HttpTool get:[NSString stringWithFormat:@"user/login"] params:params success:^(id responseObj) {
         NSLog(@"");
         [[ACToastView toastView]hide];
+<<<<<<< HEAD
         [self.window.rootViewController removeFromParentViewController];
         MainViewController * mainvc = [[MainViewController alloc]init];
         SSNavigationController * naviRoot = [[SSNavigationController alloc] initWithRootViewController:mainvc];
@@ -363,6 +364,12 @@ typedef NS_ENUM(NSUInteger, ETLoginViewControllerType) {
         [self.window setRootViewController:naviRoot];
         [self.window setBackgroundColor:kACColorWhite];
         [self.window makeKeyAndVisible];
+=======
+        NSUserDefaults* user=[NSUserDefaults standardUserDefaults];
+        NSDictionary* a=responseObj[@"data"];
+        [user setObject:[a objectForKey:@"token"] forKey:@"token"];
+        [user synchronize];
+>>>>>>> af2f01f46482aed3128f93401481f13b6650e9af
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
     }];
