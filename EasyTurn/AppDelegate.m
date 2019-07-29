@@ -36,8 +36,15 @@
             
         }else{
             //跳转登录页面
-            [self mainViewController];
+            NSUserDefaults* user=[NSUserDefaults standardUserDefaults];
+            NSString* token=[user objectForKey:@"token"];
 
+            if (!token) {
+                [self loginViewController];
+            }else
+            {
+                 [self mainViewController];
+            }
         }
     }
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccessNotification) name:LOGINSELECTCENTERINDEX object:nil];

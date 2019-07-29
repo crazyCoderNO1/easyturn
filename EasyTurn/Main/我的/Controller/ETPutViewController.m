@@ -156,7 +156,17 @@
         }else if (indexPath.row==4) {
             UIAlertController *alertSheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
             UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"确认清除账户所有信息并注销" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                NSLog(@"点击了项目1");
+               
+                NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+                NSDictionary* defaults = [defs dictionaryRepresentation];
+                for (id key in defaults) {
+                    if (![key isEqualToString:@"token"]) {
+                        [defs removeObjectForKey:key];
+                        [defs synchronize];
+                    } else {
+                        NSLog(@"%@",[defs objectForKey:key]);
+                    }
+                }
             }];
             UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"关闭" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                 NSLog(@"点击了关闭");
