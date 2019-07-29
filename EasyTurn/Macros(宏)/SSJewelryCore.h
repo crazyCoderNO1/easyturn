@@ -105,6 +105,33 @@
 #define kLinePixel (1.0 / [UIScreen mainScreen].scale)
 #endif
 
+// 字体大小(常规/粗体)
+#define BOLDSYSTEMFONT(FONTSIZE)[UIFont boldSystemFontOfSize:FONTSIZE]
+#define SYSTEMFONT(FONTSIZE)    [UIFont systemFontOfSize:FONTSIZE]
+#define FONT(NAME, FONTSIZE)    [UIFont fontWithName:(NAME) size:(FONTSIZE)]
+
+// 颜色(RGB)
+#define RGBCOLOR(r, g, b)       [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define RGBACOLOR(r, g, b, a)   [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
+
+//弱引用
+#define WeakSelf(type)  __weak typeof(type) weak##type = type;
+
+// 系统控件适配
+//#define IS_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define IPHONE_X \
+({BOOL isPhoneX = NO;\
+if (@available(iOS 11.0, *)) {\
+isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0.0;\
+}\
+(isPhoneX);})
+
+#define TopHeight     (IPHONE_X?88:64)
+#define TabbarHeight  (IPHONE_X?83:(49 + 6))
+#define NavBarHeight   44
+#define StatusBarHeight (IPHONE_X?44:20)
+#define BottomSafeHeight (IPHONE_X?34:20)
+
 //测试环境打印Log,线上环境不打印Log
 #ifndef AMLog
 #if DEBUG

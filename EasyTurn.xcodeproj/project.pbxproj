@@ -170,6 +170,9 @@
 		00E5C31D22EDCD7E00009241 /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E5C31B22EDCD7E00009241 /* SearchResultViewController.m */; };
 		00E5C32022EDCF4600009241 /* HomeBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E5C31F22EDCF4600009241 /* HomeBaseCell.m */; };
 		00E5C32322EDD03C00009241 /* FBRequestSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E5C32122EDD03C00009241 /* FBRequestSearch.m */; };
+		00E5C32722EEF1FD00009241 /* ETProductDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E5C32622EEF1FD00009241 /* ETProductDetailController.m */; };
+		00E5C32B22EEFC1300009241 /* ProductInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00E5C32822EEFC1200009241 /* ProductInfoCell.xib */; };
+		00E5C32C22EEFC1300009241 /* ProductInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E5C32A22EEFC1200009241 /* ProductInfoCell.m */; };
 		2E0CDF0C22E83C1F00783952 /* ETBusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0CDF0B22E83C1F00783952 /* ETBusinessViewController.m */; };
 		2E0CDF0F22E83C3E00783952 /* ETTaxationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0CDF0E22E83C3E00783952 /* ETTaxationViewController.m */; };
 		2E0CDF1222E83C5500783952 /* ETAdministrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0CDF1122E83C5500783952 /* ETAdministrationViewController.m */; };
@@ -528,6 +531,11 @@
 		00E5C31F22EDCF4600009241 /* HomeBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeBaseCell.m; sourceTree = "<group>"; };
 		00E5C32122EDD03C00009241 /* FBRequestSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBRequestSearch.m; sourceTree = "<group>"; };
 		00E5C32222EDD03C00009241 /* FBRequestSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBRequestSearch.h; sourceTree = "<group>"; };
+		00E5C32522EEF1FD00009241 /* ETProductDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETProductDetailController.h; sourceTree = "<group>"; };
+		00E5C32622EEF1FD00009241 /* ETProductDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETProductDetailController.m; sourceTree = "<group>"; };
+		00E5C32822EEFC1200009241 /* ProductInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductInfoCell.xib; sourceTree = "<group>"; };
+		00E5C32922EEFC1200009241 /* ProductInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductInfoCell.h; sourceTree = "<group>"; };
+		00E5C32A22EEFC1200009241 /* ProductInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductInfoCell.m; sourceTree = "<group>"; };
 		0B41FA3272E5846DF85F3D53 /* libPods-EasyTurn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EasyTurn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E0CDF0A22E83C1F00783952 /* ETBusinessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETBusinessViewController.h; sourceTree = "<group>"; };
 		2E0CDF0B22E83C1F00783952 /* ETBusinessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETBusinessViewController.m; sourceTree = "<group>"; };
@@ -840,6 +848,9 @@
 		007FAD4B22E04347001EC5F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				00E5C32922EEFC1200009241 /* ProductInfoCell.h */,
+				00E5C32A22EEFC1200009241 /* ProductInfoCell.m */,
+				00E5C32822EEFC1200009241 /* ProductInfoCell.xib */,
 				004AB53B22E19A3D0056B8F5 /* ETHomeTopView.h */,
 				004AB53C22E19A3D0056B8F5 /* ETHomeTopView.m */,
 				004AB53E22E19D040056B8F5 /* ETHomeHeaderView.h */,
@@ -867,6 +878,8 @@
 				00E5C31922EDCD7E00009241 /* FBSearchViewController.m */,
 				00E5C31822EDCD7D00009241 /* SearchResultViewController.h */,
 				00E5C31B22EDCD7E00009241 /* SearchResultViewController.m */,
+				00E5C32522EEF1FD00009241 /* ETProductDetailController.h */,
+				00E5C32622EEF1FD00009241 /* ETProductDetailController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1643,6 +1656,7 @@
 			files = (
 				0046AA6A22EACDE30038CA11 /* UserSaleViewCell.xib in Resources */,
 				007FAE8222E06EE8001EC5F2 /* AlipaySDK.bundle in Resources */,
+				00E5C32B22EEFC1300009241 /* ProductInfoCell.xib in Resources */,
 				007FADF422E052C3001EC5F2 /* SVProgressHUD.bundle in Resources */,
 				007FAD0C22E0236F001EC5F2 /* Assets.xcassets in Resources */,
 				2EC4ECCE22E5D00500F076D1 /* README.txt in Resources */,
@@ -1816,6 +1830,7 @@
 				2E1CDA9922EAD09600174F08 /* WrongSpeakBtn.m in Sources */,
 				2E7161AA22E97AED008B72CF /* MarqueeView.m in Sources */,
 				007FAD4722E03E66001EC5F2 /* STResponseModel.m in Sources */,
+				00E5C32722EEF1FD00009241 /* ETProductDetailController.m in Sources */,
 				007FAD4622E03E66001EC5F2 /* STBaseModel.m in Sources */,
 				007FADA422E05228001EC5F2 /* LGAlertViewHelper.m in Sources */,
 				007FADF522E052C3001EC5F2 /* OTSyncTitleView.m in Sources */,
@@ -1849,6 +1864,7 @@
 				004AB53D22E19A3D0056B8F5 /* ETHomeTopView.m in Sources */,
 				007FAE2922E052FD001EC5F2 /* UIImage+AHKit.m in Sources */,
 				007FADFD22E052C3001EC5F2 /* WXApiManager.m in Sources */,
+				00E5C32C22EEFC1300009241 /* ProductInfoCell.m in Sources */,
 				0046AA6022EACDE30038CA11 /* ETSetUserViewController.m in Sources */,
 				007FADF322E052C3001EC5F2 /* SVIndefiniteAnimatedView.m in Sources */,
 				00E5C30422EDC5EB00009241 /* CXTexeFileBgView.m in Sources */,
