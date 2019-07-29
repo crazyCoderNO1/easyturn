@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ACViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSInteger, JMColumnMenuType1) {
     JMColumnMenuTypeTencent1, //腾讯新闻
     JMColumnMenuTypeTouTiao1, //今日头条
 };
-@interface ETHomeLocationController : UIViewController
+@interface ETHomeLocationController : ACViewController
 /** 类型 */
 @property (nonatomic, assign) JMColumnMenuType1 type;
 /** 导航栏的背景颜色 */

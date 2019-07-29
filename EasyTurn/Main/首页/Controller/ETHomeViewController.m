@@ -16,6 +16,7 @@
 #import "AticleMenu.h"
 #import "ETEnterpriseServiceTableViewCell1.h"
 #import "ETProductModel.h"
+#import "FBSearchViewController.h"
 @interface ETHomeViewController ()<UITableViewDelegate, UITableViewDataSource, ETHomeHeaderViewDelegate>
 @property (nonatomic, strong) ETHomeTopView *vHomeTop;
 @property (nonatomic, strong) ETHomeHeaderView *vHomeHeader;
@@ -214,6 +215,9 @@
 #pragma mark -ETHomeHeaderViewDelegate
 - (void)homeHeaderViewPushSearch {
     AMLog(@"11");
+    FBSearchViewController* search = [FBSearchViewController new];
+    [self.navigationController pushViewController:search animated:YES];
+    
 }
 
 - (void)slideshowHeadViewDidSelectItemAtIndex:(NSInteger)index {
