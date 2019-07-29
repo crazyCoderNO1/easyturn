@@ -17,6 +17,7 @@
 #import "ETEnterpriseServiceTableViewCell1.h"
 #import "ETProductModel.h"
 #import "FBSearchViewController.h"
+#import "ETProductDetailController.h"
 @interface ETHomeViewController ()<UITableViewDelegate, UITableViewDataSource, ETHomeHeaderViewDelegate>
 @property (nonatomic, strong) ETHomeTopView *vHomeTop;
 @property (nonatomic, strong) ETHomeHeaderView *vHomeHeader;
@@ -88,10 +89,10 @@
                              @"pageSize": @"10",
                              @"cityId": @(2)
                              };
-    [HttpTool get:[NSString stringWithFormat:@"product/dynamic"] params:params success:^(id responseObj) {
+    [HttpTool get:[NSString stringWithFormat:@"release/dynamic"] params:params success:^(id responseObj) {
         _products=[NSMutableArray new];
-        NSDictionary* a=responseObj[@"data"][@"productList"];
-        for (NSDictionary* prod in responseObj[@"data"][@"productList"]) {
+        NSDictionary* a=responseObj[@"data"];
+        for (NSDictionary* prod in responseObj[@"data"]) {
             ETProductModel* p=[ETProductModel mj_objectWithKeyValues:prod];
             [_products addObject:p];
         }
@@ -195,9 +196,11 @@
     if (_products.count>0) {
         ETProductModel* p=[_products objectAtIndex:indexPath.row];
                            cell.serviceLab.text=p.desc;
+        cell.giveserviceLab.text=p.title;
         cell.moneyLab.text=p.price;
-        cell.detailsLab.text=p.desc;
-                           [cell.comImg sd_setImageWithURL:[NSURL URLWithString:p.image]];
+        cell.addressLab.text=p.cityName;
+        cell.detailsLab.text=p.business;
+                           [cell.comImg sd_setImageWithURL:[NSURL URLWithString:p.imageList]];
     }
     return cell;
 }
@@ -209,7 +212,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
+    ETProductDetailController* detail=[ETProductDetailController new];
+    [self.navigationController pushViewController:detail animated:YES];
 }
 
 #pragma mark -ETHomeHeaderViewDelegate

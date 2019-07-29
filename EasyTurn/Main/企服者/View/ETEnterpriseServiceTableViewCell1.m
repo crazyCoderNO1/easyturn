@@ -97,6 +97,7 @@
 - (UILabel *)addressLab {
     if (!_addressLab) {
         _addressLab=[[UILabel alloc]init];
+        [_addressLab setFont:[UIFont systemFontOfSize:12]];
         //        _addressLab.backgroundColor=[UIColor blueColor];
     }
     return _addressLab;
