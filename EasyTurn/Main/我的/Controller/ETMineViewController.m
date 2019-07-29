@@ -37,7 +37,7 @@ static NSString *const cellIdentifier =@"cellIdentifier";
 }
 - (UITableView *) tableView {
     if (!_tableView) {
-        _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, kStatusBarHeight, Screen_Width, Screen_Height-kStatusBarHeight) style:UITableViewStylePlain];
+        _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, Screen_Width, Screen_Height-kStatusBarHeight) style:UITableViewStylePlain];
         _tableView.delegate=self;
         _tableView.dataSource=self;
         [_tableView registerClass:[ETMETableViewCell class] forCellReuseIdentifier:cellIdentifier];
@@ -64,7 +64,7 @@ static NSString *const cellIdentifier =@"cellIdentifier";
 {
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
-    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
     ETMineVIew*etmine=[[ETMineVIew alloc]init];
     etmine.delegate=self;
 }

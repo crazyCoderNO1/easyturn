@@ -348,13 +348,21 @@ typedef NS_ENUM(NSUInteger, ETLoginViewControllerType) {
 //                                        }];
     
     NSDictionary *params = @{
-                             @"mobile" : @"15821414708",
-                             @"code": @"123456",
+                             @"mobile" : _labPhoneErrorMessage.text,
+                             @"code": _tfPassWord.text,
                              @"type": @(1)
                              };
     [HttpTool get:[NSString stringWithFormat:@"user/login"] params:params success:^(id responseObj) {
         NSLog(@"");
         [[ACToastView toastView]hide];
+        [self.window.rootViewController removeFromParentViewController];
+        MainViewController * mainvc = [[MainViewController alloc]init];
+        SSNavigationController * naviRoot = [[SSNavigationController alloc] initWithRootViewController:mainvc];
+        naviRoot.navigationBarHidden = NO;
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen]bounds]];
+        [self.window setRootViewController:naviRoot];
+        [self.window setBackgroundColor:kACColorWhite];
+        [self.window makeKeyAndVisible];
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
     }];

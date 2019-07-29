@@ -10,6 +10,7 @@
 #import <SDCycleScrollView.h>
 #import "OTAutoScrollView.h"
 #import "ETHomeHeaderAutoScrollCell.h"
+#import "ETHomeViewController.h"
 static NSString *const kETHomeHeaderAutoScrollCell = @"ETHomeHeaderAutoScrollCell";
 @interface ETHomeHeaderView ()<SDCycleScrollViewDelegate, OTAutoScrollViewDataSource>
 @property (nonatomic, strong) SDCycleScrollView *cycleScrollView;
@@ -135,7 +136,7 @@ static NSString *const kETHomeHeaderAutoScrollCell = @"ETHomeHeaderAutoScrollCel
     
     _laAllQiugou = [[UILabel alloc]init];
     _laAllQiugou.textAlignment = NSTextAlignmentCenter;
-    _laAllQiugou.text = @"全部5条";
+    _laAllQiugou.text = [NSString stringWithFormat:@"全部5条"];
     [vQiugou addSubview:_laAllQiugou];
     [_laAllQiugou mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(vQiugou);

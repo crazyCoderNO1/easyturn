@@ -410,7 +410,7 @@
 - (UIButton *)meinv {
     if (!_meinv) {
         _meinv=[[UIButton alloc]init];
-         [_meinv addTarget:self action:@selector(agreementBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+         [_meinv addTarget:self action:@selector(agreementBtnClick2:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _meinv;
 }
@@ -441,7 +441,7 @@
 - (UIButton *)accountv {
     if (!_accountv) {
         _accountv=[[UIButton alloc]init];
-         [_accountv addTarget:self action:@selector(agreementBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+         [_accountv addTarget:self action:@selector(agreementBtnClick3:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _accountv;
 }

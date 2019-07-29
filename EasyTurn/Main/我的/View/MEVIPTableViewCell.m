@@ -13,8 +13,7 @@
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self=[super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        [self addSubview:self.titleLab];
-        
+
         [self addSubview:self.titleLab];
         [self.titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(19);
@@ -52,7 +51,6 @@
 - (UILabel *)titleLab {
     if (!_titleLab) {
         _titleLab=[[UILabel alloc]init];
-        _titleLab.backgroundColor=[UIColor redColor];
         _titleLab.font=[UIFont systemFontOfSize:13];
     }
     return _titleLab;
@@ -61,7 +59,7 @@
 - (UILabel *)subTitleLab {
     if (!_subTitleLab) {
         _subTitleLab=[[UILabel alloc]init];
-        _titleLab.backgroundColor=[UIColor blueColor];
+        _subTitleLab.font=[UIFont systemFontOfSize:13];
     }
     return _subTitleLab;
 }
@@ -70,6 +68,10 @@
     if (!_subBtn) {
         _subBtn=[[UIButton alloc]init];
         _subBtn.backgroundColor=[UIColor blackColor];
+        [_subBtn setTitle:@"购买" forState:UIControlStateNormal];
+        _subBtn.backgroundColor=[UIColor orangeColor];
+        _subBtn.layer.cornerRadius=10;
+        _subBtn.titleLabel.font=[UIFont systemFontOfSize:13];
     }
     return _subBtn;
 }
