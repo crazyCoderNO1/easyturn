@@ -188,16 +188,21 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ETEnterpriseServiceTableViewCell1 *cell = [tableView dequeueReusableCellWithIdentifier:@"MyIdentifier"];
-    if (cell == nil) {
-        cell = [[ETEnterpriseServiceTableViewCell1 alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"MyIdentifier"];
+        ETEnterpriseServiceTableViewCell1* cell = [[ETEnterpriseServiceTableViewCell1 alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"MyIdentifier"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    }
     if (_products.count>0) {
         ETProductModel* p=[_products objectAtIndex:indexPath.row];
                            cell.serviceLab.text=p.desc;
         cell.giveserviceLab.text=p.title;
-        cell.moneyLab.text=p.price;
+        if ([p.releaseId isEqualToString:@"1001"]) {
+            cell.serviceLab.text=@"出售";
+        }else if ([p.releaseId isEqualToString:@"1002"]) {
+            cell.serviceLab.text=@"求购";
+        }else if ([p.releaseId isEqualToString:@"1003"]) {
+            cell.serviceLab.text=@"服务";
+        }
+        cell.moneyLab.text=[NSString stringWithFormat:@"¥%@",p.price];
+    
         cell.addressLab.text=p.cityName;
         cell.detailsLab.text=p.business;
                            [cell.comImg sd_setImageWithURL:[NSURL URLWithString:p.imageList]];

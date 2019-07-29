@@ -73,6 +73,8 @@
 - (UILabel *)giveserviceLab {
     if (!_giveserviceLab) {
         _giveserviceLab=[[UILabel alloc]init];
+        _giveserviceLab.font=[UIFont systemFontOfSize:15];
+        _giveserviceLab.textColor=[UIColor colorWithRed:34/255.0 green:34/255.0 blue:34/255.0 alpha:1.0];
         //        _giveserviceLab.backgroundColor=[UIColor blackColor];
     }
     return _giveserviceLab;
@@ -81,6 +83,8 @@
 - (UILabel *)serviceLab {
     if (!_serviceLab) {
         _serviceLab=[[UILabel alloc]init];
+        _serviceLab.font=[UIFont systemFontOfSize:13];
+        _serviceLab.textColor=[UIColor colorWithRed:102/255.0 green:102/255.0 blue:102/255.0 alpha:1.0];
         //        _serviceLab.backgroundColor=[UIColor blueColor];
     }
     return _serviceLab;
@@ -89,6 +93,8 @@
 - (UILabel *)moneyLab {
     if (!_moneyLab) {
         _moneyLab=[[UILabel alloc]init];
+        _moneyLab.font=[UIFont systemFontOfSize:14];
+        _moneyLab.textColor=[UIColor colorWithRed:248/255.0 green:124/255.0 blue:43/255.0 alpha:1.0];
         //        _moneyLab.backgroundColor=[UIColor blueColor];
     }
     return _moneyLab;
@@ -98,7 +104,7 @@
     if (!_addressLab) {
         _addressLab=[[UILabel alloc]init];
         [_addressLab setFont:[UIFont systemFontOfSize:12]];
-        //        _addressLab.backgroundColor=[UIColor blueColor];
+        _addressLab.textColor=[UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0];
     }
     return _addressLab;
 }
@@ -106,7 +112,8 @@
 - (UILabel *)detailsLab {
     if (!_detailsLab) {
         _detailsLab=[[UILabel alloc]init];
-        //         _detailsLab.backgroundColor=[UIColor blueColor];
+        [_detailsLab setFont:[UIFont systemFontOfSize:12]];
+        _detailsLab.textColor=[UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0];
     }
     return _detailsLab;
 }
