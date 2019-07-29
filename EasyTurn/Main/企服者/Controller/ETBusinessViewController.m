@@ -10,6 +10,9 @@
 #import "ETEnterpriseServiceTableViewCell.h"
 @interface ETBusinessViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tab;
+@property(nonatomic, strong)UIView *searchView;
+@property (nonatomic, strong) UITextField *searchTextField;
+
 @end
 
 @implementation ETBusinessViewController
@@ -27,6 +30,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.tab];
+    self.searchView = [[UIView alloc]initWithFrame:CGRectMake(20, 0, Screen_Width -20 - 50, 30)];
+    self.searchView.backgroundColor = [UIColor xm_colorFromRGB:0xF8F8F8];
+    self.searchView.clipsToBounds = YES;
+    self.searchView.layer.cornerRadius = 15.0;
+    self.navigationItem.titleView = self.searchView;
+    
+    self.searchTextField = [[UITextField alloc]initWithFrame:CGRectMake(30, 2, Screen_Width -20 - 80, 26)];
+    self.searchTextField.placeholder = @"搜索个关键词试试";
+    self.searchTextField.font = [UIFont systemFontOfSize:13.0];
+    self.searchTextField.returnKeyType = UIReturnKeySearch;
+    self.searchTextField.delegate = self;
+    [self.searchView addSubview:self.searchTextField];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

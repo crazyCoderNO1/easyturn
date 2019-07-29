@@ -178,7 +178,6 @@
 		2E0CDF1B22E83CA200783952 /* ETPuzzleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0CDF1A22E83CA200783952 /* ETPuzzleViewController.m */; };
 		2E0CDF1E22E83DC900783952 /* ETEnterpriseServiceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0CDF1D22E83DC900783952 /* ETEnterpriseServiceTableViewCell.m */; };
 		2E0F6BC622EC7FC50031AFC7 /* ETIssueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0F6BC522EC7FC40031AFC7 /* ETIssueViewController.m */; };
-		2E0F6BC922EC80390031AFC7 /* ETPurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0F6BC822EC80390031AFC7 /* ETPurchaseViewController.m */; };
 		2E1CDA9522EAD09600174F08 /* ETMineVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1CDA8322EAD09600174F08 /* ETMineVIew.m */; };
 		2E1CDA9822EAD09600174F08 /* ETMETableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1CDA8722EAD09600174F08 /* ETMETableViewCell.m */; };
 		2E1CDA9922EAD09600174F08 /* WrongSpeakBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1CDA8A22EAD09600174F08 /* WrongSpeakBtn.m */; };
@@ -970,20 +969,20 @@
 		007FAD5A22E04530001EC5F2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				007FAE5422E05DDB001EC5F2 /* ETEnterpriseServiceController.h */,
-				007FAE5522E05DDB001EC5F2 /* ETEnterpriseServiceController.m */,
-				2E0CDF0A22E83C1F00783952 /* ETBusinessViewController.h */,
-				2E0CDF0B22E83C1F00783952 /* ETBusinessViewController.m */,
-				2E0CDF0D22E83C3E00783952 /* ETTaxationViewController.h */,
-				2E0CDF0E22E83C3E00783952 /* ETTaxationViewController.m */,
 				2E0CDF1022E83C5500783952 /* ETAdministrationViewController.h */,
 				2E0CDF1122E83C5500783952 /* ETAdministrationViewController.m */,
+				2E0CDF0A22E83C1F00783952 /* ETBusinessViewController.h */,
+				2E0CDF0B22E83C1F00783952 /* ETBusinessViewController.m */,
+				007FAE5422E05DDB001EC5F2 /* ETEnterpriseServiceController.h */,
+				007FAE5522E05DDB001EC5F2 /* ETEnterpriseServiceController.m */,
 				2E0CDF1322E83C7000783952 /* ETFinancialViewController.h */,
 				2E0CDF1422E83C7000783952 /* ETFinancialViewController.m */,
 				2E0CDF1622E83C8800783952 /* ETIntelligenceViewController.h */,
 				2E0CDF1722E83C8800783952 /* ETIntelligenceViewController.m */,
 				2E0CDF1922E83CA200783952 /* ETPuzzleViewController.h */,
 				2E0CDF1A22E83CA200783952 /* ETPuzzleViewController.m */,
+				2E0CDF0D22E83C3E00783952 /* ETTaxationViewController.h */,
+				2E0CDF0E22E83C3E00783952 /* ETTaxationViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
