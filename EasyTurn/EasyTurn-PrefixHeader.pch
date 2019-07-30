@@ -39,4 +39,7 @@
 #import "SSCacheManager.h"
 #import "SSUserLoginModel.h"
 #import "HttpTool.h"
+/*聊天*/
+#import <HyphenateLite/HyphenateLite.h>
+#import <EaseUI.h>
 #endif /* EasyTurn_PrefixHeader_pch */

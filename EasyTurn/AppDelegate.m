@@ -53,6 +53,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //[[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleLightContent];
     [WXApi registerApp:@"wx6aa68fa297ad59ee"];
+    
+    EMOptions *options = [EMOptions optionsWithAppkey:@"1196190727046562#yzvip"];
+    options.apnsCertName = @"istore_dev";
+    [[EMClient sharedClient] initializeSDKWithOptions:options];
+    [self huanxin];
+
     //设置根控制器
     [self appConfigProvider];
     //统一设置导航栏
@@ -83,6 +89,30 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccessNotification) name:LOGINSELECTCENTERINDEX object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginOutNotification) name:LOGINOFFSELECTCENTERINDEX object:nil];
     return YES;
+}
+-(void)huanxin
+{
+    NSDictionary *params = @{
+                             };
+    [HttpTool get:[NSString stringWithFormat:@"user/getJimUser"] params:params success:^(id responseObj) {
+        NSLog(@"");
+        NSUserDefaults* user=[NSUserDefaults standardUserDefaults];
+        NSDictionary* a=responseObj[@"data"];
+        [user setObject:[a objectForKey:@"auroraName"] forKey:@"huanxin"];
+        [user synchronize];
+        [[EMClient sharedClient] loginWithUsername:[a objectForKey:@"auroraName"]
+                                          password:[a objectForKey:@"password"]
+                                        completion:^(NSString *aUsername, EMError *aError) {
+                                            if (!aError) {
+                                                NSLog(@"登录成功");
+                                            } else {
+                                                NSLog(@"登录失败");
+                                            }
+                                        }];
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 //微信回调代理
 - (void)onResp:(BaseResp *)resp{
