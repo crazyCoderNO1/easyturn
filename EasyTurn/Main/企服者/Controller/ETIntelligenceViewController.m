@@ -7,11 +7,15 @@
 //
 
 #import "ETIntelligenceViewController.h"
-#import "ETEnterpriseServiceTableViewCell.h"
+#import "ETEnterpriseServiceTableViewCell1.h"
+#import "ETProductModel.h"
+
 @interface ETIntelligenceViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tab;
 @property(nonatomic, strong)UIView *searchView;
 @property (nonatomic, strong) UITextField *searchTextField;
+@property (nonatomic, strong) NSMutableArray *products;
+
 
 @end
 
@@ -23,7 +27,7 @@
         _tab.delegate=self;
         _tab.dataSource=self;
         _tab.rowHeight=123;
-        [_tab registerClass:[ETEnterpriseServiceTableViewCell class] forCellReuseIdentifier:@"cell"];
+        [_tab registerClass:[ETEnterpriseServiceTableViewCell1 class] forCellReuseIdentifier:@"cell"];
     }
     return _tab;
 }
@@ -42,21 +46,46 @@
     self.searchTextField.returnKeyType = UIReturnKeySearch;
     self.searchTextField.delegate = self;
     [self.searchView addSubview:self.searchTextField];
+    [self PostUI];
 }
-
+#pragma mark - 企服者
+- (void)PostUI {
+    NSMutableDictionary* dic=[NSMutableDictionary new];
+    NSDictionary *params = @{
+                             @"serviceId" : @"5"
+                             };
+    [HttpTool get:[NSString stringWithFormat:@"release/releaseClassify"] params:params success:^(id responseObj) {
+        _products=[NSMutableArray new];
+        NSDictionary* a=responseObj[@"data"];
+        for (NSDictionary* prod in responseObj[@"data"]) {
+            ETProductModel* p=[ETProductModel mj_objectWithKeyValues:prod];
+            [_products addObject:p];
+        }
+        //        NSLog(@"");
+        [_tab reloadData];
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return [_products count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ETEnterpriseServiceTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    ETEnterpriseServiceTableViewCell1 *cell=[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    ETProductModel* p=[_products objectAtIndex:indexPath.row];
+    cell.giveserviceLab.text=p.title;
+    [cell.comImg sd_setImageWithURL:[NSURL URLWithString:p.imageList] placeholderImage:nil];
+    cell.moneyLab.text=p.price;
+    cell.addressLab.text=p.cityName;
+    cell.detailsLab.text=p.detail;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [_tab deselectRowAtIndexPath:indexPath animated:YES];
     
-    ETEnterpriseServiceTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    ETEnterpriseServiceTableViewCell1 *cell = [tableView cellForRowAtIndexPath:indexPath];
     // 2
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     // 3点击没有颜色改变

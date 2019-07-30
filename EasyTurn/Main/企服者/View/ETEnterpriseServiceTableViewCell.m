@@ -74,7 +74,7 @@
 - (UILabel *)giveserviceLab {
     if (!_giveserviceLab) {
         _giveserviceLab=[[UILabel alloc]init];
-        _giveserviceLab.backgroundColor=[UIColor blackColor];
+//        _giveserviceLab.backgroundColor=[UIColor blackColor];
     }
     return _giveserviceLab;
 }
@@ -82,7 +82,7 @@
 - (UILabel *)serviceLab {
     if (!_serviceLab) {
         _serviceLab=[[UILabel alloc]init];
-        _serviceLab.backgroundColor=[UIColor blueColor];
+//        _serviceLab.backgroundColor=[UIColor blueColor];
     }
     return _serviceLab;
 }
@@ -90,7 +90,7 @@
 - (UILabel *)moneyLab {
     if (!_moneyLab) {
         _moneyLab=[[UILabel alloc]init];
-        _moneyLab.backgroundColor=[UIColor blueColor];
+//        _moneyLab.backgroundColor=[UIColor blueColor];
     }
     return _moneyLab;
 }
@@ -98,7 +98,7 @@
 - (UILabel *)addressLab {
     if (!_addressLab) {
         _addressLab=[[UILabel alloc]init];
-        _addressLab.backgroundColor=[UIColor blueColor];
+//        _addressLab.backgroundColor=[UIColor blueColor];
     }
     return _addressLab;
 }
@@ -106,7 +106,7 @@
 - (UILabel *)detailsLab {
     if (!_detailsLab) {
         _detailsLab=[[UILabel alloc]init];
-         _detailsLab.backgroundColor=[UIColor blueColor];
+//         _detailsLab.backgroundColor=[UIColor blueColor];
     }
     return _detailsLab;
 }

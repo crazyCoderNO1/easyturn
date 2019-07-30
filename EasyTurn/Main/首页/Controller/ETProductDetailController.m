@@ -236,9 +236,10 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if(section==1)
-        return 3;
-    else
         return 1;
+    else if(section==3)
+        return 3;
+    return 1;
 }
 
 
@@ -300,6 +301,14 @@
         cell.priceLabel.text=[NSString stringWithFormat:@"￥:%@",@"1000"];
         cell.oPriceLabel.text=[NSString stringWithFormat:@"价格:￥%@",@""];
         return cell;
+    }
+    if (indexPath.section==2) {
+        cell.textLabel.text=@"经营范围";
+        cell.detailTextLabel.text=@"转让北京现成资质14项房建总包三级，市政";
+    }
+    if (indexPath.section==3) {
+        cell.textLabel.text=@"注册时间";
+        cell.detailTextLabel.text=@"2019-06-19";
     }
 //    if(indexPath.section==1&&indexPath.row==0){
 //        UIView* v=[[UIView alloc] initWithFrame:CGRectMake(0, 0, Main_Screen_Width, 80)];

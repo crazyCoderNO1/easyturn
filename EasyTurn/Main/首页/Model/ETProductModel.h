@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *cityName;
 @property (nonatomic, copy) NSString *business;
 @property (nonatomic, copy) NSString *releaseId;
+@property (nonatomic, copy) NSString *detail;
 
 @property (nonatomic, strong) UserInfoModel *userInfo;
 
