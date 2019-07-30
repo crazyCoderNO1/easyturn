@@ -7,7 +7,7 @@
 //
 
 #import "ETHomeHeaderView1.h"
-#import <SDCycleScrollView.h>
+#import "SDCycleScrollView.h"
 #import "OTAutoScrollView.h"
 #import "ETHomeHeaderAutoScrollCell.h"
 static NSString *const kETHomeHeaderAutoScrollCell = @"ETHomeHeaderAutoScrollCell";

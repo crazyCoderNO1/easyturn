@@ -7,7 +7,7 @@
 //
 
 #import "ETHomeHeaderView.h"
-#import <SDCycleScrollView.h>
+#import "SDCycleScrollView.h"
 #import "OTAutoScrollView.h"
 #import "ETHomeHeaderAutoScrollCell.h"
 #import "ETHomeViewController.h"

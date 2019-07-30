@@ -102,8 +102,9 @@ static MainViewController *vcMain = nil;
     [self setNaviController:_navRelease title:@"发布" defautImage:[UIImage ak_imageNamed:@"发布_选中"] selectedImage:[UIImage ak_imageNamed:@"发布_选中"]];
     [_controllers addObject:_navRelease];
     
-    ETMessageCenterController *vcMessage = [[ETMessageCenterController alloc] init];
-    _navMessage = [[SSNavigationController alloc] initWithRootViewController:vcMessage];
+//    ETMessageCenterController *vcMessage = [[ETMessageCenterController alloc] init];
+    EaseConversationListViewController *chatListVC = [[EaseConversationListViewController alloc] init];
+    _navMessage = [[SSNavigationController alloc] initWithRootViewController:chatListVC];
     _navMessage.tabCode = TabCode_Message;
     [self setNaviController:_navMessage title:@"消息" defautImage:[UIImage ak_imageNamed:@"消息_未选中"] selectedImage:[UIImage ak_imageNamed:@"消息_选中"]];
     [_controllers addObject:_navMessage];

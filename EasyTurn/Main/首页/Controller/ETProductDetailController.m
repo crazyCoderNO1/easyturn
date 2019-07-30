@@ -147,6 +147,11 @@
     [bottomView addSubview:addimButton];
     
 }
+-(void)addAction:(id)sender
+{
+    EaseMessageViewController *chatController = [[EaseMessageViewController alloc] initWithConversationChatter:@"1156078615943835648" conversationType:EMConversationTypeChat];
+    [self.navigationController pushViewController:chatController animated:YES];
+}
 #pragma mark - 收藏 购物车
 - (void)setUpLeftTwoButton
 {

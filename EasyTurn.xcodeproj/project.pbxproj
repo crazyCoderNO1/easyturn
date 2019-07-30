@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00199B8522F0149200FACC24 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 00199B7122F0149200FACC24 /* LICENSE */; };
+		00199B8622F0149200FACC24 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 00199B7222F0149200FACC24 /* README.md */; };
+		00199B8722F0149200FACC24 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00199B7922F0149200FACC24 /* SDCycleScrollView.m */; };
+		00199B8822F0149200FACC24 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 00199B7A22F0149200FACC24 /* UIView+SDExtension.m */; };
+		00199B8922F0149200FACC24 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00199B7B22F0149200FACC24 /* SDCollectionViewCell.m */; };
+		00199B8A22F0149200FACC24 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00199B7E22F0149200FACC24 /* TADotView.m */; };
+		00199B8B22F0149200FACC24 /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 00199B7F22F0149200FACC24 /* TAPageControl.m */; };
+		00199B8C22F0149200FACC24 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00199B8022F0149200FACC24 /* TAAnimatedDotView.m */; };
+		00199B8D22F0149200FACC24 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00199B8122F0149200FACC24 /* TAAbstractDotView.m */; };
 		0046AA5822EACDE30038CA11 /* ETPassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA1F22EACDE20038CA11 /* ETPassWordViewController.m */; };
 		0046AA5922EACDE30038CA11 /* ETCashOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA2022EACDE20038CA11 /* ETCashOutViewController.m */; };
 		0046AA5A22EACDE30038CA11 /* ETAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA2122EACDE20038CA11 /* ETAccountViewController.m */; };
@@ -217,6 +226,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00199B7122F0149200FACC24 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		00199B7222F0149200FACC24 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		00199B7622F0149200FACC24 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		00199B7722F0149200FACC24 /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
+		00199B7822F0149200FACC24 /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
+		00199B7922F0149200FACC24 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
+		00199B7A22F0149200FACC24 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		00199B7B22F0149200FACC24 /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
+		00199B7D22F0149200FACC24 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		00199B7E22F0149200FACC24 /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		00199B7F22F0149200FACC24 /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		00199B8022F0149200FACC24 /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		00199B8122F0149200FACC24 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		00199B8222F0149200FACC24 /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		00199B8322F0149200FACC24 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		00199B8422F0149200FACC24 /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
 		0046AA1F22EACDE20038CA11 /* ETPassWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPassWordViewController.m; sourceTree = "<group>"; };
 		0046AA2022EACDE20038CA11 /* ETCashOutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETCashOutViewController.m; sourceTree = "<group>"; };
 		0046AA2122EACDE20038CA11 /* ETAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETAccountViewController.m; sourceTree = "<group>"; };
@@ -629,6 +654,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00199B7022F0149200FACC24 /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				00199B7122F0149200FACC24 /* LICENSE */,
+				00199B7222F0149200FACC24 /* README.md */,
+				00199B7322F0149200FACC24 /* SDCycleScrollView */,
+			);
+			path = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		00199B7322F0149200FACC24 /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				00199B7422F0149200FACC24 /* Lib */,
+			);
+			path = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		00199B7422F0149200FACC24 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				00199B7522F0149200FACC24 /* SDCycleScrollView */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		00199B7522F0149200FACC24 /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				00199B7622F0149200FACC24 /* UIView+SDExtension.h */,
+				00199B7722F0149200FACC24 /* SDCycleScrollView.h */,
+				00199B7822F0149200FACC24 /* SDCollectionViewCell.h */,
+				00199B7922F0149200FACC24 /* SDCycleScrollView.m */,
+				00199B7A22F0149200FACC24 /* UIView+SDExtension.m */,
+				00199B7B22F0149200FACC24 /* SDCollectionViewCell.m */,
+				00199B7C22F0149200FACC24 /* PageControl */,
+			);
+			path = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		00199B7C22F0149200FACC24 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				00199B7D22F0149200FACC24 /* TAAbstractDotView.h */,
+				00199B7E22F0149200FACC24 /* TADotView.m */,
+				00199B7F22F0149200FACC24 /* TAPageControl.m */,
+				00199B8022F0149200FACC24 /* TAAnimatedDotView.m */,
+				00199B8122F0149200FACC24 /* TAAbstractDotView.m */,
+				00199B8222F0149200FACC24 /* TADotView.h */,
+				00199B8322F0149200FACC24 /* TAAnimatedDotView.h */,
+				00199B8422F0149200FACC24 /* TAPageControl.h */,
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
 		0046AA1D22EACDE20038CA11 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -1032,6 +1112,7 @@
 		007FAD6522E051C9001EC5F2 /* Vendors(第三方) */ = {
 			isa = PBXGroup;
 			children = (
+				00199B7022F0149200FACC24 /* SDCycleScrollView */,
 				00E5C30722EDC68700009241 /* FMDB */,
 				00E5C2E622EDC5EA00009241 /* CXSearch */,
 				00E5C2C822ED35E600009241 /* JMColumnMenu */,
@@ -1561,6 +1642,7 @@
 				007FACFC22E0236F001EC5F2 /* Frameworks */,
 				007FACFD22E0236F001EC5F2 /* Resources */,
 				1ADE9A17F4D799909FC90CB4 /* [CP] Copy Pods Resources */,
+				AE945B3C7F0C18A6F5E7F32B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1658,10 +1740,12 @@
 				007FAE8222E06EE8001EC5F2 /* AlipaySDK.bundle in Resources */,
 				00E5C32B22EEFC1300009241 /* ProductInfoCell.xib in Resources */,
 				007FADF422E052C3001EC5F2 /* SVProgressHUD.bundle in Resources */,
+				00199B8522F0149200FACC24 /* LICENSE in Resources */,
 				007FAD0C22E0236F001EC5F2 /* Assets.xcassets in Resources */,
 				2EC4ECCE22E5D00500F076D1 /* README.txt in Resources */,
 				00E5C2FE22EDC5EB00009241 /* Image.xcassets in Resources */,
 				00E5C2D722ED35E600009241 /* JMColumnMenu.bundle in Resources */,
+				00199B8622F0149200FACC24 /* README.md in Resources */,
 				00E5C30522EDC5EB00009241 /* CXSearchCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1698,6 +1782,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyTurn/Pods-EasyTurn-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE945B3C7F0C18A6F5E7F32B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyTurn/Pods-EasyTurn-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyTurn/Pods-EasyTurn-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyTurn/Pods-EasyTurn-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C1363E7F78F9AFAC5D40C0FA /* [CP] Check Pods Manifest.lock */ = {
@@ -1785,6 +1886,7 @@
 				0046AA5F22EACDE30038CA11 /* ETAuthenticateViewController.m in Sources */,
 				007FAD4522E03E66001EC5F2 /* STApiHelper.m in Sources */,
 				0046AA5C22EACDE30038CA11 /* ETMeinCollectTableViewCell.m in Sources */,
+				00199B8A22F0149200FACC24 /* TADotView.m in Sources */,
 				007FADAD22E05228001EC5F2 /* ACAlertView.m in Sources */,
 				007FAD9E22E05228001EC5F2 /* APAuthInfo.m in Sources */,
 				007FAE8922E0A082001EC5F2 /* ETRegisterViewController.m in Sources */,
@@ -1805,6 +1907,7 @@
 				007FADA322E05228001EC5F2 /* LGAlertViewWindowContainer.m in Sources */,
 				0046AA6922EACDE30038CA11 /* UserSaleView.m in Sources */,
 				007FAE5622E05DDB001EC5F2 /* ETEnterpriseServiceController.m in Sources */,
+				00199B8B22F0149200FACC24 /* TAPageControl.m in Sources */,
 				2E0F6BC622EC7FC50031AFC7 /* ETIssueViewController.m in Sources */,
 				2E1CDA9A22EAD09600174F08 /* MEVIPTableViewCell.m in Sources */,
 				00E5C31D22EDCD7E00009241 /* SearchResultViewController.m in Sources */,
@@ -1814,12 +1917,14 @@
 				0046AA6322EACDE30038CA11 /* StaffVC.m in Sources */,
 				004AB54022E19D040056B8F5 /* ETHomeHeaderView.m in Sources */,
 				007FAE2022E052FD001EC5F2 /* UIView+Frame.m in Sources */,
+				00199B8C22F0149200FACC24 /* TAAnimatedDotView.m in Sources */,
 				00E5C32022EDCF4600009241 /* HomeBaseCell.m in Sources */,
 				007FAE3D22E0539F001EC5F2 /* DCSpeedy.m in Sources */,
 				007FAE4D22E05540001EC5F2 /* SSUserLoginModel.m in Sources */,
 				2E7161B022E98800008B72CF /* ETRKongViewController.m in Sources */,
 				007FAD4422E03E66001EC5F2 /* SSNavigationController.m in Sources */,
 				007FADF722E052C3001EC5F2 /* OTSyncViewStyleConfig.m in Sources */,
+				00199B8722F0149200FACC24 /* SDCycleScrollView.m in Sources */,
 				2E1CDA9D22EAD09600174F08 /* UIView+QQFrame.m in Sources */,
 				007FADAC22E05228001EC5F2 /* LGAlertView+AHKAlertView.m in Sources */,
 				00CDE38F22EAF88100F563FF /* HttpTool.m in Sources */,
@@ -1827,10 +1932,12 @@
 				0046AA6422EACDE30038CA11 /* ETMineViewController.m in Sources */,
 				007FAE3E22E0539F001EC5F2 /* SSAppVersionTool.m in Sources */,
 				2E1CDA9B22EAD09600174F08 /* ETMineModel.m in Sources */,
+				00199B8922F0149200FACC24 /* SDCollectionViewCell.m in Sources */,
 				2E1CDA9922EAD09600174F08 /* WrongSpeakBtn.m in Sources */,
 				2E7161AA22E97AED008B72CF /* MarqueeView.m in Sources */,
 				007FAD4722E03E66001EC5F2 /* STResponseModel.m in Sources */,
 				00E5C32722EEF1FD00009241 /* ETProductDetailController.m in Sources */,
+				00199B8822F0149200FACC24 /* UIView+SDExtension.m in Sources */,
 				007FAD4622E03E66001EC5F2 /* STBaseModel.m in Sources */,
 				007FADA422E05228001EC5F2 /* LGAlertViewHelper.m in Sources */,
 				007FADF522E052C3001EC5F2 /* OTSyncTitleView.m in Sources */,
@@ -1884,6 +1991,7 @@
 				007FAE4122E0539F001EC5F2 /* DCPlaceholderTextView.m in Sources */,
 				007FAE5C22E05E2D001EC5F2 /* ETMessageCenterController.m in Sources */,
 				007FAE2422E052FD001EC5F2 /* UIView+AHkit.m in Sources */,
+				00199B8D22F0149200FACC24 /* TAAbstractDotView.m in Sources */,
 				0046AA5922EACDE30038CA11 /* ETCashOutViewController.m in Sources */,
 				2E0CDF1522E83C7000783952 /* ETFinancialViewController.m in Sources */,
 				007FADA022E05228001EC5F2 /* AHKAlertView.m in Sources */,
@@ -2048,7 +2156,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P79622B5H8;
+				DEVELOPMENT_TEAM = 6467D2S34F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EasyTurn/Vendors(第三方)/aliPayTools",
@@ -2082,7 +2190,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P79622B5H8;
+				DEVELOPMENT_TEAM = 6467D2S34F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EasyTurn/Vendors(第三方)/aliPayTools",
