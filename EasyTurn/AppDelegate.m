@@ -10,15 +10,48 @@
 #import "MainViewController.h"
 #import "ETLoginViewController.h"
 #import "WXApi.h"
+#import <AlipaySDK/AlipaySDK.h>
 @interface AppDelegate ()<WXApiDelegate>
 
 @end
 
 @implementation AppDelegate
-
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options
+{
+    if ([url.host isEqualToString:@"safepay"]) {
+        // 支付跳转支付宝钱包进行支付，处理支付结果
+        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"result = %@",resultDic);
+        }];
+        
+        // 授权跳转支付宝钱包进行支付，处理支付结果
+        [[AlipaySDK defaultService] processAuth_V2Result:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"result = %@",resultDic);
+            // 解析 auth code
+            NSString *result = resultDic[@"result"];
+            NSString *authCode = nil;
+            if (result.length>0) {
+                NSArray *resultArr = [result componentsSeparatedByString:@"&"];
+                for (NSString *subResult in resultArr) {
+                    if (subResult.length > 10 && [subResult hasPrefix:@"auth_code="]) {
+                        authCode = [subResult substringFromIndex:10];
+                        break;
+                    }
+                }
+            }
+            NSLog(@"授权结果 authCode = %@", authCode?:@"");
+        }];
+    }
+    //此处是微信支付
+    if ([url.scheme isEqualToString:@"wx6aa68fa297ad59ee"])
+    {
+        return  [WXApi handleOpenURL:url delegate:(id<WXApiDelegate>)self];
+    }
+    return YES;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleLightContent]; 
+    //[[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleLightContent];
     [WXApi registerApp:@"wx6aa68fa297ad59ee"];
     //设置根控制器
     [self appConfigProvider];
@@ -180,6 +213,12 @@
     [self.window setBackgroundColor:kACColorWhite];
     [self.window makeKeyAndVisible];
 }
+
+
+
+
+    
+
 
 #pragma mark - 登录页面
 - (void)loginViewController {

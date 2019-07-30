@@ -8,7 +8,8 @@
 
 #import "ETRKongViewController.h"
 #import "ETIssueViewController.h"
-#import "ETPurchaseViewController.h"
+#import "ETPublishPurchaseViewController.h"
+#import "ETPersuadersViewController.h"
 @interface ETRKongViewController ()
 @property (nonatomic,strong) UIImageView *publishImg;
 @property (nonatomic,strong) UILabel *publishLab;
@@ -154,9 +155,13 @@
 - (UIButton *)purchaseBtn {
     if (!_purchaseBtn) {
         _purchaseBtn=[[UIButton alloc]init];
-        [_purchaseBtn addTarget:self action:@selector(aaaaa) forControlEvents:UIControlEventTouchUpInside];
+        [_purchaseBtn addTarget:self action:@selector(bbbb) forControlEvents:UIControlEventTouchUpInside];
     }
     return _purchaseBtn;
+}
+- (void)bbbb {
+    ETPublishPurchaseViewController *publish=[[ETPublishPurchaseViewController alloc]init];
+    [self.navigationController pushViewController:publish animated:YES];
 }
 
 - (UIImageView *)businessImg {
@@ -180,9 +185,13 @@
 - (UIButton *)businessBtn {
     if (!_businessBtn) {
         _businessBtn=[[UIButton alloc]init];
-         [_businessBtn addTarget:self action:@selector(aaaaa) forControlEvents:UIControlEventTouchUpInside];
+         [_businessBtn addTarget:self action:@selector(cccc) forControlEvents:UIControlEventTouchUpInside];
     }
     return _businessBtn;
+}
+- (void)cccc {
+    ETPersuadersViewController *persu=[[ETPersuadersViewController alloc]init];
+    [self.navigationController pushViewController:persu animated:YES];
 }
 
 - (UIButton *)fanhuiBtn {

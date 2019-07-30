@@ -9,6 +9,7 @@
 #import "ETProductDetailController.h"
 #import "ProductInfoCell.h"
 #import "SDCycleScrollView.h"
+
 @interface ETProductDetailController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UIView *bigView;
 @property (nonatomic, strong) UIWebView *webView;
