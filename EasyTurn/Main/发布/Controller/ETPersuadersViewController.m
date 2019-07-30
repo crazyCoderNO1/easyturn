@@ -1,22 +1,22 @@
 //
-//  ETIssueViewController.m
+//  ETPersuadersViewController.m
 //  EasyTurn
 //
-//  Created by 王翔 on 2019/7/27.
-//  Copyright © 2019年 EasyTurn. All rights reserved.
+//  Created by 王翔 on 2019/7/30.
+//  Copyright © 2019 EasyTurn. All rights reserved.
 //
 
-#import "ETIssueViewController.h"
+#import "ETPersuadersViewController.h"
 
-
-@interface ETIssueViewController () <UITableViewDelegate,UITableViewDataSource>
+@interface ETPersuadersViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tab;
+
 @end
 
-@implementation ETIssueViewController
+@implementation ETPersuadersViewController
 
 -(void)viewWillDisappear:(BOOL)animated {
-   [super viewWillDisappear:animated];
+    [super viewWillDisappear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
@@ -47,11 +47,11 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section==0) {
-        return 4;
+        return 2;
     }else if (section==1) {
         return 1;
     }else if (section==2) {
-        return 5;
+        return 3;
     }else if (section==3) {
         return 2;
     }else {
@@ -90,16 +90,18 @@
         }
     }
     return YES;
-
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-       UITableViewCell* cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
+    
+    UITableViewCell* cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     if (indexPath.section==0) {
         if (indexPath.row==0) {
             UILabel *titlelab=[[UILabel alloc]init];
-            NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"标题：北京建筑公司 带14项资质"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Medium" size: 15],NSForegroundColorAttributeName: [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0]}];
+            NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"标题：请输入您要发布的标题(标题有利于推送搜索)"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Medium" size: 15],NSForegroundColorAttributeName: [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0]}];
+            
+            [string addAttributes:@{NSForegroundColorAttributeName: [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.000000]} range:NSMakeRange(0, 3)];
             
             [string addAttributes:@{NSForegroundColorAttributeName: [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.000000]} range:NSMakeRange(0, 3)];
             
@@ -113,12 +115,12 @@
             [titlelab mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo(20);
                 make.left.mas_equalTo(15);
-                make.size.mas_equalTo(CGSizeMake(220, 21));
+                make.size.mas_equalTo(CGSizeMake(340, 21));
             }];
         }else if (indexPath.row==1) {
             UILabel *titlelab=[[UILabel alloc]init];
-            NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"经营范围："attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 15],NSForegroundColorAttributeName: [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0]}];
-
+            NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"详细内容："attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 15],NSForegroundColorAttributeName: [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0]}];
+            
             
             titlelab.attributedText = string;
             titlelab.textAlignment = NSTextAlignmentLeft;
@@ -133,7 +135,7 @@
             
             UILabel *titlelab1=[[UILabel alloc]init];
             titlelab1.numberOfLines = 0;
-            NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:@"转让北京现成资质14项房建总包三级，市政总包三机电总包三 建筑机电安装三级 消防二级 装饰二级，防水二级，地基三级，幕墙二级，环保三"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 15],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
+            NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:@"请输入服务内容"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 15],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
             
             
             titlelab1.attributedText = string1;
@@ -145,66 +147,6 @@
                 make.top.mas_equalTo(20);
                 make.left.mas_equalTo(90);
                 make.size.mas_equalTo(CGSizeMake(245, 88));
-            }];
-        }else if (indexPath.row==2) {
-            UILabel *titlelab=[[UILabel alloc]init];
-            NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"附带资产："attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 15],NSForegroundColorAttributeName: [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0]}];
-            
-            
-            titlelab.attributedText = string;
-            titlelab.textAlignment = NSTextAlignmentLeft;
-            titlelab.alpha = 1.0;
-            [cell addSubview:titlelab];
-            
-            [titlelab mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(20);
-                make.left.mas_equalTo(15);
-                make.size.mas_equalTo(CGSizeMake(76, 22));
-            }];
-            
-            UILabel *titlelab1=[[UILabel alloc]init];
-            titlelab1.numberOfLines = 0;
-            NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:@"免费送建造师带安全"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 15],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
-            titlelab1.attributedText = string1;
-            titlelab1.textAlignment = NSTextAlignmentLeft;
-            titlelab1.alpha = 1.0;
-            [cell addSubview:titlelab1];
-            
-            [titlelab1 mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(20);
-                make.left.mas_equalTo(90);
-                make.size.mas_equalTo(CGSizeMake(138, 18));
-            }];
-        }else if (indexPath.row==3) {
-            UILabel *titlelab=[[UILabel alloc]init];
-            NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"其他信息："attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 15],NSForegroundColorAttributeName: [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0]}];
-            
-            
-            titlelab.attributedText = string;
-            titlelab.textAlignment = NSTextAlignmentLeft;
-            titlelab.alpha = 1.0;
-            [cell addSubview:titlelab];
-            
-            [titlelab mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(20);
-                make.left.mas_equalTo(15);
-                make.size.mas_equalTo(CGSizeMake(76, 22));
-            }];
-            
-            UILabel *titlelab1=[[UILabel alloc]init];
-            titlelab1.numberOfLines = 0;
-            NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:@"另外我单位转让北京现成的电力总包三 带承装修，打扰了哪位老总请谅解，欢迎各位老总给介绍客户，谢谢。"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 13],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
-            
-            
-            titlelab1.attributedText = string1;
-            titlelab1.textAlignment = NSTextAlignmentLeft;
-            titlelab1.alpha = 1.0;
-            [cell addSubview:titlelab1];
-            
-            [titlelab1 mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(20);
-                make.left.mas_equalTo(90);
-                make.size.mas_equalTo(CGSizeMake(270,60));
             }];
         }
     }else if (indexPath.section==1) {
@@ -233,21 +175,6 @@
                 make.size.mas_equalTo(CGSizeMake(76, 22));
             }];
             
-            UILabel *titlelab1=[[UILabel alloc]init];
-           NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:@"建筑"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 15],NSForegroundColorAttributeName: [UIColor colorWithRed:20/255.0 green:138/255.0 blue:236/255.0 alpha:1.0]}];
-            
-            
-            titlelab1.attributedText = string1;
-            titlelab1.textAlignment = NSTextAlignmentLeft;
-            titlelab1.alpha = 1.0;
-            [cell addSubview:titlelab1];
-            
-            [titlelab1 mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(15);
-                make.left.mas_equalTo(89);
-                make.size.mas_equalTo(CGSizeMake(35, 21));
-            }];
-            
             UIButton *xzbtn=[[UIButton alloc]init];
             [xzbtn setImage:[UIImage imageNamed:@"出售_下拉 copy"] forState:UIControlStateNormal];
             [cell addSubview:xzbtn];
@@ -258,7 +185,7 @@
             }];
         }else if (indexPath.row==1) {
             UILabel *titlelab=[[UILabel alloc]init];
-            NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"注册地址"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 15],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
+            NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"地址定位"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 15],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
             titlelab.attributedText = string;
             titlelab.textAlignment = NSTextAlignmentLeft;
             titlelab.alpha = 1.0;
@@ -271,7 +198,7 @@
             }];
             
             UILabel *titlelab1=[[UILabel alloc]init];
-           NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:@"北京 — 密云"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 15],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
+            NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:@"北京 — 密云"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 15],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
             
             
             titlelab1.attributedText = string1;
@@ -287,7 +214,7 @@
             cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
         }else if (indexPath.row==2) {
             UILabel *titlelab=[[UILabel alloc]init];
-            NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"注册时间"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 15],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
+            NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"有效时间"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 15],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
             titlelab.attributedText = string;
             titlelab.textAlignment = NSTextAlignmentLeft;
             titlelab.alpha = 1.0;
@@ -314,79 +241,6 @@
                 make.size.mas_equalTo(CGSizeMake(86, 21));
             }];
             cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
-        }else if (indexPath.row==3) {
-            UILabel *titlelab=[[UILabel alloc]init];
-            NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"纳税类型"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 15],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
-            titlelab.attributedText = string;
-            titlelab.textAlignment = NSTextAlignmentLeft;
-            titlelab.alpha = 1.0;
-            [cell addSubview:titlelab];
-            
-            [titlelab mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(15);
-                make.left.mas_equalTo(15);
-                make.size.mas_equalTo(CGSizeMake(76, 22));
-            }];
-            
-            UILabel *titlelab1=[[UILabel alloc]init];
-            NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:@"一般纳税人"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 15],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
-            
-            
-            titlelab1.attributedText = string1;
-            titlelab1.textAlignment = NSTextAlignmentLeft;
-            titlelab1.alpha = 1.0;
-            [cell addSubview:titlelab1];
-            
-            [titlelab1 mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(15);
-                make.left.mas_equalTo(89);
-                make.size.mas_equalTo(CGSizeMake(86, 21));
-            }];
-            cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
-        }else if (indexPath.row==4) {
-            UILabel *titlelab=[[UILabel alloc]init];
-            NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"有效时间"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 15],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
-            titlelab.attributedText = string;
-            titlelab.textAlignment = NSTextAlignmentLeft;
-            titlelab.alpha = 1.0;
-            [cell addSubview:titlelab];
-            
-            [titlelab mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(15);
-                make.left.mas_equalTo(15);
-                make.size.mas_equalTo(CGSizeMake(76, 22));
-            }];
-            
-            UIView *view = [[UIView alloc] init];
-            view.layer.backgroundColor = [UIColor colorWithRed:242/255.0 green:242/255.0 blue:242/255.0 alpha:1.0].CGColor;
-            view.layer.cornerRadius = 5;
-            [cell addSubview:view];
-            [view mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(15);
-                make.left.mas_equalTo(89);
-                make.size.mas_equalTo(CGSizeMake(74, 30));
-            }];
-            
-            UILabel *subtitle=[[UILabel alloc]init];
-            NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:@"30天"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 15],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
-            subtitle.attributedText = string1;
-            subtitle.textAlignment = NSTextAlignmentLeft;
-            subtitle.alpha = 1.0;
-            [view addSubview:subtitle];
-            [subtitle mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(4);
-                make.left.mas_equalTo(13);
-                make.size.mas_equalTo(CGSizeMake(33, 21));
-            }];
-            
-            UIButton *xzbtn=[[UIButton alloc]init];
-            [xzbtn setImage:[UIImage imageNamed:@"出售_下拉 copy"] forState:UIControlStateNormal];
-            [cell addSubview:xzbtn];
-            [xzbtn mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(22);
-                make.left.mas_equalTo(144);
-                make.size.mas_equalTo(CGSizeMake(15, 15));
-            }];
         }
     }else if (indexPath.section==3) {
         if (indexPath.row==0) {
@@ -450,7 +304,7 @@
                 make.top.mas_equalTo(4);
                 make.left.mas_equalTo(22);
                 make.size.mas_equalTo(CGSizeMake(50, 21));
-             }];
+            }];
             UILabel *subLab=[[UILabel alloc]init];
             NSMutableAttributedString *string2 = [[NSMutableAttributedString alloc] initWithString:@"～"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 15],NSForegroundColorAttributeName: [UIColor colorWithRed:102/255.0 green:102/255.0 blue:102/255.0 alpha:1.0]}];
             subLab.attributedText = string2;
@@ -565,6 +419,7 @@
     // 3点击没有颜色改变
     cell.selected = NO;
 }
+
 /*
 #pragma mark - Navigation
 
