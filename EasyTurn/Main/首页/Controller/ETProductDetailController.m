@@ -72,17 +72,14 @@
     [HttpTool get:[NSString stringWithFormat:@"release/releaseDetail"] params:params success:^(id responseObj) {
         _products=[NSMutableArray new];
         NSDictionary* a=responseObj[@"data"];
-<<<<<<< HEAD
         for (NSDictionary* prod in responseObj[@"data"]) {
             ETProductModel* p=[ETProductModel mj_objectWithKeyValues:prod];
 //            [_products addObject:p];
         }
         //        NSLog(@"");
-=======
             ETProductModel* p=[ETProductModel mj_objectWithKeyValues:a];
             NSLog(@"");
         [_products addObject:p];
->>>>>>> 3bcc73bbe0cd0c8a35b5bcfc922dbb606b9f1efb
         [_tableView reloadData];
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
