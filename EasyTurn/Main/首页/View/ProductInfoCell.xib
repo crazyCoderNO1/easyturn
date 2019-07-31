@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -43,23 +43,26 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UoQ-da-VzB">
-                        <rect key="frame" x="224" y="48" width="50" height="50"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lON-FP-vSD">
+                        <rect key="frame" x="212" y="53" width="82" height="40"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="50" id="6BF-M8-N9y"/>
-                            <constraint firstAttribute="width" constant="50" id="PtJ-C4-hu6"/>
+                            <constraint firstAttribute="width" constant="82" id="H65-dK-gk6"/>
+                            <constraint firstAttribute="height" constant="40" id="yRs-z6-nOm"/>
                         </constraints>
-                    </imageView>
+                        <state key="normal" title="发起交易">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="UoQ-da-VzB" secondAttribute="trailing" constant="30" id="LBA-hb-TjT"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="lON-FP-vSD" secondAttribute="trailing" constant="10" id="NzV-aR-iDe"/>
                     <constraint firstItem="zZU-hh-R0t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="Opd-JC-gK1"/>
                     <constraint firstItem="Hj0-d2-Y9c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="86" id="adm-Uk-UVE"/>
+                    <constraint firstItem="lON-FP-vSD" firstAttribute="centerY" secondItem="nob-WN-bFD" secondAttribute="centerY" id="f9X-7j-dgH"/>
                     <constraint firstAttribute="bottom" secondItem="nob-WN-bFD" secondAttribute="bottom" constant="15" id="lWI-mK-kYP"/>
                     <constraint firstItem="nob-WN-bFD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="lwR-bi-Dnf"/>
                     <constraint firstItem="zZU-hh-R0t" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="mG0-pd-oLx"/>
                     <constraint firstItem="zZU-hh-R0t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="nCJ-7d-7lk"/>
-                    <constraint firstItem="UoQ-da-VzB" firstAttribute="centerY" secondItem="nob-WN-bFD" secondAttribute="centerY" id="pLg-0w-X2u"/>
                     <constraint firstAttribute="trailingMargin" secondItem="zZU-hh-R0t" secondAttribute="trailing" id="x9g-ui-tWL"/>
                     <constraint firstItem="Hj0-d2-Y9c" firstAttribute="centerY" secondItem="nob-WN-bFD" secondAttribute="centerY" id="y8H-T3-MMm"/>
                 </constraints>
@@ -68,8 +71,8 @@
             <connections>
                 <outlet property="oPriceLabel" destination="Hj0-d2-Y9c" id="67H-3w-EC3"/>
                 <outlet property="priceLabel" destination="nob-WN-bFD" id="KKS-sW-o15"/>
-                <outlet property="shareImage" destination="UoQ-da-VzB" id="sy3-lE-UYg"/>
                 <outlet property="titleLabel" destination="zZU-hh-R0t" id="Ugw-nL-xKo"/>
+                <outlet property="tradeBtn" destination="lON-FP-vSD" id="8bk-92-QqY"/>
             </connections>
             <point key="canvasLocation" x="160" y="147.52623688155924"/>
         </tableViewCell>

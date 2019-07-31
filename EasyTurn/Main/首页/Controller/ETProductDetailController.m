@@ -9,6 +9,7 @@
 #import "ETProductDetailController.h"
 #import "ProductInfoCell.h"
 #import "SDCycleScrollView.h"
+#import "ETProductModel.h"
 
 @interface ETProductDetailController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UIView *bigView;
@@ -22,6 +23,11 @@
 @property (nonatomic, strong) SDCycleScrollView *cycleScrollView;
 ///轮播图数组
 @property (nonatomic, strong) NSArray *imageGroupArray;
+@property (nonatomic,strong) UIView *bottomView;
+@property (nonatomic, strong) UIView *navigationView;
+@property (nonatomic, strong) UIButton *leftButton;
+@property (nonatomic, strong) NSMutableArray *products;
+
 @end
 
 @implementation ETProductDetailController
@@ -38,23 +44,56 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self enableLeftBackButton];
+    [self enableLeftBackButton];
     [self setBgUI];
     [self setHeaderAndFooterView];
     [self setBottomView];
     [self setUpLeftTwoButton];
+    
+    _navigationView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, TopHeight)];
+    _navigationView.backgroundColor = kACColorClear;
+    [self.view addSubview:_navigationView];
+    _leftButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    _leftButton.frame = CGRectMake(15, StatusBarHeight, 55, 45);
+    //    [_leftButton setBackgroundColor:[UIColor blueColor]];
+    [_leftButton setImage:[UIImage imageNamed:@"navigation_back_hl"] forState:(UIControlStateNormal)];
+    [_leftButton addTarget:self action:@selector(backAction) forControlEvents:(UIControlEventTouchUpInside)];
+    [_navigationView addSubview:_leftButton];
     // Do any additional setup after loading the view.
+    [self PostUI];
 }
-
+#pragma mark - 动态列表
+- (void)PostUI {
+    NSMutableDictionary* dic=[NSMutableDictionary new];
+    NSDictionary *params = @{
+                             @"releaseId" : _releaseId
+                             };
+    [HttpTool get:[NSString stringWithFormat:@"release/releaseDetail"] params:params success:^(id responseObj) {
+        _products=[NSMutableArray new];
+        NSDictionary* a=responseObj[@"data"];
+        for (NSDictionary* prod in responseObj[@"data"]) {
+            ETProductModel* p=[ETProductModel mj_objectWithKeyValues:prod];
+            [_products addObject:p];
+        }
+        //        NSLog(@"");
+        [_tableView reloadData];
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+}
+-(void)backAction
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 - (void)setBgUI
 {
-    _bottomHeight = 55;
+    _bottomHeight = 40;
     
     //存放tableView和webView，tableview在上面，webview在下面
-    _bigView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, (Screen_Width - _bottomHeight) * 2)];
+    _bigView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, Screen_Height)];
     _bigView.backgroundColor = kACColorWhite;
     
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, Screen_Height - _bottomHeight)];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, Screen_Height)];
     _tableView.backgroundColor = kACColorWhite;
     _tableView.delegate = self;
     _tableView.dataSource = self;
@@ -108,7 +147,7 @@
     UIView *footView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, 40)];
     [footView addSubview:pullMsgView];
     
-    _tableView.tableFooterView = footView;
+//    _tableView.tableFooterView = footView;
     
     //设置下拉提示视图
     UILabel *downPullMsgView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, 40)];
@@ -123,29 +162,29 @@
 
 - (void)setBottomView
 {
-    UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, Screen_Height - _bottomHeight, Screen_Width, _bottomHeight)];
-    bottomView.backgroundColor = kACColorBackgroundGray;
-    [self.view addSubview:bottomView];
+    _bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, Screen_Height - _bottomHeight, Screen_Width, _bottomHeight)];
+    _bottomView.backgroundColor = kACColorBackgroundGray;
+    _tableView.tableFooterView=_bottomView;
     
     UIButton *addButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    addButton.frame = CGRectMake(bottomView.mj_w/2, 0, bottomView.mj_w/4, _bottomHeight);
-    addButton.backgroundColor = RGBCOLOR(250, 112, 60);
+    addButton.frame = CGRectMake(_bottomView.mj_w/2, 0, _bottomView.mj_w/4, _bottomHeight);
+    addButton.backgroundColor = RGBCOLOR(60, 138, 239);
     addButton.titleLabel.font = SYSTEMFONT(16);
-    [addButton setTitle:@"加入购物车" forState:(UIControlStateNormal)];
+    [addButton setTitle:@"联系人:张先生" forState:(UIControlStateNormal)];
     [addButton setTitleColor:kACColorWhite forState:(UIControlStateNormal)];
     addButton.tag=0;
     [addButton addTarget:self action:@selector(addAction:) forControlEvents:(UIControlEventTouchUpInside)];
-    [bottomView addSubview:addButton];
+    [_bottomView addSubview:addButton];
     
     UIButton *addimButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    addimButton.frame = CGRectMake(bottomView.mj_w*3/4, 0, bottomView.mj_w/4, _bottomHeight);
-    addimButton.backgroundColor = kACColorRed;
+    addimButton.frame = CGRectMake(_bottomView.mj_w*3/4, 0, _bottomView.mj_w/4, _bottomHeight);
+    addimButton.backgroundColor = RGBCOLOR(60, 138, 239);
     addimButton.titleLabel.font = SYSTEMFONT(16);
-    [addimButton setTitle:@"立即购买" forState:(UIControlStateNormal)];
+    [addimButton setTitle:@"联系商家" forState:(UIControlStateNormal)];
     [addimButton setTitleColor:kACColorWhite forState:(UIControlStateNormal)];
     addimButton.tag=1;
     [addimButton addTarget:self action:@selector(addAction:) forControlEvents:(UIControlEventTouchUpInside)];
-    [bottomView addSubview:addimButton];
+    [_bottomView addSubview:addimButton];
     
 }
 -(void)addAction:(id)sender
@@ -171,7 +210,7 @@
         [button addTarget:self action:@selector(bottomButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         CGFloat buttonX = (buttonW * i);
         button.frame = CGRectMake(buttonX, buttonY, buttonW, buttonH);
-        [self.view addSubview:button];
+//        [self.view addSubview:button];
     }
 }
 - (void)setImageGroupArray:(NSArray *)imageGroupArray{
@@ -184,54 +223,56 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGFloat offset = scrollView.contentOffset.y;
-    
+
     if (scrollView == _tableView){
         //重新赋值，就不会有用力拖拽时的回弹
-        _tempScrollView.contentOffset = CGPointMake(_tempScrollView.contentOffset.x, 0);
-        if (offset >= 0 && offset <= Screen_Width) {
-            //因为tempScrollView是放在tableView上的，tableView向上速度为1，实际上tempScrollView的速度也是1，此处往反方向走1/2的速度，相当于tableView还是正向在走1/2，这样就形成了视觉差！
-            _tempScrollView.contentOffset = CGPointMake(_tempScrollView.contentOffset.x, - offset / 2.0f);
+//        _tempScrollView.contentOffset = CGPointMake(_tempScrollView.contentOffset.x, 0);
+        if (offset >= TopHeight && offset <= Screen_Width) {
+            _leftButton.hidden=YES; //因为tempScrollView是放在tableView上的，tableView向上速度为1，实际上tempScrollView的速度也是1，此处往反方向走1/2的速度，相当于tableView还是正向在走1/2，这样就形成了视觉差！
+//            _tempScrollView.contentOffset = CGPointMake(_tempScrollView.contentOffset.x, - offset / 2.0f);
         }
+        else
+            _leftButton.hidden=NO;
     }
-    
-}
 
-#pragma mark -- 监听滚动实现商品详情与图文详情界面的切换
--(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    
-    WeakSelf(self);
-    CGFloat offset = scrollView.contentOffset.y;
-    if (scrollView == _tableView) {
-        if (offset > _tableView.contentSize.height - Screen_Height + self.bottomHeight + 50) {
-            [UIView animateWithDuration:0.4 animations:^{
-                weakself.bigView.transform = CGAffineTransformTranslate(weakself.bigView.transform, 0, -Screen_Height +  self.bottomHeight + TopHeight);
-            } completion:^(BOOL finished) {
-                
-            }];
-        }
-        //        [_basecontroller.segmentedControl didSelectIndex:1];
-    }
-    if (scrollView == _webView.scrollView) {
-        if (offset < -50) {
-            [UIView animateWithDuration:0.4 animations:^{
-                [UIView animateWithDuration:0.4 animations:^{
-                    weakself.bigView.transform = CGAffineTransformIdentity;
-                    
-                }];
-            } completion:^(BOOL finished) {
-                
-            }];
-        }
-        //        [_basecontroller.segmentedControl didSelectIndex:1];
-        
-    }
 }
+//
+//#pragma mark -- 监听滚动实现商品详情与图文详情界面的切换
+//-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+//
+//    WeakSelf(self);
+//    CGFloat offset = scrollView.contentOffset.y;
+//    if (scrollView == _tableView) {
+//        if (offset > _tableView.contentSize.height - Screen_Height + self.bottomHeight + 50) {
+//            [UIView animateWithDuration:0.4 animations:^{
+//                weakself.bigView.transform = CGAffineTransformTranslate(weakself.bigView.transform, 0, -Screen_Height +  self.bottomHeight + TopHeight);
+//            } completion:^(BOOL finished) {
+//
+//            }];
+//        }
+//        //        [_basecontroller.segmentedControl didSelectIndex:1];
+//    }
+//    if (scrollView == _webView.scrollView) {
+//        if (offset < -50) {
+//            [UIView animateWithDuration:0.4 animations:^{
+//                [UIView animateWithDuration:0.4 animations:^{
+//                    weakself.bigView.transform = CGAffineTransformIdentity;
+//
+//                }];
+//            } completion:^(BOOL finished) {
+//
+//            }];
+//        }
+//        //        [_basecontroller.segmentedControl didSelectIndex:1];
+//
+//    }
+//}
 
 #pragma mark -- UITableViewDelegate & dataSource
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     
-    return 4;
+    return 6;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -240,6 +281,8 @@
         return 1;
     else if(section==3)
         return 3;
+    else if(section==4)
+        return 2;
     return 1;
 }
 
@@ -258,6 +301,14 @@
     else if (indexPath.section==2) {
         return 80;
     }
+    else if (indexPath.section==4) {
+        if (indexPath.row==0) {
+            return 80;
+        }
+        else{
+        return 160;
+        }
+    }
     else{
         
         return 60;
@@ -266,11 +317,16 @@
 //设置分区尾视图高度
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     if (section>0) {
-        return 10;
+        if (section==5) {
+            return 0.01;
+        }
+        else
+            return 10;
     }
     else{
         return 0.01;
-    }}
+    }
+}
 //设置分区头视图高度
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     
@@ -310,6 +366,19 @@
     if (indexPath.section==3) {
         cell.textLabel.text=@"注册时间";
         cell.detailTextLabel.text=@"2019-06-19";
+    }
+    if (indexPath.section==4&&indexPath.row==0) {
+        cell.textLabel.text=@"附带资产";
+        cell.detailTextLabel.text=@"免费送建造师带安全";
+    }
+    if (indexPath.section==4&&indexPath.row==1) {
+        cell.textLabel.text=@"其他信息";
+        cell.detailTextLabel.text=@"我们单位现在有多家现成资质转让可以量身定";
+    }
+    if (indexPath.section==5) {
+        cell.imageView.image=[UIImage imageNamed:@"我的_Bitmap"];
+        cell.textLabel.text=@"易转平台";
+        cell.detailTextLabel.text=@"推荐一条新的收购";
     }
 //    if(indexPath.section==1&&indexPath.row==0){
 //        UIView* v=[[UIView alloc] initWithFrame:CGRectMake(0, 0, Main_Screen_Width, 80)];

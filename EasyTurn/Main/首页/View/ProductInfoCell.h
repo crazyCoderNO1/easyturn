@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *oPriceLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *shareImage;
+@property (weak, nonatomic) IBOutlet UIButton *tradeBtn;
 
 @end
 

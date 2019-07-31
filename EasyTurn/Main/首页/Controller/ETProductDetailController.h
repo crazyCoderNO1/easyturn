@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UIImageView *headerImageView;
 @property (nonatomic, strong) UIImage *image;
+@property (nonatomic, copy) NSString *releaseId;
+
 @end
 
 NS_ASSUME_NONNULL_END
