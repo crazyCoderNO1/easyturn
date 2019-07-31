@@ -8,8 +8,9 @@
 
 #import "ETBuyPushViewController.h"
 #import "ETPayaymentViewController.h"
-@interface ETBuyPushViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface ETBuyPushViewController ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 @property (nonatomic,strong)UITableView *tab;
+@property (nonatomic, copy) NSString *finalPrice;
 
 @end
 
@@ -133,6 +134,7 @@
             UITextField *label1 = [[UITextField alloc] init];
             label1.textAlignment = NSTextAlignmentLeft;
             label1.alpha = 1.0;
+            label1.delegate=self;
             [view addSubview:label1];
             [label1 mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo(6);
@@ -220,11 +222,18 @@
         if (indexPath.row==0) {
             ETPayaymentViewController *payVC=[[ETPayaymentViewController alloc]init];
             payVC.product=_product;
+            payVC.finalPrice=_finalPrice;
+            payVC.releaseId=_releaseId;
             [self.navigationController pushViewController:payVC animated:YES];
         }
     }
 }
-
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSString* price=[textField.text stringByAppendingString:string];
+    _finalPrice=price;
+    NSLog(@"结束编辑");
+    return YES;
+}
 /*
 #pragma mark - Navigation
 

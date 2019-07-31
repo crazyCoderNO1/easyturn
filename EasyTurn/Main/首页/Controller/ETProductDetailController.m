@@ -442,6 +442,8 @@
 - (void)tiao {
     ETBuyPushViewController *buy =[[ETBuyPushViewController alloc]init];
     buy.product=_products[0];
+    ETProductModel* p=_products[0];
+    buy.releaseId=p.releaseId;
     [self.navigationController pushViewController:buy animated:YES];
     
 }
