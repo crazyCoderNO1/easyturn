@@ -21,6 +21,9 @@
         _tab=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, Screen_Width, Screen_Height) style:UITableViewStyleGrouped];
         _tab.delegate=self;
         _tab.dataSource=self;
+        _tab.tableHeaderView = [[UIView alloc]initWithFrame:CGRectMake(0,0,0,0.01)];
+        _tab.sectionFooterHeight = 0;
+        _tab.sectionHeaderHeight = 10;
     }
     return _tab;
 }
@@ -52,7 +55,12 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    if (section==0) {
+        return 2;
+    }else if (section==1) {
+        return 4;
+    }
+    return YES;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -67,7 +75,7 @@
             label.textAlignment = NSTextAlignmentLeft;
             label.alpha = 1.0;
             [cell addSubview:label];
-            [cell mas_makeConstraints:^(MASConstraintMaker *make) {
+            [label mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo(21);
                 make.left.mas_equalTo(14);
                 make.size.mas_equalTo(CGSizeMake(74, 21));
@@ -75,7 +83,7 @@
             
             UILabel *label1 = [[UILabel alloc] init];
             label1.numberOfLines = 0;
-            NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:@"¥ 30000元"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Medium" size: 30],NSForegroundColorAttributeName: [UIColor colorWithRed:248/255.0 green:124/255.0 blue:43/255.0 alpha:1.0]}];
+            NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:@"¥ 30000元"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Medium" size: 13],NSForegroundColorAttributeName: [UIColor colorWithRed:248/255.0 green:124/255.0 blue:43/255.0 alpha:1.0]}];
             label1.attributedText = string1;
             label1.textAlignment = NSTextAlignmentLeft;
             label1.alpha = 1.0;
@@ -94,7 +102,7 @@
             label.textAlignment = NSTextAlignmentLeft;
             label.alpha = 1.0;
             [cell addSubview:label];
-            [cell mas_makeConstraints:^(MASConstraintMaker *make) {
+            [label mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo(11);
                 make.left.mas_equalTo(15);
                 make.size.mas_equalTo(CGSizeMake(74, 21));
@@ -110,7 +118,7 @@
             label.textAlignment = NSTextAlignmentLeft;
             label.alpha = 1.0;
             [cell addSubview:label];
-            [cell mas_makeConstraints:^(MASConstraintMaker *make) {
+            [label mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo(21);
                 make.left.mas_equalTo(14);
                 make.size.mas_equalTo(CGSizeMake(74, 21));
@@ -132,7 +140,7 @@
             label.textAlignment = NSTextAlignmentLeft;
             label.alpha = 1.0;
             [cell addSubview:label];
-            [cell mas_makeConstraints:^(MASConstraintMaker *make) {
+            [label mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo(19);
                 make.left.mas_equalTo(57);
                 make.size.mas_equalTo(CGSizeMake(180, 21));
@@ -143,7 +151,7 @@
             [_btn setImage:[UIImage imageNamed:@"支付_分组 3"] forState:UIControlStateSelected];
             [_btn addTarget:self action:@selector(aaa) forControlEvents:UIControlEventTouchUpInside];
             [cell addSubview:self.btn];
-            [self.btn mas_makeConstraints:^(MASConstraintMaker *make) {
+            [_btn mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo (20);
                 make.right.mas_equalTo(-13);
                 make.size.mas_equalTo(CGSizeMake(19, 19));
@@ -165,7 +173,7 @@
             label.textAlignment = NSTextAlignmentLeft;
             label.alpha = 1.0;
             [cell addSubview:label];
-            [cell mas_makeConstraints:^(MASConstraintMaker *make) {
+            [label mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo(19);
                 make.left.mas_equalTo(57);
                 make.size.mas_equalTo(CGSizeMake(180, 21));
@@ -176,7 +184,7 @@
             [_btn setImage:[UIImage imageNamed:@"支付_分组 3"] forState:UIControlStateSelected];
             [_btn addTarget:self action:@selector(aaa) forControlEvents:UIControlEventTouchUpInside];
             [cell addSubview:self.btn];
-            [self.btn mas_makeConstraints:^(MASConstraintMaker *make) {
+            [_btn mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo (20);
                 make.right.mas_equalTo(-13);
                 make.size.mas_equalTo(CGSizeMake(19, 19));
@@ -198,7 +206,7 @@
             label.textAlignment = NSTextAlignmentLeft;
             label.alpha = 1.0;
             [cell addSubview:label];
-            [cell mas_makeConstraints:^(MASConstraintMaker *make) {
+            [label mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo(19);
                 make.left.mas_equalTo(57);
                 make.size.mas_equalTo(CGSizeMake(180, 21));
@@ -209,7 +217,7 @@
             [_btn setImage:[UIImage imageNamed:@"支付_分组 3"] forState:UIControlStateSelected];
             [_btn addTarget:self action:@selector(aaa) forControlEvents:UIControlEventTouchUpInside];
             [cell addSubview:self.btn];
-            [self.btn mas_makeConstraints:^(MASConstraintMaker *make) {
+            [_btn mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo (20);
                 make.right.mas_equalTo(-13);
                 make.size.mas_equalTo(CGSizeMake(19, 19));
@@ -226,6 +234,36 @@
     }else {
         _btn.selected=YES;
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [_tab deselectRowAtIndexPath:indexPath animated:YES];
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    // 2
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    // 3点击没有颜色改变
+    cell.selected = NO;
+//    if (indexPath.section==1) {
+//        if (indexPath.row==0) {
+//            ETPayaymentViewController *payVC=[[ETPayaymentViewController alloc]init];
+//            [self.navigationController pushViewController:payVC animated:YES];
+//        }
+//    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section==0) {
+        if (indexPath.row==0) {
+            return 50;
+        }else if (indexPath.row==1) {
+            return 150;
+        }
+    }else if (indexPath.section==1) {
+            return 50;
+       
+    }
+    return YES;
 }
 /*
 #pragma mark - Navigation

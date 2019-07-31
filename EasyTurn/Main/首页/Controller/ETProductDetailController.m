@@ -10,6 +10,7 @@
 #import "ProductInfoCell.h"
 #import "SDCycleScrollView.h"
 #import "ETProductModel.h"
+#import "ETBuyPushViewController.h"
 
 @interface ETProductDetailController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UIView *bigView;
@@ -73,7 +74,7 @@
         NSDictionary* a=responseObj[@"data"];
         for (NSDictionary* prod in responseObj[@"data"]) {
             ETProductModel* p=[ETProductModel mj_objectWithKeyValues:prod];
-            [_products addObject:p];
+//            [_products addObject:p];
         }
         //        NSLog(@"");
         [_tableView reloadData];
@@ -357,6 +358,7 @@
         cell.titleLabel.numberOfLines=0;
         cell.priceLabel.text=[NSString stringWithFormat:@"￥:%@",@"1000"];
         cell.oPriceLabel.text=[NSString stringWithFormat:@"价格:￥%@",@""];
+        [cell.tradeBtn addTarget:self action:@selector(tiao) forControlEvents:UIControlEventTouchUpInside];
         return cell;
     }
     if (indexPath.section==2) {
@@ -432,8 +434,17 @@
     return cell;
 }
 
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+- (void)tiao {
+    ETBuyPushViewController *buy =[[ETBuyPushViewController alloc]init];
+    [self.navigationController pushViewController:buy animated:YES];
     
 }
+
+
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    if (indexPath.section==0) {
+//        ETBuyPushViewController *buy =[[ETBuyPushViewController alloc]init];
+//        [self.navigationController pushViewController:buy animated:YES];
+//    }
+//}
 @end

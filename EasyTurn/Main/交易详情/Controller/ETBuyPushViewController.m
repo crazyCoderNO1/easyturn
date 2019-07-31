@@ -23,6 +23,7 @@
         _tab.tableHeaderView = [[UIView alloc]initWithFrame:CGRectMake(0,0,0,0.01)];
         _tab.sectionFooterHeight = 0;
         _tab.sectionHeaderHeight = 10;
+        _tab.rowHeight=100;
     }
     return _tab;
 }
@@ -58,7 +59,7 @@
                 label.textAlignment = NSTextAlignmentLeft;
                 label.alpha = 1.0;
             [cell addSubview:label];
-            [cell mas_makeConstraints:^(MASConstraintMaker *make) {
+            [label mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo(15);
                 make.left.mas_equalTo(15);
                 make.right.mas_equalTo(-15);
@@ -73,7 +74,7 @@
             label.textAlignment = NSTextAlignmentLeft;
             label.alpha = 1.0;
             [cell addSubview:label];
-            [cell mas_makeConstraints:^(MASConstraintMaker *make) {
+            [label mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo(15);
                 make.left.mas_equalTo(15);
                 make.size.mas_equalTo(CGSizeMake(157, 21));
@@ -87,7 +88,7 @@
             label.textAlignment = NSTextAlignmentLeft;
             label.alpha = 1.0;
             [cell addSubview:label];
-            [cell mas_makeConstraints:^(MASConstraintMaker *make) {
+            [label mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo(15);
                 make.left.mas_equalTo(15);
                 make.size.mas_equalTo(CGSizeMake(165, 21));
@@ -101,7 +102,7 @@
             label.textAlignment = NSTextAlignmentLeft;
             label.alpha = 1.0;
             [cell addSubview:label];
-            [cell mas_makeConstraints:^(MASConstraintMaker *make) {
+            [label mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo(15);
                 make.left.mas_equalTo(15);
                 make.size.mas_equalTo(CGSizeMake(170, 21));
@@ -115,7 +116,7 @@
             label.textAlignment = NSTextAlignmentLeft;
             label.alpha = 1.0;
             [cell addSubview:label];
-            [cell mas_makeConstraints:^(MASConstraintMaker *make) {
+            [label mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo(21);
                 make.left.mas_equalTo(14);
                 make.size.mas_equalTo(CGSizeMake(74, 21));
@@ -127,7 +128,7 @@
             [cell addSubview:view];
             [view mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo(15);
-                make.left.mas_equalTo(14);
+                make.left.mas_equalTo(89);
                 make.size.mas_equalTo(CGSizeMake(91, 34));
             }];
             
@@ -153,7 +154,7 @@
             label.textAlignment = NSTextAlignmentLeft;
             label.alpha = 1.0;
             [cell addSubview:label];
-            [cell mas_makeConstraints:^(MASConstraintMaker *make) {
+            [label mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo(15);
                 make.left.mas_equalTo(15);
                 make.size.mas_equalTo(CGSizeMake(215, 21));
@@ -208,7 +209,18 @@
     
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+        return 60;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [_tab deselectRowAtIndexPath:indexPath animated:YES];
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    // 2
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    // 3点击没有颜色改变
+    cell.selected = NO;
     if (indexPath.section==1) {
         if (indexPath.row==0) {
             ETPayaymentViewController *payVC=[[ETPayaymentViewController alloc]init];
