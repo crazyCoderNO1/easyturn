@@ -91,6 +91,8 @@
     // 3点击没有颜色改变
     cell.selected = NO;
     ETProductDetailController* p=[ETProductDetailController new];
+    ETProductModel* pm =[_products objectAtIndex:indexPath.row];
+    p.releaseId=pm.releaseId;
     [self.navigationController pushViewController:p animated:YES];
 }
 

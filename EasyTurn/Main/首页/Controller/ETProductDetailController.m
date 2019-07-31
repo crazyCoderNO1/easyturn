@@ -72,11 +72,17 @@
     [HttpTool get:[NSString stringWithFormat:@"release/releaseDetail"] params:params success:^(id responseObj) {
         _products=[NSMutableArray new];
         NSDictionary* a=responseObj[@"data"];
+<<<<<<< HEAD
         for (NSDictionary* prod in responseObj[@"data"]) {
             ETProductModel* p=[ETProductModel mj_objectWithKeyValues:prod];
 //            [_products addObject:p];
         }
         //        NSLog(@"");
+=======
+            ETProductModel* p=[ETProductModel mj_objectWithKeyValues:a];
+            NSLog(@"");
+        [_products addObject:p];
+>>>>>>> 3bcc73bbe0cd0c8a35b5bcfc922dbb606b9f1efb
         [_tableView reloadData];
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
@@ -356,7 +362,9 @@
         ProductInfoCell *cell=[_tableView dequeueReusableCellWithIdentifier:@"productinfocell"];
         cell.titleLabel.text=@"代理公司记账";
         cell.titleLabel.numberOfLines=0;
-        cell.priceLabel.text=[NSString stringWithFormat:@"￥:%@",@"1000"];
+        //
+        ETProductModel* p=[_products objectAtIndex:0];
+        cell.priceLabel.text=[NSString stringWithFormat:@"￥:%@",p.price];
         cell.oPriceLabel.text=[NSString stringWithFormat:@"价格:￥%@",@""];
         [cell.tradeBtn addTarget:self action:@selector(tiao) forControlEvents:UIControlEventTouchUpInside];
         return cell;
