@@ -68,16 +68,15 @@
         }else if (indexPath.row==1) {
             UILabel *label = [[UILabel alloc] init];
             label.numberOfLines = 0;
-            NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"注册时间：2019-01-03"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 13],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
-            
-            label.attributedText = string;
+            label.text=[NSString stringWithFormat:@"注册时间：%@",self.product.releaseTime];
+            label.font=[UIFont systemFontOfSize:13];
             label.textAlignment = NSTextAlignmentLeft;
             label.alpha = 1.0;
             [cell addSubview:label];
             [label mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo(15);
                 make.left.mas_equalTo(15);
-                make.size.mas_equalTo(CGSizeMake(157, 21));
+                make.size.mas_equalTo(CGSizeMake(200, 21));
             }];
         }else if (indexPath.row==2) {
             UILabel *label = [[UILabel alloc] init];
@@ -132,10 +131,7 @@
                 make.size.mas_equalTo(CGSizeMake(91, 34));
             }];
             
-            UILabel *label1 = [[UILabel alloc] init];
-            label1.numberOfLines = 0;
-            NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:@"¥ 30000元"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Medium" size: 14],NSForegroundColorAttributeName: [UIColor colorWithRed:248/255.0 green:124/255.0 blue:43/255.0 alpha:1.0]}];
-            label1.attributedText = string1;
+            UITextField *label1 = [[UITextField alloc] init];
             label1.textAlignment = NSTextAlignmentLeft;
             label1.alpha = 1.0;
             [view addSubview:label1];

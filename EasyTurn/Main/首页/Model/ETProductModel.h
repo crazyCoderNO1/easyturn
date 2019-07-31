@@ -27,7 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *business;
 @property (nonatomic, copy) NSString *releaseId;
 @property (nonatomic, copy) NSString *detail;
-
+@property (nonatomic, copy) NSString *releaseTime;
+//详情
 @property (nonatomic, strong) UserInfoModel *userInfo;
 
 @end

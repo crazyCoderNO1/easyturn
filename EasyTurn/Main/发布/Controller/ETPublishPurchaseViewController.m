@@ -37,7 +37,6 @@
     YHSegmentView *segmentView = [[YHSegmentView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, [UIScreen mainScreen].bounds.size.height - CGRectGetMaxY(self.navigationController.navigationBar.frame)) ViewControllersArr:[mutArr copy] TitleArr:titleArr TitleNormalSize:20 TitleSelectedSize:20 SegmentStyle:YHSegementStyleSpace ParentViewController:self ReturnIndexBlock:^(NSInteger index) {
         NSLog(@"点击了%ld模块",(long)index);
     }];
-    
     [self.view addSubview:segmentView];
 }
 
