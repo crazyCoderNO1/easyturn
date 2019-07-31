@@ -26,9 +26,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥75" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nob-WN-bFD" userLabel="priceLabel">
-                        <rect key="frame" x="20" y="61.5" width="70" height="23"/>
+                        <rect key="frame" x="20" y="61.5" width="100" height="23"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="70" id="dDw-t0-6ro"/>
+                            <constraint firstAttribute="width" constant="100" id="dDw-t0-6ro"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                         <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
