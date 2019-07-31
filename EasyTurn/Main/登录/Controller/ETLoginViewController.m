@@ -43,6 +43,10 @@ typedef NS_ENUM(NSUInteger, ETLoginViewControllerType) {
 
 @implementation ETLoginViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationBarHidden=YES;
+}
+
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options
 {
     if ([url.host isEqualToString:@"oauth"]){//微信登录

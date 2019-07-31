@@ -12,10 +12,10 @@
 #import "ETPhoneNumberViewController.h"
 #import "ETTouchMeinViewController.h"
 #import "ETAboutViewController.h"
+#import "ETLoginViewController.h"
 @interface ETPutViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tab;
 @property(nonatomic,strong)NSArray *arr;
-
 @end
 
 @implementation ETPutViewController
@@ -35,13 +35,52 @@
   
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor=[UIColor whiteColor];
-    self.title=@"VIP会员";
+    self.title=@"设置";
     self.navigationController.navigationBar.titleTextAttributes=
     @{NSForegroundColorAttributeName:[UIColor whiteColor],
       NSFontAttributeName:[UIFont systemFontOfSize:18]};
     self.navigationController.navigationBar.barTintColor=[UIColor colorWithRed:47/255.0 green:134/255.0 blue:251/255.0 alpha:1.0];
     [self.view addSubview:self.tab];
+    [self btnController];
+    
 }
+
+- (void)btnController {
+    UIButton * backBtn=[[UIButton alloc]init];
+    backBtn.backgroundColor=[UIColor colorWithRed:47/255.0 green:134/255.0 blue:251/255.0 alpha:1.0];
+    [backBtn setTitle:@"退出" forState:UIControlStateNormal];
+    backBtn.titleLabel.font=[UIFont systemFontOfSize:18];
+    backBtn.layer.cornerRadius = 6;
+    [backBtn addTarget:self action:@selector(backbtntiao) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:backBtn];
+    [backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(502-kNavigationBarHeight-kStatusBarHeight);
+        make.left.mas_equalTo(15);
+        make.right.mas_equalTo(-15);
+        make.height.mas_equalTo(48);
+    }];
+}
+
+- (void)backbtntiao {
+    
+    NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+    NSDictionary* defaults = [defs dictionaryRepresentation];
+    for (id key in defaults) {
+        if (![key isEqualToString:@"token"]) {
+            [defs removeObjectForKey:key];
+            [defs synchronize];
+            UIWindow * window = [[[UIApplication  sharedApplication]delegate]window];
+            ETLoginViewController*loginVC = [[ETLoginViewController  alloc]init];
+            UINavigationController * nav = [[UINavigationController  alloc]initWithRootViewController: loginVC];
+            window.rootViewController= nav;
+        } else {
+            NSLog(@"%@",[defs objectForKey:key]);
+        }
+    }
+    
+}
+
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 2;
