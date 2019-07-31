@@ -7,7 +7,10 @@
 //
 
 #import "ETPayaymentViewController.h"
-
+#import "WXApiRequestHandler.h"
+#import "WXApiManager.h"
+#import "WechatAuthSDK.h"
+#import "WXApiObject.h"
 @interface ETPayaymentViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView*tab;
 @property (nonatomic,strong) UIButton *btn;
@@ -35,7 +38,40 @@
     [self.view addSubview:self.tab];
     [self payBtn];
 }
+#pragma mark - 预支付
+- (void)PostUI {
+    NSMutableDictionary* dic=[NSMutableDictionary new];
+    NSDictionary *params = @{
+                             @"id" : @(6),
+                             @"price" : _finalPrice,
+                             @"productId" : _releaseId,
+                             @"type" : @(2)
 
+                             };
+    [HttpTool get:[NSString stringWithFormat:@"pay/prePay"] params:params success:^(id responseObj) {
+        
+                NSString* a=responseObj[@"data"][@"result"];
+                NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:[a dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableLeaves error:nil];
+        //
+        NSDictionary* d=[jsonDict copy];
+        [self wechatPay:d];
+        NSLog(@"");
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+}
+-(void)wechatPay:(NSDictionary*)d
+{
+    [self.navigationController popViewControllerAnimated:NO];
+    //    NSDictionary* d=[NSDictionary new];
+    //    [[WXApiObject shareInstance]WXApiPayWithParam:d];
+    NSString *res = [WXApiRequestHandler jumpToBizPay:d];
+    if( ![@"" isEqual:res] ){
+        UIAlertView *alter = [[UIAlertView alloc] initWithTitle:@"支付失败" message:res delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        [alter show];
+    }
+}
 - (void)payBtnController {
     _payBtn =[[UIButton alloc]init];
     [_payBtn setTitle:@"去支付" forState:UIControlStateNormal];
@@ -83,7 +119,7 @@
             
             UILabel *label1 = [[UILabel alloc] init];
             label1.numberOfLines = 0;
-            NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:@"¥ 30000元"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Medium" size: 13],NSForegroundColorAttributeName: [UIColor colorWithRed:248/255.0 green:124/255.0 blue:43/255.0 alpha:1.0]}];
+            NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:_finalPrice attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Medium" size: 13],NSForegroundColorAttributeName: [UIColor colorWithRed:248/255.0 green:124/255.0 blue:43/255.0 alpha:1.0]}];
             label1.attributedText = string1;
             label1.textAlignment = NSTextAlignmentLeft;
             label1.alpha = 1.0;
@@ -250,6 +286,7 @@
 //            [self.navigationController pushViewController:payVC animated:YES];
 //        }
 //    }
+    [self PostUI];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
