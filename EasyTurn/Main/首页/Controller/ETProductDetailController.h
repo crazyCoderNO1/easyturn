@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ACViewController.h"
+#import "ETProductModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ETProductDetailController : ACViewController
@@ -16,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIImageView *headerImageView;
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, copy) NSString *releaseId;
+@property (nonatomic, strong) ETProductModel *product;
 
 @end
 

@@ -220,6 +220,7 @@
     ETProductDetailController* detail=[ETProductDetailController new];
     ETProductModel* p =[_products objectAtIndex:indexPath.row];
     detail.releaseId=p.releaseId;
+    detail.product=p;
     [self.navigationController pushViewController:detail animated:YES];
 }
 

@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ETProductModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ETBuyPushViewController : UIViewController
-
+@property (nonatomic, copy) NSString *releaseId;
+@property (nonatomic, strong) ETProductModel *product;
 @end
 
 NS_ASSUME_NONNULL_END

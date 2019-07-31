@@ -224,6 +224,7 @@
     if (indexPath.section==1) {
         if (indexPath.row==0) {
             ETPayaymentViewController *payVC=[[ETPayaymentViewController alloc]init];
+            payVC.product=_product;
             [self.navigationController pushViewController:payVC animated:YES];
         }
     }
