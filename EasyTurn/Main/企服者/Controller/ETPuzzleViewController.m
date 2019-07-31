@@ -9,6 +9,7 @@
 #import "ETPuzzleViewController.h"
 #import "ETEnterpriseServiceTableViewCell1.h"
 #import "ETProductModel.h"
+#import "ETProductDetailController.h"
 
 @interface ETPuzzleViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tab;
@@ -90,6 +91,8 @@
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     // 3点击没有颜色改变
     cell.selected = NO;
+    ETProductDetailController* p=[ETProductDetailController new];
+    [self.navigationController pushViewController:p animated:YES];
 }
 
 /*

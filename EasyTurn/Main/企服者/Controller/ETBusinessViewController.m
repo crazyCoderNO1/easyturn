@@ -9,6 +9,7 @@
 #import "ETBusinessViewController.h"
 #import "ETEnterpriseServiceTableViewCell1.h"
 #import "ETProductModel.h"
+#import "ETProductDetailController.h"
 @interface ETBusinessViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tab;
 @property(nonatomic, strong)UIView *searchView;
@@ -88,6 +89,8 @@
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     // 3点击没有颜色改变
     cell.selected = NO;
+    ETProductDetailController* p=[ETProductDetailController new];
+    [self.navigationController pushViewController:p animated:YES];
 }
 /*
 #pragma mark - Navigation

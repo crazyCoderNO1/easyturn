@@ -218,6 +218,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     ETProductDetailController* detail=[ETProductDetailController new];
+    ETProductModel* p =[_products objectAtIndex:indexPath.row];
+    detail.releaseId=p.releaseId;
     [self.navigationController pushViewController:detail animated:YES];
 }
 

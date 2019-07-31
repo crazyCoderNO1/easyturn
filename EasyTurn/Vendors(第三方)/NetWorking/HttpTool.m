@@ -44,6 +44,8 @@
 
 + (void)post:(NSString *)url params:(NSDictionary *)params success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
+    NSUserDefaults* user=[NSUserDefaults standardUserDefaults];
+    NSString* token=[user objectForKey:@"token"];
     // 1.获得请求管理者
     //    AFHTTPSessionManager *mgr = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:devHost_Http_App]];
     static AFHTTPSessionManager *mgr = nil;
@@ -54,6 +56,7 @@
         mgr.requestSerializer = [AFJSONRequestSerializer serializer];
         mgr.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html",@"text/json", @"text/plain", @"text/javascript", nil];
         mgr.requestSerializer.timeoutInterval = 10;
+        [mgr.requestSerializer setValue:token forHTTPHeaderField:@"token"];
     });
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
