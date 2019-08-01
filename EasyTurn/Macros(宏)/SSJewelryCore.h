@@ -196,7 +196,7 @@ static const NSString *APIKey = @"46bbcda544ff928deaeafbee6dc08669";
 // 线下 测试环境
 //static NSString *const devHost_Http_App = @"http://premiere.ltd:8080";
 // 线上 正式环境
-static NSString *const devHost_Http_App = @"http://app.yz-vip.cn";
+static NSString *const devHost_Http_App = @"https://app.yz-vip.cn";
 // 线上 测试环境
 //static NSString *const devHost_Http_App = @"http://test.ssw88.net:8081";
 

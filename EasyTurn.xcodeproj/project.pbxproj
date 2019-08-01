@@ -19,6 +19,20 @@
 		00199B9722F17C2B00FACC24 /* WXApiResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 00199B9022F17C2B00FACC24 /* WXApiResponseHandler.m */; };
 		00199B9822F17C2B00FACC24 /* WXApiRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 00199B9122F17C2B00FACC24 /* WXApiRequestHandler.m */; };
 		00199B9922F17C2B00FACC24 /* WXApiObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 00199B9222F17C2B00FACC24 /* WXApiObject.m */; };
+		00199BA822F288E400FACC24 /* CityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 00199BA222F288E400FACC24 /* CityItem.m */; };
+		00199BA922F288E400FACC24 /* CityButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 00199BA422F288E400FACC24 /* CityButton.m */; };
+		00199BAA22F288E400FACC24 /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00199BA522F288E400FACC24 /* citydict.plist */; };
+		00199BAB22F288E400FACC24 /* ButtonGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00199BA622F288E400FACC24 /* ButtonGroupView.m */; };
+		00199BBE22F288EE00FACC24 /* NSString+PinYin4Cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 00199BB022F288EE00FACC24 /* NSString+PinYin4Cocoa.m */; };
+		00199BBF22F288EE00FACC24 /* unicode_to_hanyu_pinyin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 00199BB122F288EE00FACC24 /* unicode_to_hanyu_pinyin.txt */; };
+		00199BC022F288EF00FACC24 /* PinyinHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 00199BB622F288EE00FACC24 /* PinyinHelper.m */; };
+		00199BC122F288EF00FACC24 /* ChineseInclude.m in Sources */ = {isa = PBXBuildFile; fileRef = 00199BB822F288EE00FACC24 /* ChineseInclude.m */; };
+		00199BC222F288EF00FACC24 /* HanyuPinyinOutputFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 00199BB922F288EE00FACC24 /* HanyuPinyinOutputFormat.m */; };
+		00199BC322F288EF00FACC24 /* ZYPinYinSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 00199BBA22F288EE00FACC24 /* ZYPinYinSearch.m */; };
+		00199BC422F288EF00FACC24 /* ChineseToPinyinResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 00199BBB22F288EE00FACC24 /* ChineseToPinyinResource.m */; };
+		00199BC522F288EF00FACC24 /* PinyinFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 00199BBC22F288EE00FACC24 /* PinyinFormatter.m */; };
+		00199BC622F288EF00FACC24 /* PinYinForObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 00199BBD22F288EE00FACC24 /* PinYinForObjc.m */; };
+		00199BC922F2891400FACC24 /* CityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00199BC722F2891400FACC24 /* CityListViewController.m */; };
 		0046AA5822EACDE30038CA11 /* ETPassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA1F22EACDE20038CA11 /* ETPassWordViewController.m */; };
 		0046AA5922EACDE30038CA11 /* ETCashOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA2022EACDE20038CA11 /* ETCashOutViewController.m */; };
 		0046AA5A22EACDE30038CA11 /* ETAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0046AA2122EACDE20038CA11 /* ETAccountViewController.m */; };
@@ -258,6 +272,32 @@
 		00199B9322F17C2B00FACC24 /* WXApiRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiRequestHandler.h; sourceTree = "<group>"; };
 		00199B9422F17C2B00FACC24 /* WXApiResponseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiResponseHandler.h; sourceTree = "<group>"; };
 		00199B9622F17C2B00FACC24 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		00199BA122F288E400FACC24 /* CityItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityItem.h; sourceTree = "<group>"; };
+		00199BA222F288E400FACC24 /* CityItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityItem.m; sourceTree = "<group>"; };
+		00199BA322F288E400FACC24 /* CityButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityButton.h; sourceTree = "<group>"; };
+		00199BA422F288E400FACC24 /* CityButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityButton.m; sourceTree = "<group>"; };
+		00199BA522F288E400FACC24 /* citydict.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citydict.plist; sourceTree = "<group>"; };
+		00199BA622F288E400FACC24 /* ButtonGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonGroupView.m; sourceTree = "<group>"; };
+		00199BA722F288E400FACC24 /* ButtonGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonGroupView.h; sourceTree = "<group>"; };
+		00199BAD22F288EE00FACC24 /* PinyinHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinHelper.h; sourceTree = "<group>"; };
+		00199BAE22F288EE00FACC24 /* HanyuPinyinOutputFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HanyuPinyinOutputFormat.h; sourceTree = "<group>"; };
+		00199BAF22F288EE00FACC24 /* ChineseInclude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseInclude.h; sourceTree = "<group>"; };
+		00199BB022F288EE00FACC24 /* NSString+PinYin4Cocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PinYin4Cocoa.m"; sourceTree = "<group>"; };
+		00199BB122F288EE00FACC24 /* unicode_to_hanyu_pinyin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unicode_to_hanyu_pinyin.txt; sourceTree = "<group>"; };
+		00199BB222F288EE00FACC24 /* ChineseToPinyinResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyinResource.h; sourceTree = "<group>"; };
+		00199BB322F288EE00FACC24 /* ZYPinYinSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYPinYinSearch.h; sourceTree = "<group>"; };
+		00199BB422F288EE00FACC24 /* PinYinForObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinYinForObjc.h; sourceTree = "<group>"; };
+		00199BB522F288EE00FACC24 /* PinyinFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinFormatter.h; sourceTree = "<group>"; };
+		00199BB622F288EE00FACC24 /* PinyinHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinHelper.m; sourceTree = "<group>"; };
+		00199BB722F288EE00FACC24 /* NSString+PinYin4Cocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PinYin4Cocoa.h"; sourceTree = "<group>"; };
+		00199BB822F288EE00FACC24 /* ChineseInclude.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseInclude.m; sourceTree = "<group>"; };
+		00199BB922F288EE00FACC24 /* HanyuPinyinOutputFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HanyuPinyinOutputFormat.m; sourceTree = "<group>"; };
+		00199BBA22F288EE00FACC24 /* ZYPinYinSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPinYinSearch.m; sourceTree = "<group>"; };
+		00199BBB22F288EE00FACC24 /* ChineseToPinyinResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyinResource.m; sourceTree = "<group>"; };
+		00199BBC22F288EE00FACC24 /* PinyinFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinFormatter.m; sourceTree = "<group>"; };
+		00199BBD22F288EE00FACC24 /* PinYinForObjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinYinForObjc.m; sourceTree = "<group>"; };
+		00199BC722F2891400FACC24 /* CityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityListViewController.m; sourceTree = "<group>"; };
+		00199BC822F2891400FACC24 /* CityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityListViewController.h; sourceTree = "<group>"; };
 		0046AA1F22EACDE20038CA11 /* ETPassWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPassWordViewController.m; sourceTree = "<group>"; };
 		0046AA2022EACDE20038CA11 /* ETCashOutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETCashOutViewController.m; sourceTree = "<group>"; };
 		0046AA2122EACDE20038CA11 /* ETAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETAccountViewController.m; sourceTree = "<group>"; };
@@ -751,6 +791,45 @@
 			path = WechatPay;
 			sourceTree = "<group>";
 		};
+		00199BA022F288C400FACC24 /* City */ = {
+			isa = PBXGroup;
+			children = (
+				00199BAC22F288EE00FACC24 /* ZYPinYinSearchLib */,
+				00199BA722F288E400FACC24 /* ButtonGroupView.h */,
+				00199BA622F288E400FACC24 /* ButtonGroupView.m */,
+				00199BA322F288E400FACC24 /* CityButton.h */,
+				00199BA422F288E400FACC24 /* CityButton.m */,
+				00199BA522F288E400FACC24 /* citydict.plist */,
+				00199BA122F288E400FACC24 /* CityItem.h */,
+				00199BA222F288E400FACC24 /* CityItem.m */,
+			);
+			path = City;
+			sourceTree = "<group>";
+		};
+		00199BAC22F288EE00FACC24 /* ZYPinYinSearchLib */ = {
+			isa = PBXGroup;
+			children = (
+				00199BAD22F288EE00FACC24 /* PinyinHelper.h */,
+				00199BAE22F288EE00FACC24 /* HanyuPinyinOutputFormat.h */,
+				00199BAF22F288EE00FACC24 /* ChineseInclude.h */,
+				00199BB022F288EE00FACC24 /* NSString+PinYin4Cocoa.m */,
+				00199BB122F288EE00FACC24 /* unicode_to_hanyu_pinyin.txt */,
+				00199BB222F288EE00FACC24 /* ChineseToPinyinResource.h */,
+				00199BB322F288EE00FACC24 /* ZYPinYinSearch.h */,
+				00199BB422F288EE00FACC24 /* PinYinForObjc.h */,
+				00199BB522F288EE00FACC24 /* PinyinFormatter.h */,
+				00199BB622F288EE00FACC24 /* PinyinHelper.m */,
+				00199BB722F288EE00FACC24 /* NSString+PinYin4Cocoa.h */,
+				00199BB822F288EE00FACC24 /* ChineseInclude.m */,
+				00199BB922F288EE00FACC24 /* HanyuPinyinOutputFormat.m */,
+				00199BBA22F288EE00FACC24 /* ZYPinYinSearch.m */,
+				00199BBB22F288EE00FACC24 /* ChineseToPinyinResource.m */,
+				00199BBC22F288EE00FACC24 /* PinyinFormatter.m */,
+				00199BBD22F288EE00FACC24 /* PinYinForObjc.m */,
+			);
+			path = ZYPinYinSearchLib;
+			sourceTree = "<group>";
+		};
 		0046AA1D22EACDE20038CA11 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -994,8 +1073,11 @@
 		007FAD4C22E0434D001EC5F2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				00199BA022F288C400FACC24 /* City */,
 				004AB53822E175510056B8F5 /* ETHomeViewController.h */,
 				004AB53922E175510056B8F5 /* ETHomeViewController.m */,
+				00199BC822F2891400FACC24 /* CityListViewController.h */,
+				00199BC722F2891400FACC24 /* CityListViewController.m */,
 				00E5C2C222EC65A500009241 /* ETHomeLocationController.h */,
 				00E5C2C322EC65A500009241 /* ETHomeLocationController.m */,
 				00E5C31A22EDCD7E00009241 /* FBSearchViewController.h */,
@@ -1840,7 +1922,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00199BBF22F288EE00FACC24 /* unicode_to_hanyu_pinyin.txt in Resources */,
 				0046AA6A22EACDE30038CA11 /* UserSaleViewCell.xib in Resources */,
+				00199BAA22F288E400FACC24 /* citydict.plist in Resources */,
 				007FAE8222E06EE8001EC5F2 /* AlipaySDK.bundle in Resources */,
 				00E5C32B22EEFC1300009241 /* ProductInfoCell.xib in Resources */,
 				007FADF422E052C3001EC5F2 /* SVProgressHUD.bundle in Resources */,
@@ -1958,17 +2042,21 @@
 				007FAD9A22E05228001EC5F2 /* ACLoadingAlert.m in Sources */,
 				007FAE3C22E0539F001EC5F2 /* SSCacheManager.m in Sources */,
 				007FAD6422E05142001EC5F2 /* SSNotificationCenterName.m in Sources */,
+				00199BA922F288E400FACC24 /* CityButton.m in Sources */,
 				0046AA6E22EACDE30038CA11 /* ETPutViewController.m in Sources */,
 				007FADFF22E052C3001EC5F2 /* OTAutoScrollView.m in Sources */,
 				007FAD4222E03E66001EC5F2 /* ACViewController.m in Sources */,
 				0046AA6C22EACDE30038CA11 /* ETStoreUpViewController.m in Sources */,
 				00E5C30122EDC5EB00009241 /* CXSearchModel.m in Sources */,
+				00199BC522F288EF00FACC24 /* PinyinFormatter.m in Sources */,
 				2E13654022F02D190083E850 /* YHDetailsTabController.m in Sources */,
 				0046AA5822EACDE30038CA11 /* ETPassWordViewController.m in Sources */,
 				007FAD9922E05228001EC5F2 /* AHKToastView.m in Sources */,
 				007FADA822E05228001EC5F2 /* LGAlertViewController.m in Sources */,
 				00E5C2E222ED44F300009241 /* ETProductModel.m in Sources */,
 				0046AA7222EACDE30038CA11 /* ETAboutViewController.m in Sources */,
+				00199BA822F288E400FACC24 /* CityItem.m in Sources */,
+				00199BC622F288EF00FACC24 /* PinYinForObjc.m in Sources */,
 				00E5C31522EDC68700009241 /* FMDatabase.m in Sources */,
 				00E5C2D522ED35E600009241 /* JMColumnMenu.m in Sources */,
 				2E1CDA9522EAD09600174F08 /* ETMineVIew.m in Sources */,
@@ -1979,7 +2067,9 @@
 				007FAE4022E0539F001EC5F2 /* DCObjManager.m in Sources */,
 				007FADF822E052C3001EC5F2 /* OTSyncView.m in Sources */,
 				00E5C2FD22EDC5EB00009241 /* CXDBHandle.m in Sources */,
+				00199BC122F288EF00FACC24 /* ChineseInclude.m in Sources */,
 				007FADFB22E052C3001EC5F2 /* ApiXml.mm in Sources */,
+				00199BC022F288EF00FACC24 /* PinyinHelper.m in Sources */,
 				007FAE2722E052FD001EC5F2 /* UIBarButtonItem+Extension.m in Sources */,
 				007FADEE22E052C3001EC5F2 /* OTDynamicGridModel.m in Sources */,
 				00E5C2DC22ED365700009241 /* AticleMenu.m in Sources */,
@@ -2015,6 +2105,7 @@
 				007FADA322E05228001EC5F2 /* LGAlertViewWindowContainer.m in Sources */,
 				0046AA6922EACDE30038CA11 /* UserSaleView.m in Sources */,
 				007FAE5622E05DDB001EC5F2 /* ETEnterpriseServiceController.m in Sources */,
+				00199BC422F288EF00FACC24 /* ChineseToPinyinResource.m in Sources */,
 				00199B8B22F0149200FACC24 /* TAPageControl.m in Sources */,
 				2E0F6BC622EC7FC50031AFC7 /* ETIssueViewController.m in Sources */,
 				2E1CDA9A22EAD09600174F08 /* MEVIPTableViewCell.m in Sources */,
@@ -2024,10 +2115,13 @@
 				007FADF222E052C3001EC5F2 /* SVProgressHUD.m in Sources */,
 				0046AA6322EACDE30038CA11 /* StaffVC.m in Sources */,
 				004AB54022E19D040056B8F5 /* ETHomeHeaderView.m in Sources */,
+				00199BC222F288EF00FACC24 /* HanyuPinyinOutputFormat.m in Sources */,
 				007FAE2022E052FD001EC5F2 /* UIView+Frame.m in Sources */,
+				00199BC322F288EF00FACC24 /* ZYPinYinSearch.m in Sources */,
 				00199B8C22F0149200FACC24 /* TAAnimatedDotView.m in Sources */,
 				00E5C32022EDCF4600009241 /* HomeBaseCell.m in Sources */,
 				007FAE3D22E0539F001EC5F2 /* DCSpeedy.m in Sources */,
+				00199BC922F2891400FACC24 /* CityListViewController.m in Sources */,
 				007FAE4D22E05540001EC5F2 /* SSUserLoginModel.m in Sources */,
 				2E7161B022E98800008B72CF /* ETRKongViewController.m in Sources */,
 				007FAD4422E03E66001EC5F2 /* SSNavigationController.m in Sources */,
@@ -2077,6 +2171,7 @@
 				004AB54622E1BB130056B8F5 /* ETHomeHeaderAutoScrollCell.m in Sources */,
 				007FADFA22E052C3001EC5F2 /* WXUtil.mm in Sources */,
 				007FADE922E052C3001EC5F2 /* OTButton.m in Sources */,
+				00199BBE22F288EE00FACC24 /* NSString+PinYin4Cocoa.m in Sources */,
 				00E5C2D422ED35E600009241 /* JMColumnMenuModel.m in Sources */,
 				007FAE6222E05F1B001EC5F2 /* ETReleaseViewController.m in Sources */,
 				004AB53D22E19A3D0056B8F5 /* ETHomeTopView.m in Sources */,
@@ -2107,6 +2202,7 @@
 				007FAE2422E052FD001EC5F2 /* UIView+AHkit.m in Sources */,
 				00199B8D22F0149200FACC24 /* TAAbstractDotView.m in Sources */,
 				0046AA5922EACDE30038CA11 /* ETCashOutViewController.m in Sources */,
+				00199BAB22F288E400FACC24 /* ButtonGroupView.m in Sources */,
 				2E0CDF1522E83C7000783952 /* ETFinancialViewController.m in Sources */,
 				007FADA022E05228001EC5F2 /* AHKAlertView.m in Sources */,
 				00E5C2E522ED6E9E00009241 /* ETEnterpriseServiceTableViewCell1.m in Sources */,

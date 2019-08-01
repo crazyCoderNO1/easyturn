@@ -18,13 +18,19 @@
 #import "ETProductModel.h"
 #import "FBSearchViewController.h"
 #import "ETProductDetailController.h"
-@interface ETHomeViewController ()<UITableViewDelegate, UITableViewDataSource, ETHomeHeaderViewDelegate>
+#import <CoreLocation/CoreLocation.h>
+#import "CityListViewController.h"
+
+@interface ETHomeViewController ()<UITableViewDelegate, UITableViewDataSource, ETHomeHeaderViewDelegate,CLLocationManagerDelegate>
+{
+    CLLocationManager* manager;
+}
 @property (nonatomic, strong) ETHomeTopView *vHomeTop;
 @property (nonatomic, strong) ETHomeHeaderView *vHomeHeader;
 @property (nonatomic, strong) UITableView *tbHome;
 @property (nonatomic, strong) MarqueeView *marqueeView;
 @property (nonatomic, strong) NSMutableArray *products;
-
+@property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 @end
 
 @implementation ETHomeViewController
@@ -79,6 +85,7 @@
     [self requestDate];
     [self.vHomeHeader addSubview:self.marqueeView];
     [self PostUI];
+    [self location];
 }
 
 #pragma mark - 动态列表
@@ -127,23 +134,75 @@
     }];
 }
 
+-(void)location
+{
+    manager = [[CLLocationManager alloc]init];//初始化一个定位管理对象
+    [manager requestAlwaysAuthorization];//申请定位服务权限
+    //    [manager requestWhenInUseAuthorization];
+    manager.delegate=self;//设置代理
+    [manager startUpdatingLocation];//开启定位服务
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
+    NSLog(@"%@",locations);
+    //位置坐标
+    CLLocation *location=[locations firstObject];
+    
+    
+    _coordinate=location.coordinate;
+    
+    NSLog(@"您的当前位置:经度：%f,纬度：%f,海拔：%f,航向：%f,速度：%f",_coordinate.longitude,_coordinate.latitude,location.altitude,location.course,location.speed);
+    [self PostCityUI];
+    [manager stopUpdatingLocation];
+}
+
+#pragma mark -  获取cityID
+- (void)PostCityUI {
+    NSMutableDictionary* dic=[NSMutableDictionary new];
+    NSDictionary *params = @{
+                             @"lat" : [NSString stringWithFormat:@"%f", _coordinate.latitude ],
+                             @"lng": [NSString stringWithFormat:@"%f", _coordinate.longitude ]
+                             };
+    [HttpTool get:[NSString stringWithFormat:@"city/getCityByLocation"] params:params success:^(id responseObj) {
+
+        [_vHomeTop.btnLocationDown setTitle:responseObj[@"data"][@"name"] forState:UIControlStateNormal];
+        //cityId
+        NSUserDefaults* user=[NSUserDefaults standardUserDefaults];
+        [user setObject:responseObj[@"data"][@"id"] forKey:@"cityid"];
+        [user setObject:responseObj[@"data"][@"name"] forKey:@"cityname"];
+        [user synchronize];
+        //        NSLog(@"");
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+}
 #pragma mark - createSubViewsAndConstraints
 - (void)createSubViewsAndConstraints {
     
     _vHomeTop = [[ETHomeTopView alloc]init];
     [self.view addSubview:_vHomeTop];
     _vHomeTop.block = ^{
-        ETHomeLocationController* loc=[ETHomeLocationController new];
-        
-        AticleMenu* memu=[AticleMenu new];
-        memu.Text=@"交易";
-        NSMutableArray *arr1 = [NSMutableArray new];
-        NSMutableArray *arr2 = [NSMutableArray new];
-        [arr1 addObject:memu];
-        [arr2 addObject:memu];
-        JMColumnMenu *menuVC = [JMColumnMenu columnMenuWithTagsArrM:arr1 OtherArrM:arr2 Type:JMColumnMenuTypeTouTiao Delegate:self];
+//        ETHomeLocationController* loc=[ETHomeLocationController new];
+//        
+//        AticleMenu* memu=[AticleMenu new];
+//        memu.Text=@"交易";
+//        NSMutableArray *arr1 = [NSMutableArray new];
+//        NSMutableArray *arr2 = [NSMutableArray new];
+//        [arr1 addObject:memu];
+//        [arr2 addObject:memu];
+//        JMColumnMenu *menuVC = [JMColumnMenu columnMenuWithTagsArrM:arr1 OtherArrM:arr2 Type:JMColumnMenuTypeTouTiao Delegate:self];
 //        [self presentViewController:menuVC animated:YES completion:nil];
 //        [loc.view addSubview:menuVC.view];
+        
+        CityListViewController* loc=[CityListViewController new];
+        loc.delegate = self;
+        //热门城市列表
+        loc.arrayHotCity = [NSMutableArray arrayWithObjects:@"广州",@"北京",@"天津",@"厦门",@"重庆",@"福州",@"泉州",@"济南",@"深圳",@"长沙",@"无锡", nil];
+        //历史选择城市列表
+        loc.arrayHistoricalCity = [NSMutableArray arrayWithObjects:@"福州",@"厦门",@"泉州", nil];
+        //定位城市列表
+        NSUserDefaults* user=[NSUserDefaults standardUserDefaults];
+        loc.arrayLocatingCity   = [NSMutableArray arrayWithObjects:[user objectForKey:@"cityname"], nil];
         [self.navigationController pushViewController:loc animated:YES];
         
 
@@ -157,7 +216,12 @@
     [self.view addSubview:self.tbHome];
  
 }
+- (void)didClickedWithCityName:(NSString*)cityName
+{
+    NSLog(@"%@",cityName);
+    [_vHomeTop.btnLocationDown setTitle:cityName forState:UIControlStateNormal];
 
+}
 #pragma mark - 请求网络
 - (void)requestDate {
     WEAKSELF
