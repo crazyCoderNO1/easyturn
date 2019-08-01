@@ -222,7 +222,7 @@
         if (indexPath.row==0) {
             ETPayaymentViewController *payVC=[[ETPayaymentViewController alloc]init];
             payVC.product=_product;
-            payVC.finalPrice=_finalPrice;
+            payVC.finalPrice=_finalPrice?_finalPrice:@"";
             payVC.releaseId=_releaseId;
             [self.navigationController pushViewController:payVC animated:YES];
         }
