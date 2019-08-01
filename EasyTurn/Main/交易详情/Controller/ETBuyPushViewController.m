@@ -82,9 +82,8 @@
         }else if (indexPath.row==2) {
             UILabel *label = [[UILabel alloc] init];
             label.numberOfLines = 0;
-            NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"注册地址：北京市朝阳区"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 13],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
-            
-            label.attributedText = string;
+            label.text=[NSString stringWithFormat:@"注册地址：%@",self.product.address];
+            label.font=[UIFont systemFontOfSize:13];
             label.textAlignment = NSTextAlignmentLeft;
             label.alpha = 1.0;
             [cell addSubview:label];
