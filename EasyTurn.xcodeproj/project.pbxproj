@@ -2366,11 +2366,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-<<<<<<< HEAD
-				DEVELOPMENT_TEAM = 6467D2S34F;
-=======
 				DEVELOPMENT_TEAM = 9AQ6D6P8UV;
->>>>>>> f0071cba4e21dc1fc63247684b7f75d922df5252
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EasyTurn/Vendors(第三方)/aliPayTools",
@@ -2422,11 +2418,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-<<<<<<< HEAD
-				DEVELOPMENT_TEAM = 6467D2S34F;
-=======
 				DEVELOPMENT_TEAM = 9AQ6D6P8UV;
->>>>>>> f0071cba4e21dc1fc63247684b7f75d922df5252
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EasyTurn/Vendors(第三方)/aliPayTools",
