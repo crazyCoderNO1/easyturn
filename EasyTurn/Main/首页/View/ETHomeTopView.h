@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OTButton.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ETHomeTopView : UIView
 @property (nonatomic, strong) void (^block)(void);
+@property (nonatomic, strong) UIButton *btnLocation;
+@property (nonatomic, strong) OTButton *btnLocationDown;
 
 @end
 

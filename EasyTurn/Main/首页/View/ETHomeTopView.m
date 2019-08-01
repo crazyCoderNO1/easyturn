@@ -7,10 +7,10 @@
 //
 
 #import "ETHomeTopView.h"
-#import "OTButton.h"
+//#import "OTButton.h"
 @interface ETHomeTopView ()
-@property (nonatomic, strong) UIButton *btnLocation;
-@property (nonatomic, strong) OTButton *btnLocationDown;
+//@property (nonatomic, strong) UIButton *btnLocation;
+//@property (nonatomic, strong) OTButton *btnLocationDown;
 @property (nonatomic, strong) UIImageView *imagevLogo;
 @property (nonatomic, strong) UILabel *laTitle;
 @end

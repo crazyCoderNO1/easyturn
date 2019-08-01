@@ -16,10 +16,12 @@
 #import "ETAccountViewController.h"
 #import "UserMegViewController.h"
 #import "ETStoreUpViewController.h"
+#import "ETProductModel.h"
 @interface ETMineViewController ()<UITableViewDataSource,UITableViewDelegate,AccountBindingDelegate>
 
 @property (nonatomic,strong)UITableView        *tableView;
 @property (nonatomic,strong)NSMutableArray     *dataSource;
+@property (nonatomic, strong) NSMutableArray *products;
 
 @end
 
@@ -67,6 +69,29 @@ static NSString *const cellIdentifier =@"cellIdentifier";
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
     ETMineVIew*etmine=[[ETMineVIew alloc]init];
     etmine.delegate=self;
+    [self PostUI];
+}
+
+#pragma mark - 出售全部订单
+- (void)PostUI {
+    NSMutableDictionary* dic=[NSMutableDictionary new];
+    NSDictionary *params = @{
+                             @"page" : @"1",
+                             @"pageSize": @"10",
+                             @"cityId": @(2)
+                             };
+    [HttpTool get:[NSString stringWithFormat:@"release/dynamic"] params:params success:^(id responseObj) {
+        _products=[NSMutableArray new];
+        NSDictionary* a=responseObj[@"data"];
+        for (NSDictionary* prod in responseObj[@"data"]) {
+            ETProductModel* p=[ETProductModel mj_objectWithKeyValues:prod];
+            [_products addObject:p];
+        }
+        //        NSLog(@"");
+        [_tableView reloadData];
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

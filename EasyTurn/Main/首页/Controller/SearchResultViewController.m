@@ -11,12 +11,14 @@
 //#import "HomeOneImageCell.h"
 //#import "NewsVideoCell.h"
 #import "FBRequestSearch.h"
-
+#import "ETEnterpriseServiceTableViewCell1.h"
+#import "ETProductModel.h"
 @interface SearchResultViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic, strong)UITableView *tableView;
 @property(nonatomic, strong)FBRequestSearch *searchModel;
 @property(nonatomic, strong)NSMutableArray *aticleArray;
 @property(nonatomic, strong)UIView *searchView;
+@property (nonatomic, strong) NSMutableArray *products;
 
 @end
 
@@ -40,6 +42,7 @@
 //        [weakSelf searchAticle];
 //    }];
 //    [self.tableView.mj_header beginRefreshing];
+    [self searchAticle];
 }
 
 -(void)searchAticle{
@@ -57,13 +60,33 @@
 //    } failure:^(NSError *error) {
 //        [self.tableView.mj_header endRefreshing];
 //    }];
+    NSMutableDictionary* dic=[NSMutableDictionary new];
+    NSDictionary *params = @{
+                             @"page" : @"1",
+                             @"pageSize": @"10",
+                             @"cityId": @(2),
+                             @"keyword" : @"*",
+                             @"priceOrder" : @(2)
+                             };
+    [HttpTool get:[NSString stringWithFormat:@"search/product"] params:params success:^(id responseObj) {
+        _products=[NSMutableArray new];
+        NSDictionary* a=responseObj[@"data"][@"releaseList"];
+        for (NSDictionary* prod in responseObj[@"data"][@"releaseList"]) {
+            ETProductModel* p=[ETProductModel mj_objectWithKeyValues:prod];
+            [_products addObject:p];
+        }
+        //        NSLog(@"");
+        [_tableView reloadData];
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 
 
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.aticleArray.count;
+    return self.products.count;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 //    AticleModel * model = self.aticleArray[indexPath.row];
@@ -75,8 +98,15 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    HomeBaseCell * cell = [HomeBaseCell cellWithTableView:tableView];
+//    HomeBaseCell * cell = [HomeBaseCell cellWithTableView:tableView];
 //    cell.model = self.aticleArray[indexPath.row];
+    ETEnterpriseServiceTableViewCell1 *cell=[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    ETProductModel* p=[_products objectAtIndex:indexPath.row];
+    cell.giveserviceLab.text=p.title;
+    [cell.comImg sd_setImageWithURL:[NSURL URLWithString:p.imageList] placeholderImage:nil];
+    cell.moneyLab.text=p.price;
+    cell.addressLab.text=p.cityName;
+    cell.detailsLab.text=p.detail;
     return cell;
 }
 
@@ -103,6 +133,8 @@
         UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
         tableView.delegate = self;
         tableView.dataSource = self;
+        [tableView registerClass:[ETEnterpriseServiceTableViewCell1 class] forCellReuseIdentifier:@"cell"];
+
         _tableView = tableView;
     }
     return _tableView;
