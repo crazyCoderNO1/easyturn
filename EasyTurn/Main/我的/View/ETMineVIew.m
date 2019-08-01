@@ -11,6 +11,7 @@
 #import "WrongSpeakBtn.h"
 #import "ETPutViewController.h"
 #import "UserMegViewController.h"
+#import "UserInfoModel.h"
 @implementation ETMineVIew
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -238,11 +239,39 @@
             make.right.mas_equalTo(-44);
             make.size.mas_equalTo(CGSizeMake(65, 22));
         }];
-        
+        [self PostUI];
     }
     return self;
 }
+#pragma mark - 用户信息
+- (void)PostUI {
+    NSMutableDictionary* dic=[NSMutableDictionary new];
+    NSUserDefaults* user=[NSUserDefaults standardUserDefaults];
 
+    NSDictionary *params = @{
+                             @"uid" : [user objectForKey:@"uid"]
+                             };
+    
+    [HttpTool get:[NSString stringWithFormat:@"user/info"] params:params success:^(id responseObj) {
+//        _products=[NSMutableArray new];
+        NSDictionary* a=responseObj[@"data"];
+        UserInfoModel* info=[UserInfoModel mj_objectWithKeyValues:responseObj[@"data"][@"userInfo"]];
+        NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:info.name attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Medium" size:18],NSForegroundColorAttributeName: [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1.0]}];
+        
+        _nameLab.attributedText = string;
+        
+//        NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString: "attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 13],NSForegroundColorAttributeName: [UIColor colorWithRed:218/255.0 green:218/255.0 blue:218/255.0 alpha:1.0]}];
+//        _companyLab.attributedText = string;
+        for (NSDictionary* prod in responseObj[@"data"]) {
+//            ETProductModel* p=[ETProductModel mj_objectWithKeyValues:prod];
+//            [_products addObject:p];
+        }
+//                NSLog(@"");
+//        [_tableView reloadData];
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+}
 - (UIImageView *)img {
     if (!_img) {
         _img=[[UIImageView alloc]init];

@@ -362,6 +362,7 @@ typedef NS_ENUM(NSUInteger, ETLoginViewControllerType) {
         NSUserDefaults* user=[NSUserDefaults standardUserDefaults];
         NSDictionary* a=responseObj[@"data"];
         [user setObject:[a objectForKey:@"token"] forKey:@"token"];
+        [user setObject:[a objectForKey:@"uid"] forKey:@"uid"];
         [user synchronize];
         [self.window.rootViewController removeFromParentViewController];
         MainViewController * mainvc = [[MainViewController alloc]init];

@@ -270,6 +270,39 @@
         cell.addressLab.text=p.cityName;
         cell.detailsLab.text=p.business;
                            [cell.comImg sd_setImageWithURL:[NSURL URLWithString:p.imageList]];
+        if ([p.releaseTypeId isEqualToString:@"1"]) {
+            UIImageView* jiao=[UIImageView new];
+            [jiao setImage:[UIImage imageNamed:@"首页_出售"]];
+            [cell.comImg addSubview:jiao];
+            [jiao mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.mas_equalTo(0);
+                make.top.mas_equalTo(0);
+                make.width.mas_equalTo(35);
+                make.height.mas_equalTo(35);
+            }];
+        }
+        if ([p.releaseTypeId isEqualToString:@"3"]) {
+            UIImageView* jiao=[UIImageView new];
+            [jiao setImage:[UIImage imageNamed:@"首页_企服者"]];
+            [cell.comImg addSubview:jiao];
+            [jiao mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.mas_equalTo(0);
+                make.top.mas_equalTo(0);
+                make.width.mas_equalTo(35);
+                make.height.mas_equalTo(35);
+            }];
+        }
+        if ([p.releaseTypeId isEqualToString:@"2"]) {
+            UIImageView* jiao=[UIImageView new];
+            [jiao setImage:[UIImage imageNamed:@"首页_求购"]];
+            [cell.comImg addSubview:jiao];
+            [jiao mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.mas_equalTo(0);
+                make.top.mas_equalTo(0);
+                make.width.mas_equalTo(35);
+                make.height.mas_equalTo(35);
+            }];
+        }
     }
     return cell;
 }
