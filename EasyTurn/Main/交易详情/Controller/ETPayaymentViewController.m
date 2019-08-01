@@ -43,6 +43,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title=@"支付方式";
+    _btnTag=1;
     [self.view addSubview:self.tab];
     [self payBtn];
 }
@@ -124,14 +125,11 @@
     if (section==0) {
         return 2;
     }else if (section==1) {
-        if (_btnTag==100) {
-            [_tab reloadData];
+        if (_btnTag==1) {
             return 4;
-        }else if (_btnTag==101) {
-            [_tab reloadData];
+        }else if (_btnTag==2) {
             return 3;
-        }else if (_btnTag==102) {
-            [_tab reloadData];
+        }else if (_btnTag==3) {
             return 4;
         }
     }
@@ -249,105 +247,311 @@
                 make.size.mas_equalTo(CGSizeMake(74, 21));
             }];
         }else if (indexPath.row==1) {
-            UIImageView *remainderImg=[[UIImageView alloc]init];
-            remainderImg.image=[UIImage imageNamed:@"我的_分组7"];
-            [cell addSubview:remainderImg];
-            [remainderImg mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(14);
-                make.left.mas_equalTo(15);
-                make.size.mas_equalTo(CGSizeMake(30, 30));
-            }];
-            
-            UILabel *label = [[UILabel alloc] init];
-            label.numberOfLines = 0;
-            NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"账户余额（剩余：¥6000）"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 14],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
-            label.attributedText = string;
-            label.textAlignment = NSTextAlignmentLeft;
-            label.alpha = 1.0;
-            [cell addSubview:label];
-            [label mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(19);
-                make.left.mas_equalTo(57);
-                make.size.mas_equalTo(CGSizeMake(180, 21));
-            }];
-
-            _btn=[[UIButton alloc]init];
-            [_btn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
-            [_btn setImage:[UIImage imageNamed:@"支付_分组 3"] forState:UIControlStateSelected];
-            [_btn addTarget:self action:@selector(aaa) forControlEvents:UIControlEventTouchUpInside];
-            [cell addSubview:self.btn];
-            [_btn mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo (20);
-                make.right.mas_equalTo(-13);
-                make.size.mas_equalTo(CGSizeMake(19, 19));
-            }];
+            if (_btnTag==1) {
+                UIImageView *remainderImg=[[UIImageView alloc]init];
+                remainderImg.image=[UIImage imageNamed:@"我的_分组7"];
+                [cell addSubview:remainderImg];
+                [remainderImg mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(14);
+                    make.left.mas_equalTo(15);
+                    make.size.mas_equalTo(CGSizeMake(30, 30));
+                }];
+                
+                UILabel *label = [[UILabel alloc] init];
+                label.numberOfLines = 0;
+                NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"账户余额（剩余：¥6000）"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 14],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
+                label.attributedText = string;
+                label.textAlignment = NSTextAlignmentLeft;
+                label.alpha = 1.0;
+                [cell addSubview:label];
+                [label mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(19);
+                    make.left.mas_equalTo(57);
+                    make.size.mas_equalTo(CGSizeMake(180, 21));
+                }];
+                
+                _btn=[[UIButton alloc]init];
+                [_btn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+                [_btn setImage:[UIImage imageNamed:@"支付_分组 3"] forState:UIControlStateSelected];
+                [_btn addTarget:self action:@selector(aaa) forControlEvents:UIControlEventTouchUpInside];
+                [cell addSubview:self.btn];
+                [_btn mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo (20);
+                    make.right.mas_equalTo(-13);
+                    make.size.mas_equalTo(CGSizeMake(19, 19));
+                }];
+            }else if (_btnTag==2) {
+                UILabel *label = [[UILabel alloc] init];
+                label.numberOfLines = 0;
+                NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"第一期，买家付金额"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 14],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
+                label.attributedText = string;
+                label.textAlignment = NSTextAlignmentLeft;
+                label.alpha = 1.0;
+                [cell addSubview:label];
+                [label mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(14);
+                    make.left.mas_equalTo(44);
+                    make.size.mas_equalTo(CGSizeMake(135, 21));
+                }];
+                
+                UILabel *label1 = [[UILabel alloc] init];
+                label1.numberOfLines = 0;
+                NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:@"¥ 15000元"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Medium" size: 14],NSForegroundColorAttributeName: [UIColor colorWithRed:248/255.0 green:124/255.0 blue:43/255.0 alpha:1.0]}];
+                label1.attributedText = string1;
+                label1.textAlignment = NSTextAlignmentLeft;
+                label1.alpha = 1.0;
+                [cell addSubview:label1];
+                [label1 mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(14);
+                    make.left.mas_equalTo(185);
+                    make.size.mas_equalTo(CGSizeMake(75, 21));
+                }];
+                
+                UILabel *label2 = [[UILabel alloc] init];
+                label2.numberOfLines = 0;
+                NSMutableAttributedString *string2 = [[NSMutableAttributedString alloc] initWithString:@"未支付"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 12],NSForegroundColorAttributeName: [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0]}];
+                label2.attributedText = string2;
+                label2.textAlignment = NSTextAlignmentLeft;
+                label2.alpha = 1.0;
+                [cell addSubview:label2];
+                [label2 mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(14);
+                    make.right.mas_equalTo(-15);
+                    make.size.mas_equalTo(CGSizeMake(40, 16));
+                }];
+            }else if (_btnTag==3) {
+                UILabel *label = [[UILabel alloc] init];
+                label.numberOfLines = 0;
+                NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"第一期，买家付金额"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 14],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
+                label.attributedText = string;
+                label.textAlignment = NSTextAlignmentLeft;
+                label.alpha = 1.0;
+                [cell addSubview:label];
+                [label mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(14);
+                    make.left.mas_equalTo(44);
+                    make.size.mas_equalTo(CGSizeMake(135, 21));
+                }];
+                
+                UILabel *label1 = [[UILabel alloc] init];
+                label1.numberOfLines = 0;
+                NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:@"¥ 15000元"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Medium" size: 14],NSForegroundColorAttributeName: [UIColor colorWithRed:248/255.0 green:124/255.0 blue:43/255.0 alpha:1.0]}];
+                label1.attributedText = string1;
+                label1.textAlignment = NSTextAlignmentLeft;
+                label1.alpha = 1.0;
+                [cell addSubview:label1];
+                [label1 mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(14);
+                    make.left.mas_equalTo(185);
+                    make.size.mas_equalTo(CGSizeMake(75, 21));
+                }];
+                
+                UILabel *label2 = [[UILabel alloc] init];
+                label2.numberOfLines = 0;
+                NSMutableAttributedString *string2 = [[NSMutableAttributedString alloc] initWithString:@"未支付"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 12],NSForegroundColorAttributeName: [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0]}];
+                label2.attributedText = string2;
+                label2.textAlignment = NSTextAlignmentLeft;
+                label2.alpha = 1.0;
+                [cell addSubview:label2];
+                [label2 mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(14);
+                    make.right.mas_equalTo(-15);
+                    make.size.mas_equalTo(CGSizeMake(40, 16));
+                }];
+            }
+           
         }else if (indexPath.row==2) {
-            UIImageView *remainderImg=[[UIImageView alloc]init];
-            remainderImg.image=[UIImage imageNamed:@"支付_支付宝"];
-            [cell addSubview:remainderImg];
-            [remainderImg mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(14);
-                make.left.mas_equalTo(15);
-                make.size.mas_equalTo(CGSizeMake(30, 30));
-            }];
-            
-            UILabel *label = [[UILabel alloc] init];
-            label.numberOfLines = 0;
-            NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"支付宝账户  （张**）"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 14],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
-            label.attributedText = string;
-            label.textAlignment = NSTextAlignmentLeft;
-            label.alpha = 1.0;
-            [cell addSubview:label];
-            [label mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(19);
-                make.left.mas_equalTo(57);
-                make.size.mas_equalTo(CGSizeMake(180, 21));
-            }];
-            
-            _btn=[[UIButton alloc]init];
-            [_btn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
-            [_btn setImage:[UIImage imageNamed:@"支付_分组 3"] forState:UIControlStateSelected];
-            [_btn addTarget:self action:@selector(aaa) forControlEvents:UIControlEventTouchUpInside];
-            [cell addSubview:self.btn];
-            [_btn mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo (20);
-                make.right.mas_equalTo(-13);
-                make.size.mas_equalTo(CGSizeMake(19, 19));
-            }];
+            if (_btnTag==1) {
+                UIImageView *remainderImg=[[UIImageView alloc]init];
+                remainderImg.image=[UIImage imageNamed:@"支付_支付宝"];
+                [cell addSubview:remainderImg];
+                [remainderImg mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(14);
+                    make.left.mas_equalTo(15);
+                    make.size.mas_equalTo(CGSizeMake(30, 30));
+                }];
+                
+                UILabel *label = [[UILabel alloc] init];
+                label.numberOfLines = 0;
+                NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"支付宝账户  （张**）"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 14],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
+                label.attributedText = string;
+                label.textAlignment = NSTextAlignmentLeft;
+                label.alpha = 1.0;
+                [cell addSubview:label];
+                [label mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(19);
+                    make.left.mas_equalTo(57);
+                    make.size.mas_equalTo(CGSizeMake(180, 21));
+                }];
+                
+                _btn=[[UIButton alloc]init];
+                [_btn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+                [_btn setImage:[UIImage imageNamed:@"支付_分组 3"] forState:UIControlStateSelected];
+                [_btn addTarget:self action:@selector(aaa) forControlEvents:UIControlEventTouchUpInside];
+                [cell addSubview:self.btn];
+                [_btn mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo (20);
+                    make.right.mas_equalTo(-13);
+                    make.size.mas_equalTo(CGSizeMake(19, 19));
+                }];
+            }else if (_btnTag==2) {
+                UILabel *label = [[UILabel alloc] init];
+                label.numberOfLines = 0;
+                NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"第二期，买家付金额"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 14],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
+                label.attributedText = string;
+                label.textAlignment = NSTextAlignmentLeft;
+                label.alpha = 1.0;
+                [cell addSubview:label];
+                [label mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(14);
+                    make.left.mas_equalTo(44);
+                    make.size.mas_equalTo(CGSizeMake(135, 21));
+                }];
+                
+                UILabel *label1 = [[UILabel alloc] init];
+                label1.numberOfLines = 0;
+                NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:@"¥ 15000元"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Medium" size: 14],NSForegroundColorAttributeName: [UIColor colorWithRed:248/255.0 green:124/255.0 blue:43/255.0 alpha:1.0]}];
+                label1.attributedText = string1;
+                label1.textAlignment = NSTextAlignmentLeft;
+                label1.alpha = 1.0;
+                [cell addSubview:label1];
+                [label1 mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(14);
+                    make.left.mas_equalTo(185);
+                    make.size.mas_equalTo(CGSizeMake(75, 21));
+                }];
+                
+                UILabel *label2 = [[UILabel alloc] init];
+                label2.numberOfLines = 0;
+                NSMutableAttributedString *string2 = [[NSMutableAttributedString alloc] initWithString:@"未支付"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 12],NSForegroundColorAttributeName: [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0]}];
+                label2.attributedText = string2;
+                label2.textAlignment = NSTextAlignmentLeft;
+                label2.alpha = 1.0;
+                [cell addSubview:label2];
+                [label2 mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(14);
+                    make.right.mas_equalTo(-15);
+                    make.size.mas_equalTo(CGSizeMake(40, 16));
+                }];
+            }else if (_btnTag==3) {
+                UILabel *label = [[UILabel alloc] init];
+                label.numberOfLines = 0;
+                NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"第二期，买家付金额"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 14],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
+                label.attributedText = string;
+                label.textAlignment = NSTextAlignmentLeft;
+                label.alpha = 1.0;
+                [cell addSubview:label];
+                [label mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(14);
+                    make.left.mas_equalTo(44);
+                    make.size.mas_equalTo(CGSizeMake(135, 21));
+                }];
+                
+                UILabel *label1 = [[UILabel alloc] init];
+                label1.numberOfLines = 0;
+                NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:@"¥ 15000元"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Medium" size: 14],NSForegroundColorAttributeName: [UIColor colorWithRed:248/255.0 green:124/255.0 blue:43/255.0 alpha:1.0]}];
+                label1.attributedText = string1;
+                label1.textAlignment = NSTextAlignmentLeft;
+                label1.alpha = 1.0;
+                [cell addSubview:label1];
+                [label1 mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(14);
+                    make.left.mas_equalTo(185);
+                    make.size.mas_equalTo(CGSizeMake(75, 21));
+                }];
+                
+                UILabel *label2 = [[UILabel alloc] init];
+                label2.numberOfLines = 0;
+                NSMutableAttributedString *string2 = [[NSMutableAttributedString alloc] initWithString:@"未支付"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 12],NSForegroundColorAttributeName: [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0]}];
+                label2.attributedText = string2;
+                label2.textAlignment = NSTextAlignmentLeft;
+                label2.alpha = 1.0;
+                [cell addSubview:label2];
+                [label2 mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(14);
+                    make.right.mas_equalTo(-15);
+                    make.size.mas_equalTo(CGSizeMake(40, 16));
+                }];
+                
+            }
+           
         }else if (indexPath.row==3) {
-            UIImageView *remainderImg=[[UIImageView alloc]init];
-            remainderImg.image=[UIImage imageNamed:@"支付_微信"];
-            [cell addSubview:remainderImg];
-            [remainderImg mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(14);
-                make.left.mas_equalTo(15);
-                make.size.mas_equalTo(CGSizeMake(30, 30));
-            }];
-            
-            UILabel *label = [[UILabel alloc] init];
-            label.numberOfLines = 0;
-            NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"微信账户（张**）"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 14],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
-            label.attributedText = string;
-            label.textAlignment = NSTextAlignmentLeft;
-            label.alpha = 1.0;
-            [cell addSubview:label];
-            [label mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(19);
-                make.left.mas_equalTo(57);
-                make.size.mas_equalTo(CGSizeMake(180, 21));
-            }];
-            
-            _btn=[[UIButton alloc]init];
-            [_btn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
-            [_btn setImage:[UIImage imageNamed:@"支付_分组 3"] forState:UIControlStateSelected];
-            [_btn addTarget:self action:@selector(aaa) forControlEvents:UIControlEventTouchUpInside];
-            [cell addSubview:self.btn];
-            [_btn mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo (20);
-                make.right.mas_equalTo(-13);
-                make.size.mas_equalTo(CGSizeMake(19, 19));
-            }];
-        }
+            if (_btnTag==1) {
+                UIImageView *remainderImg=[[UIImageView alloc]init];
+                remainderImg.image=[UIImage imageNamed:@"支付_微信"];
+                [cell addSubview:remainderImg];
+                [remainderImg mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(14);
+                    make.left.mas_equalTo(15);
+                    make.size.mas_equalTo(CGSizeMake(30, 30));
+                }];
+                
+                UILabel *label = [[UILabel alloc] init];
+                label.numberOfLines = 0;
+                NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"微信账户（张**）"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 14],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
+                label.attributedText = string;
+                label.textAlignment = NSTextAlignmentLeft;
+                label.alpha = 1.0;
+                [cell addSubview:label];
+                [label mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(19);
+                    make.left.mas_equalTo(57);
+                    make.size.mas_equalTo(CGSizeMake(180, 21));
+                }];
+                
+                _btn=[[UIButton alloc]init];
+                [_btn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+                [_btn setImage:[UIImage imageNamed:@"支付_分组 3"] forState:UIControlStateSelected];
+                [_btn addTarget:self action:@selector(aaa) forControlEvents:UIControlEventTouchUpInside];
+                [cell addSubview:self.btn];
+                [_btn mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo (20);
+                    make.right.mas_equalTo(-13);
+                    make.size.mas_equalTo(CGSizeMake(19, 19));
+                }];
+            }else if (_btnTag==3) {
+                UILabel *label = [[UILabel alloc] init];
+                label.numberOfLines = 0;
+                NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"第三期，买家付金额"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 14],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
+                label.attributedText = string;
+                label.textAlignment = NSTextAlignmentLeft;
+                label.alpha = 1.0;
+                [cell addSubview:label];
+                [label mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(14);
+                    make.left.mas_equalTo(44);
+                    make.size.mas_equalTo(CGSizeMake(135, 21));
+                }];
+                
+                UILabel *label1 = [[UILabel alloc] init];
+                label1.numberOfLines = 0;
+                NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:@"¥ 15000元"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Medium" size: 14],NSForegroundColorAttributeName: [UIColor colorWithRed:248/255.0 green:124/255.0 blue:43/255.0 alpha:1.0]}];
+                label1.attributedText = string1;
+                label1.textAlignment = NSTextAlignmentLeft;
+                label1.alpha = 1.0;
+                [cell addSubview:label1];
+                [label1 mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(14);
+                    make.left.mas_equalTo(185);
+                    make.size.mas_equalTo(CGSizeMake(75, 21));
+                }];
+                
+                UILabel *label2 = [[UILabel alloc] init];
+                label2.numberOfLines = 0;
+                NSMutableAttributedString *string2 = [[NSMutableAttributedString alloc] initWithString:@"未支付"attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Regular" size: 12],NSForegroundColorAttributeName: [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0]}];
+                label2.attributedText = string2;
+                label2.textAlignment = NSTextAlignmentLeft;
+                label2.alpha = 1.0;
+                [cell addSubview:label2];
+                [label2 mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(14);
+                    make.right.mas_equalTo(-15);
+                    make.size.mas_equalTo(CGSizeMake(40, 16));
+                }];
+                
+            }
+            }
+           
     }
     
     return cell;
@@ -361,6 +565,7 @@
     if (sender.tag==100) {
         self.stagingBtn.selected = !self.stagingBtn.selected;
         self.stagingBtn=_stagingBtn;
+        _btnTag=1;
         self.phasesBtn.selected=NO;
         self.stagestagingBtn.selected=NO;
         [self.stagingBtn setUserInteractionEnabled:NO];
@@ -369,6 +574,7 @@
     }else if (sender.tag==101) {
         self.phasesBtn.selected=!self.phasesBtn.selected;
         self.phasesBtn=_phasesBtn;
+        _btnTag=2;
         self.stagingBtn.selected=NO;
         self.stagestagingBtn.selected=NO;
         [self.phasesBtn setUserInteractionEnabled:NO];
@@ -378,11 +584,16 @@
         self.stagestagingBtn.selected=!self.stagestagingBtn.selected;
         self.stagestagingBtn=_stagestagingBtn;
         self.phasesBtn.selected=NO;
+        _btnTag=3;
         self.stagingBtn.selected=NO;
         [self.stagestagingBtn setUserInteractionEnabled:NO];
         [self.phasesBtn setUserInteractionEnabled:YES];
         [self.stagingBtn setUserInteractionEnabled:YES];
     }
+   
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self->_tab reloadData];
+    });
 }
 
 
