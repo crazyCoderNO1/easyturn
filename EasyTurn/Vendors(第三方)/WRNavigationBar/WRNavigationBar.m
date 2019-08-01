@@ -574,7 +574,7 @@ static int wrPushDisplayCount = 0;
     
     NSUInteger itemCount = self.navigationBar.items.count;
     NSUInteger n = self.viewControllers.count >= itemCount ? 2 : 1;
-    UIViewController *popToVC = self.viewControllers[self.viewControllers.count - n];
+     UIViewController *popToVC = self.viewControllers[self.viewControllers.count - n];
     [self popToViewController:popToVC animated:YES];
     return YES;
 }
