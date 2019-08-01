@@ -558,7 +558,7 @@
         _sellBtn.titleLabel.font=[UIFont systemFontOfSize:15];
         [_sellBtn setTitle:@"出售" forState:UIControlStateNormal];
         [_sellBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_sellBtn addTarget:self action:@selector(a) forControlEvents:UIControlEventTouchUpInside];
+        [_sellBtn addTarget:self action:@selector(a:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _sellBtn;
 }
@@ -569,7 +569,7 @@
         _giveBtn.titleLabel.font=[UIFont systemFontOfSize:15];
         [_giveBtn setTitle:@"服务" forState:UIControlStateNormal];
         [_giveBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_giveBtn addTarget:self action:@selector(a) forControlEvents:UIControlEventTouchUpInside];
+        [_giveBtn addTarget:self action:@selector(a:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _giveBtn;
 }
@@ -580,7 +580,7 @@
         _wantBtn.titleLabel.font=[UIFont systemFontOfSize:15];
         [_wantBtn setTitle:@"求购" forState:UIControlStateNormal];
         [_wantBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_wantBtn addTarget:self action:@selector(a) forControlEvents:UIControlEventTouchUpInside];
+        [_wantBtn addTarget:self action:@selector(a:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _wantBtn;
 }
@@ -591,15 +591,37 @@
         _wholeBtn.titleLabel.font=[UIFont systemFontOfSize:15];
         [_wholeBtn setTitle:@"全部订单" forState:UIControlStateNormal];
         [_wholeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_wholeBtn addTarget:self action:@selector(a) forControlEvents:UIControlEventTouchUpInside];
+        [_wholeBtn addTarget:self action:@selector(a:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _wholeBtn;
 }
 
--(void)a {
+-(void)a:(UIButton*)sender {
     WrongSpeakBtn*btn=[[WrongSpeakBtn alloc]init];
     [btn setQJselected:NO];
     [btn layoutSubviews];
+    if ([sender.titleLabel.text isEqualToString:@"出售"]) {
+        if (self.block) {
+            self.block(@"1");
+        }
+    }
+    if ([sender.titleLabel.text isEqualToString:@"服务"]) {
+        if (self.block) {
+            self.block(@"2");
+        }
+    }
+    if ([sender.titleLabel.text isEqualToString:@"求购"]) {
+        if (self.block) {
+            self.block(@"3");
+        }
+    }
+    if ([sender.titleLabel.text isEqualToString:@"全部订单"]) {
+        if (self.block) {
+            self.block(@"");
+        }
+    }
+    
+    
 }
 
 - (void)agreementBtnClick:(UIButton*)sender

@@ -83,6 +83,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 //界面
 
+@property(copy, nonatomic)void (^block)(NSString* a );
 
 
 @end

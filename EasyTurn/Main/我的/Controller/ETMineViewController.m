@@ -17,6 +17,7 @@
 #import "UserMegViewController.h"
 #import "ETStoreUpViewController.h"
 #import "ETProductModel.h"
+#import "ETEnterpriseServiceTableViewCell1.h"
 @interface ETMineViewController ()<UITableViewDataSource,UITableViewDelegate,AccountBindingDelegate>
 
 @property (nonatomic,strong)UITableView        *tableView;
@@ -42,10 +43,15 @@ static NSString *const cellIdentifier =@"cellIdentifier";
         _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, Screen_Width, Screen_Height-kStatusBarHeight) style:UITableViewStylePlain];
         _tableView.delegate=self;
         _tableView.dataSource=self;
-        [_tableView registerClass:[ETMETableViewCell class] forCellReuseIdentifier:cellIdentifier];
+//        [_tableView registerClass:[ETMETableViewCell class] forCellReuseIdentifier:cellIdentifier];
+        [_tableView registerClass:[ETEnterpriseServiceTableViewCell1 class] forCellReuseIdentifier:@"cell"];
+
         ETMineVIew *mineview = [[ETMineVIew alloc] init];
         mineview.frame = CGRectMake(0,0,Screen_Width,488);
         mineview.layer.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1.0].CGColor;
+        mineview.block = ^(NSString * _Nonnull a) {
+            [self PostUI:a];
+        };
         _tableView.tableHeaderView = mineview;
         _tableView.rowHeight=158;
         mineview.delegate=self;
@@ -69,18 +75,20 @@ static NSString *const cellIdentifier =@"cellIdentifier";
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
     ETMineVIew*etmine=[[ETMineVIew alloc]init];
     etmine.delegate=self;
-    [self PostUI];
+    [self PostUI:@"1"];
 }
 
 #pragma mark - 出售全部订单
-- (void)PostUI {
+- (void)PostUI:(NSString*)a {
     NSMutableDictionary* dic=[NSMutableDictionary new];
     NSDictionary *params = @{
                              @"page" : @"1",
                              @"pageSize": @"10",
-                             @"cityId": @(2)
+                             @"cityId": @(2),
+                             @"releaseTypeId": a
                              };
-    [HttpTool get:[NSString stringWithFormat:@"release/dynamic"] params:params success:^(id responseObj) {
+
+    [HttpTool get:[NSString stringWithFormat:@"release/orders"] params:params success:^(id responseObj) {
         _products=[NSMutableArray new];
         NSDictionary* a=responseObj[@"data"];
         for (NSDictionary* prod in responseObj[@"data"]) {
@@ -96,12 +104,19 @@ static NSString *const cellIdentifier =@"cellIdentifier";
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 //    return self.dataSource.count;
-    return 3;
+    return _products.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ETMETableViewCell*cell=[tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+//    ETMETableViewCell*cell=[tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
 
+    ETEnterpriseServiceTableViewCell1 *cell=[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    ETProductModel* p=[_products objectAtIndex:indexPath.row];
+    cell.giveserviceLab.text=p.title;
+    [cell.comImg sd_setImageWithURL:[NSURL URLWithString:p.imageList] placeholderImage:nil];
+    cell.moneyLab.text=p.price;
+    cell.addressLab.text=p.cityName;
+    cell.detailsLab.text=p.detail;
     return cell;
     
 //    ETMETableViewCell*cell=[tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
